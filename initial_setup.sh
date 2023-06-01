@@ -122,11 +122,11 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.
 # Create symlinks
 repo_path=$(pwd)
 ln -sf "${repo_path}/zprofile" ~/.zprofile
-ln -sf "${repo_path}/personal/personal_env" ~/.config/zsh/personal_env
+ln -sf "${repo_path}/personal/config/zsh/personal_env" ~/.config/zsh/personal_env
 ln -sf "${repo_path}/ssh/config" ~/.ssh/config
 ln -sf "${repo_path}/personal/ssh/personal" ~/.ssh/personal
-ln -sf "${repo_path}/config/aliasrc" ~/.config/aliasrc
-ln -sf "${repo_path}/work/config/work_aliasrc" ~/.config/work_aliasrc
+ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc
+ln -sf "${repo_path}/work/config/zsh/work_aliasrc" ~/.config/zsh/work_aliasrc
 ln -sf "${repo_path}/config/starship.toml" ~/.config/starship.toml
 ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf

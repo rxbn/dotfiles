@@ -39,8 +39,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases file
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-[ -f "$HOME/.config/work_aliasrc" ] && source "$HOME/.config/work_aliasrc"
+[ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
+[ -f "$HOME/.config/zsh/work_aliasrc" ] && source "$HOME/.config/zsh/work_aliasrc"
 
 eval $(thefuck --alias)
 
