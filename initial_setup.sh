@@ -116,7 +116,8 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Download SketchyBar font
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.6/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
+# renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.5/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Create symlinks
 repo_path=$(pwd)
