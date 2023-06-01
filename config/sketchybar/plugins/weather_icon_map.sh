@@ -2,7 +2,7 @@ case $@ in
 "1")
 	icon_result="􀆮" # sunny
 	;;
-"2" | "3" | "4")
+"2" | "3" | "4" | "26")
 	icon_result="􀇕" # mostly sunny
 	;;
 "5" | "35" | "55" | "105" | "135")
@@ -38,9 +38,6 @@ case $@ in
 "23" | "24" | "25" | "73" | "74" | "75" | "123" | "124" | "125")
 	icon_result="􀇟" # thunderstorm with rain
 	;;
-"26")
-	icon_result="􀆸" # hazy
-	;;
 "27")
 	icon_result="􀇋􀆬" # fog with sun
 	;;
@@ -59,7 +56,7 @@ case $@ in
 "51" | "101")
 	icon_result="􀆺" # moon
 	;;
-"52" | "53" | "54" | "102" | "103" | "104")
+"52" | "53" | "54" | "102" | "103" | "104" | "126")
 	icon_result="􀇛" # moon with clouds
 	;;
 "56" | "59" | "106" | "109" | "129" | "132")
@@ -82,9 +79,6 @@ case $@ in
 	;;
 "76" | "77" | "127")
 	icon_result="􀇋􀆺" # fog with moon
-	;;
-"126")
-	icon_result="􁑰" # hazy with moon
 	;;
 "137" | "139")
 	icon_result="􀇏􀋦􀆺" # thunderstorm with snow and moon
