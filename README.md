@@ -1,16 +1,10 @@
 # rxbn macOS dotfiles
 
-## Configure Sudo to Use TouchID
+## Disclaimer
 
-```bash
-sudo nvim /etc/pam.d/sudo
-```
+This is a work in progress.
 
-Add the following line to the top of the file:
-
-```text
-auth       sufficient     pam_tid.so
-```
+Use with caution. Everything in here is highly opinionated.
 
 ## Configure macOS
 
