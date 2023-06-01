@@ -1,0 +1,74 @@
+# shellcheck disable=SC2148
+alias ll='ls -l'
+alias ......='cd ../../../../..;'
+alias .....='cd ../../../..;'
+alias ....='cd ../../..;'
+alias ...='cd ../..;'
+alias ..='cd ..;'
+alias k='kubectl'
+alias kc='kubectx'
+alias kn='kubens'
+alias grep='ggrep --color'
+alias sed=gsed
+alias kg='kubectl get'
+alias kd='kubectl describe'
+alias ke='kubectl explain'
+alias kexi='kubectl exec -it'
+alias kl='kubectl logs -f'
+alias kgs='kubectl get secret'
+alias kgsv='kubectl get service'
+alias kgc='kubectl get configmap'
+alias kgp='kubectl get pods'
+alias kgi='kubectl get ingress'
+alias se='sops --encrypt --in-place'
+alias sd='sops --decrypt --in-place'
+alias gia='git add --all'
+alias gip='git push'
+alias gis='git status'
+alias gid='git diff'
+alias gica='git commit --amend --no-edit'
+alias gipf='git push --force'
+alias gipt='git push --tags'
+alias vim='nvim'
+
+function gic() {
+	# shellcheck disable=SC2124
+	text="$@"
+	git commit -m "$text"
+}
+
+alias lookatme='~/.virtualenvs/lookatme/bin/lookatme'
+
+function apm() {
+	if [[ -f $(pwd)/vars/secrets.yml && -z "$ANSIBLE_VAULT_PASSWORD_FILE" ]]; then
+		ansible-playbook --diff --ask-vault-pass main.yml "$@"
+	else
+		ansible-playbook --diff main.yml "$@"
+	fi
+}
+
+function ap() {
+	if [[ -f $(pwd)/vars/secrets.yml && $ANSIBLE_VAULT_PASSWORD_FILE ]]; then
+		ansible-playbook --diff --ask-vault-pass "$@"
+	else
+		ansible-playbook --diff "$@"
+	fi
+}
+
+function expand-alias() {
+	zle _expand_alias
+	zle self-insert
+}
+zle -N expand-alias
+bindkey -M main ' ' expand-alias
+
+function zsh_plugins_update() {
+	for d in ~/.config/plugins/zsh/*; do
+		pushd "$d" >/dev/null || continue
+		echo -e "\033[1m==> Processing zsh plugin ${BLUE}$(basename "$d")\033[0m"
+		git pull
+		popd >/dev/null || continue
+		echo -e "\n"
+	done
+}
+# vi: ft=zsh

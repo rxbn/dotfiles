@@ -1,0 +1,105 @@
+# zsh config
+
+# Enable colors
+autoload -U colors && colors
+export CLICOLOR=1
+
+# Set history size and file
+export SAVEHIST=1000000000
+export HISTSIZE=1000000000
+export HISTFILE=~/.cache/zsh/history
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt INC_APPEND_HISTORY
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)
+
+# Enable reverse history search with ctrl-r
+bindkey "^R" history-incremental-search-backward
+
+# Load python env
+eval "$(pyenv init -)"
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# Load aliases file
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[ -f "$HOME/.config/work_aliasrc" ] && source "$HOME/.config/work_aliasrc"
+
+eval $(thefuck --alias)
+
+# enable fluxctl autocompletion
+command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
+
+# enable zsh-autosuggestions
+source ~/.config/plugins/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# make ssh autocompletion faster
+
+# Highlight the current autocomplete option
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+# Better SSH/Rsync/SCP Autocomplete
+zstyle ':completion:*:(scp|rsync):*' tag-order ' hosts:-ipaddr:ip\ address hosts:-host:host files'
+zstyle ':completion:*:(ssh|scp|rsync):*:hosts-host' ignored-patterns '*(.|:)*'loopback ip6-loopback localhost ip6-localhost broadcasthost
+zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<->.<->.<->|(|::)([[:xdigit:].]##:(#c,2))##(|%*))' '127.0.0.<->' '255.255.255.255' '::1' 'fe80::*'
+
+h=()
+if [[ -r ~/.ssh/config ]]; then
+    h+=($(grep -Po '(?<=^Host\s).*' ~/.ssh/config))
+fi
+if [[ -r ~/.ssh/sshop_config ]]; then
+    h+=($(grep -Po '(?<=^Host\s).*' ~/.ssh/sshop_config))
+fi
+
+if [[ $#h -gt 0 ]]; then
+  zstyle ':completion:*:(ssh|scp|rsync):*' hosts $h
+  zstyle ':completion:*:slogin:*' hosts $h
+fi
+
+# Allow for autocomplete to be case insensitive
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
+  '+l:|?=** r:|?=**'
+
+# Initialize the autocompletion
+autoload -Uz compinit && compinit -i
+
+# direnv init
+eval "$(direnv hook zsh)"
+
+bindkey -s ^f "tmux-sessionizer\n"
+
+# make fzf beautiful
+export FZF_DEFAULT_OPTS=" \
+--color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
+--color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
+--color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
+
+set -k
+
+# Load zsh-syntax-highlighting theme
+source ${HOME}/.config/plugins/zsh/catppuccin-zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
+
+# Load zsh-syntax-highlighting; should be last.
+source ${HOME}/.config/plugins/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+eval "$(starship init zsh)"
