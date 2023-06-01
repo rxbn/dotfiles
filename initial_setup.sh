@@ -22,6 +22,7 @@ FOLDERS=(
 	~/.config/zsh
 	~/.config/plugins/zsh
 	~/.config/yamllint
+	~/.config/starship
 	~/.config/yabai
 	~/.config/skhd
 	~/.config/sketchybar
@@ -127,7 +128,7 @@ ln -sf "${repo_path}/ssh/config" ~/.ssh/config
 ln -sf "${repo_path}/personal/ssh/personal" ~/.ssh/personal
 ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc
 ln -sf "${repo_path}/work/config/zsh/work_aliasrc" ~/.config/zsh/work_aliasrc
-ln -sf "${repo_path}/config/starship.toml" ~/.config/starship.toml
+ln -sf "${repo_path}/config/starship/starship.toml" ~/.config/starship/starship.toml
 ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf
 ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
