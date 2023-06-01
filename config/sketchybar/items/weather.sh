@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "${HOME}/.config/zsh/personal_env"
+
 weather=(
 	icon.font="$FONT:Black:12.0"
 	update_freq=600
