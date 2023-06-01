@@ -117,7 +117,7 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Download SketchyBar font
 # renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.5/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.7/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Create symlinks
 repo_path=$(pwd)
