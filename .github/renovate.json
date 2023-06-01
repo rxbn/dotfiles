@@ -1,16 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "semanticCommits": "enabled",
-  "dependencyDashboard": false,
+  "dependencyDashboard": true,
   "separateMajorMinor": false,
-  "assignees": [
-    "rxbn"
-  ],
+  "assignees": ["rxbn"],
   "regexManagers": [
     {
-      "fileMatch": [
-        "initial_setup\\.sh$"
-      ],
+      "fileMatch": ["initial_setup\\.sh$"],
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*)\\s.*\\/download\\/(?<currentValue>.*?)\\/"
       ],
