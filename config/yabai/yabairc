@@ -79,7 +79,6 @@ yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extens
 yabai -m rule --add app="^Screen Sharing$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Sonos$" manage=off
-yabai -m rule --add app="^Swish$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Things$" manage=off
