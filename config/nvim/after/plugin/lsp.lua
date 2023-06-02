@@ -54,14 +54,6 @@ local on_attach = function(client, bufnr)
     return
   end
 
-  -- FIXME: This is ugly
-  if client.name == "yamlls" then
-    local ansiblels = vim.lsp.get_active_clients({ name = "ansiblels" })[1]
-    if ansiblels then
-      vim.lsp.stop_client(client.id)
-    end
-  end
-
   buf_nnoremap { '<leader>rn', '<Cmd>Lspsaga rename<CR>' }
   buf_nnoremap { '<leader>ca', '<Cmd>Lspsaga code_action<CR>' }
   buf_nnoremap { 'gd', vim.lsp.buf.definition }
