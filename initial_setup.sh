@@ -116,12 +116,16 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 # Accelerated playback when adjusting the window size.
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
+repo_path=$(pwd)
+
+# Set iTerm2 config path
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${repo_path}/iterm2"
+
 # Download SketchyBar font
 # renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.7/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Create symlinks
-repo_path=$(pwd)
 ln -sf "${repo_path}/zprofile" ~/.zprofile
 ln -sf "${repo_path}/personal/config/zsh/personal_env" ~/.config/zsh/personal_env
 ln -sf "${repo_path}/ssh/config" ~/.ssh/config
