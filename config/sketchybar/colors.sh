@@ -13,14 +13,9 @@ export GREY=0xff949cbb
 export TRANSPARENT=0x00000000
 
 # General bar colors
-export BAR_COLOR=0xff24273a
+export BAR_COLOR=$BLACK
 export BAR_BORDER_COLOR=0xff51576d
 export ICON_COLOR=$WHITE  # Color of all icons
 export LABEL_COLOR=$WHITE # Color of all labels
-export BACKGROUND_1=0xff363a4f
-export BACKGROUND_2=0xff494d64
-
-export POPUP_BACKGROUND_COLOR=0xff303446
-export POPUP_BORDER_COLOR=$WHITE
-
-export SHADOW_COLOR=$BLACK
+export BACKGROUND_1=0xff414559
+export BACKGROUND_2=0xff51576d
