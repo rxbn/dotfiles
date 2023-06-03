@@ -38,7 +38,7 @@ yabai -m config auto_balance off
 
 yabai -m config window_border on
 yabai -m config window_border_width 2
-yabai -m config window_border_hidpi off
+yabai -m config window_border_hidpi on
 yabai -m config window_border_radius 11
 yabai -m config window_border_blur off
 yabai -m config active_window_border_color 0xfff2d5cf
