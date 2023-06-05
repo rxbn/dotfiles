@@ -1,4 +1,7 @@
 case $@ in
+"WireGuard")
+	icon_result=":vpn:"
+	;;
 "Final Cut Pro")
 	icon_result=":final_cut_pro:"
 	;;
