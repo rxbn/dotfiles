@@ -2,6 +2,9 @@ local nmap = require("rxbn.keymap").nmap
 local imap = require("rxbn.keymap").imap
 local vmap = require("rxbn.keymap").vmap
 
+-- netrw
+nmap { '<leader>pv', vim.cmd.Ex }
+
 -- Remove search highlighting
 nmap { '<c-q>', '<Cmd>nohlsearch<CR>' }
 
