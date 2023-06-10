@@ -7,7 +7,10 @@ return {
 
   "jose-elias-alvarez/null-ls.nvim",
 
-  "j-hui/fidget.nvim",
+  {
+    "j-hui/fidget.nvim",
+    tag = "legacy",
+  },
 
   "b0o/schemastore.nvim",
   "someone-stole-my-name/yaml-companion.nvim",
