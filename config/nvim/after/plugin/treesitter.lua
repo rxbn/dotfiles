@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "lua",
     "go",
@@ -22,4 +22,4 @@ require("nvim-treesitter.configs").setup {
     strategy = require("ts-rainbow.strategy.global"),
     max_file_lines = nil,
   },
-}
+})
