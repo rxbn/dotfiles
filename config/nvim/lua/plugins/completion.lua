@@ -8,6 +8,10 @@ return {
   { "saadparwaiz1/cmp_luasnip", dependencies = { "L3MON4D3/LuaSnip" } },
   "roobert/tailwindcss-colorizer-cmp.nvim",
 
-  "zbirenbaum/copilot.lua",
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
   "zbirenbaum/copilot-cmp",
 }
