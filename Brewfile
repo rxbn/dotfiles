@@ -5,7 +5,6 @@ tap "go-task/tap"
 tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -196,4 +195,3 @@ mas "Pages", id: 409201541
 mas "Things", id: 904280696
 mas "Vimari", id: 1480933944
 mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
