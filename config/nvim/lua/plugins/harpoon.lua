@@ -1,6 +1,5 @@
 return {
   {
     "ThePrimeagen/harpoon",
-    opts = {},
   },
 }
