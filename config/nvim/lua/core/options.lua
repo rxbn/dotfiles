@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.opt.guicursor = ""
 
 vim.opt.shortmess:append("I")
@@ -31,7 +34,6 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
--- Highlight on yank
 local yank_group = vim.api.nvim_create_augroup('HighlightYank', {})
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = yank_group,
