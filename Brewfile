@@ -189,6 +189,7 @@ mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
+mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541

@@ -74,6 +74,7 @@ yabai -m rule --add app="^Finder$" title="^Finder Settings$" manage=off
 yabai -m rule --add app="^Firefox$" title="^Library$" manage=off
 yabai -m rule --add app="^NVIDIA GeForce NOW$" manage=off
 yabai -m rule --add app="^Home$" manage=off
+yabai -m rule --add app="^LanguageTool$" manage=off
 yabai -m rule --add app="^Mail$" title="^(General|Accounts|Junk Mail|Fonts & Colors|Viewing|Composing|Signatures|Rules|Extensions|Privacy)$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Music$" manage=off
