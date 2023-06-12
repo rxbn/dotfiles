@@ -243,7 +243,6 @@ null_ls.setup {
     null_ls.builtins.diagnostics.golangci_lint,
     null_ls.builtins.diagnostics.markdownlint,
     null_ls.builtins.formatting.rustfmt,
-    null_ls.builtins.code_actions.eslint,
   },
   on_attach = on_attach,
 }
