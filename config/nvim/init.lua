@@ -1,6 +1,6 @@
--- set leader key to space
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+require("core.options")
+require("core.keymaps")
+require("core.filetypes")
 
 -- install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
