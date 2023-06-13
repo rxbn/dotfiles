@@ -1,5 +1,4 @@
 local nmap = require("rxbn.keymap").nmap
-local imap = require("rxbn.keymap").imap
 local vmap = require("rxbn.keymap").vmap
 
 -- netrw
@@ -39,6 +38,3 @@ nmap({ "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]] })
 
 -- tmux-sessionizer
 nmap({ "<c-f>", "<Cmd>silent !tmux neww tmux-sessionizer<CR>" })
-
--- ThePrimeagen
-imap({ "<c-c>", "<Esc>" })
