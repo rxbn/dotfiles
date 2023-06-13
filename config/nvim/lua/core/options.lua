@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 local opt = vim.opt
 
+opt.termguicolors = true
 opt.guicursor = ""
 opt.showmode = false
 opt.showcmd = true

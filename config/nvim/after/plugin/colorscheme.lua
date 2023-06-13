@@ -1,4 +1,3 @@
-vim.opt.termguicolors = true
 require("catppuccin").setup({
   flavour = "frappe",
   integrations = {
