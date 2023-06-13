@@ -9,7 +9,6 @@ lspkind.init({
 })
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
-require("luasnip.loaders.from_vscode").lazy_load()
 require("copilot_cmp").setup()
 
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
