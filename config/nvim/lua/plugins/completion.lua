@@ -20,6 +20,10 @@ return {
         end,
       },
       "roobert/tailwindcss-colorizer-cmp.nvim",
+      {
+        "zbirenbaum/copilot-cmp",
+        opts = {},
+      },
     },
     opts = function()
       local cmp = require("cmp")
@@ -106,9 +110,5 @@ return {
         ["*"] = true,
       },
     },
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    opts = {},
   },
 }
