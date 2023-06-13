@@ -1,9 +1,15 @@
 return {
   "neovim/nvim-lspconfig",
-  "williamboman/mason.nvim",
+  {
+    "williamboman/mason.nvim",
+    build = ":MasonUpdate",
+  },
   "williamboman/mason-lspconfig.nvim",
 
-  "glepnir/lspsaga.nvim",
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+  },
 
   "jose-elias-alvarez/null-ls.nvim",
 
