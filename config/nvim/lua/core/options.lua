@@ -13,8 +13,6 @@ opt.signcolumn = "yes"
 
 opt.shortmess:append("I")
 
-opt.autowrite = true
-opt.autoread = true
 opt.swapfile = false
 
 opt.tabstop = 2
