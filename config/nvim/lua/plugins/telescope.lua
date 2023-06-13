@@ -1,7 +1,16 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        config = function()
+          require("telescope").load_extension("fzf")
+        end,
+      },
+    },
     cmd = "Telescope",
     keys = {
       { "<leader>pf", "<Cmd>Telescope find_files<CR>" },
@@ -24,7 +33,6 @@ return {
         end,
       },
       { "<leader>fb", "<Cmd>Telescope buffers<CR>" },
-      { "<leader>lb", "<Cmd>Telescope dap list_breakpoints<CR>" },
       { "<leader>lt", "<Cmd>TodoTelescope<CR>" },
       {
         "<leader>/",
@@ -37,15 +45,5 @@ return {
         end,
       },
     },
-    config = function()
-      local telescope = require("telescope")
-
-      telescope.load_extension("dap")
-      telescope.load_extension("fzf")
-    end,
-  },
-  {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make",
   },
 }

@@ -29,7 +29,6 @@ return {
         "theHamsta/nvim-dap-virtual-text",
         opts = {},
       },
-      "nvim-telescope/telescope-dap.nvim",
       {
         "leoluz/nvim-dap-go",
         opts = {},
@@ -40,9 +39,16 @@ return {
           require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
         end,
       },
+      {
+        "nvim-telescope/telescope-dap.nvim",
+        config = function()
+          require("telescope").load_extension("dap")
+        end,
+      },
     },
     keys = {
       { "<leader>db", '<Cmd>lua require("dap").toggle_breakpoint()<CR>' },
+      { "<leader>lb", "<Cmd>Telescope dap list_breakpoints<CR>" },
       { "<leader>dB", '<Cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>' },
       { "<leader>dc", '<Cmd>lua require("dap").continue()<CR>' },
       { "<leader>dt", '<Cmd>lua require("dap").terminate()<CR>' },
