@@ -6,8 +6,25 @@ require("fidget").setup({
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "yamlls", "gopls", "jsonls", "pylsp", "terraformls", "ansiblels", "jsonnet_ls",
-    "bashls", "dockerls", "tflint", "rust_analyzer", "marksman", "tsserver", "tailwindcss", "prismals", "taplo" }
+  ensure_installed = {
+    "lua_ls",
+    "yamlls",
+    "gopls",
+    "jsonls",
+    "pylsp",
+    "terraformls",
+    "ansiblels",
+    "jsonnet_ls",
+    "bashls",
+    "dockerls",
+    "tflint",
+    "rust_analyzer",
+    "marksman",
+    "tsserver",
+    "tailwindcss",
+    "prismals",
+    "taplo",
+  },
 })
 
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
@@ -54,21 +71,22 @@ local on_attach = function(client, bufnr)
     return
   end
 
-  buf_nnoremap { '<leader>rn', '<Cmd>Lspsaga rename<CR>' }
-  buf_nnoremap { '<leader>ca', '<Cmd>Lspsaga code_action<CR>' }
-  buf_nnoremap { 'gd', vim.lsp.buf.definition }
-  buf_nnoremap { 'gt', vim.lsp.buf.type_definition }
-  buf_nnoremap { 'gi', vim.lsp.buf.implementation }
-  buf_nnoremap { 'gr', '<Cmd>Telescope lsp_references<CR>' }
-  buf_nnoremap { '<leader>dn', '<Cmd>Lspsaga diagnostic_jump_next<CR>' }
-  buf_nnoremap { '<leader>dp', '<Cmd>Lspsaga diagnostic_jump_prev<CR>' }
-  buf_nnoremap { '<leader>dl', '<Cmd>Telescope diagnostics<CR>' }
-  buf_nnoremap { '<leader>ds', '<Cmd>Lspsaga show_line_diagnostics<CR>' }
-  buf_nnoremap { 'K', '<Cmd>Lspsaga hover_doc<CR>' }
+  buf_nnoremap({ "<leader>rn", "<Cmd>Lspsaga rename<CR>" })
+  buf_nnoremap({ "<leader>ca", "<Cmd>Lspsaga code_action<CR>" })
+  buf_nnoremap({ "gd", vim.lsp.buf.definition })
+  buf_nnoremap({ "gt", vim.lsp.buf.type_definition })
+  buf_nnoremap({ "gi", vim.lsp.buf.implementation })
+  buf_nnoremap({ "gr", "<Cmd>Telescope lsp_references<CR>" })
+  buf_nnoremap({ "<leader>dn", "<Cmd>Lspsaga diagnostic_jump_next<CR>" })
+  buf_nnoremap({ "<leader>dp", "<Cmd>Lspsaga diagnostic_jump_prev<CR>" })
+  buf_nnoremap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>" })
+  buf_nnoremap({ "<leader>ds", "<Cmd>Lspsaga show_line_diagnostics<CR>" })
+  buf_nnoremap({ "K", "<Cmd>Lspsaga hover_doc<CR>" })
 
-  buf_inoremap { '<c-s>', vim.lsp.buf.signature_help }
+  buf_inoremap({ "<c-s>", vim.lsp.buf.signature_help })
 
-  buf_nnoremap { '<leader>w',
+  buf_nnoremap({
+    "<leader>w",
     function()
       vim.api.nvim_clear_autocmds({
         group = augroup_format,
@@ -76,8 +94,8 @@ local on_attach = function(client, bufnr)
       })
       vim.cmd("w")
       format_on_save(client)
-    end
-  }
+    end,
+  })
 
   format_on_save(client)
 
@@ -110,7 +128,7 @@ updated_capabilities.textDocument.completion.completionItem.snippetSupport = tru
 
 local lspconfig = require("lspconfig")
 
-lspconfig.lua_ls.setup {
+lspconfig.lua_ls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
   settings = {
@@ -130,7 +148,7 @@ lspconfig.lua_ls.setup {
       },
     },
   },
-}
+})
 
 local yamlls_cfg = require("yaml-companion").setup({
   lspconfig = {
@@ -140,17 +158,17 @@ local yamlls_cfg = require("yaml-companion").setup({
 })
 lspconfig.yamlls.setup(yamlls_cfg)
 
-lspconfig.gopls.setup {
+lspconfig.gopls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
   settings = {
     gopls = {
-      gofumpt = true
+      gofumpt = true,
     },
   },
-}
+})
 
-lspconfig.jsonls.setup {
+lspconfig.jsonls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
   settings = {
@@ -159,82 +177,82 @@ lspconfig.jsonls.setup {
       validate = { enable = true },
     },
   },
-}
+})
 
-lspconfig.pylsp.setup {
+lspconfig.pylsp.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.terraformls.setup {
+lspconfig.terraformls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.tflint.setup {
+lspconfig.tflint.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.ansiblels.setup {
+lspconfig.ansiblels.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.jsonnet_ls.setup {
+lspconfig.jsonnet_ls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-  cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand "~/.jsonnet" },
+  cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
   settings = {
     formatting = {
       PadArrays = true,
     },
   },
-}
+})
 
-lspconfig.bashls.setup {
+lspconfig.bashls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.dockerls.setup {
+lspconfig.dockerls.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.rust_analyzer.setup {
+lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.marksman.setup {
+lspconfig.marksman.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.tailwindcss.setup {
+lspconfig.tailwindcss.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.prismals.setup {
+lspconfig.prismals.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
-lspconfig.taplo.setup {
+lspconfig.taplo.setup({
   on_attach = on_attach,
   capabilities = updated_capabilities,
-}
+})
 
 local null_ls = require("null-ls")
 
-null_ls.setup {
+null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.shfmt,
@@ -246,4 +264,4 @@ null_ls.setup {
     null_ls.builtins.diagnostics.markdownlint,
   },
   on_attach = on_attach,
-}
+})
