@@ -238,11 +238,12 @@ null_ls.setup {
   sources = {
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.shfmt,
+    null_ls.builtins.formatting.rustfmt,
+    null_ls.builtins.formatting.stylua,
     null_ls.builtins.diagnostics.yamllint,
     null_ls.builtins.diagnostics.ansiblelint,
     null_ls.builtins.diagnostics.golangci_lint,
     null_ls.builtins.diagnostics.markdownlint,
-    null_ls.builtins.formatting.rustfmt,
   },
   on_attach = on_attach,
 }

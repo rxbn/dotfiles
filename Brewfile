@@ -105,6 +105,8 @@ brew "sops"
 brew "sshuttle"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Opinionated Lua code formatter
+brew "stylua"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
