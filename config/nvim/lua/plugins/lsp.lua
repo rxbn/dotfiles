@@ -9,6 +9,11 @@ return {
   {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
+    opts = {
+      ui = {
+        kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+      },
+    },
   },
 
   "jose-elias-alvarez/null-ls.nvim",
