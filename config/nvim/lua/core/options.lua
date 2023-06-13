@@ -1,31 +1,32 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.guicursor = ""
-vim.opt.showmode = false
-vim.opt.showcmd = false
-vim.opt.laststatus = 3
+local opt = vim.opt
+
+opt.guicursor = ""
+opt.showmode = false
+opt.showcmd = true
+opt.laststatus = 3
 vim.cmd [[highlight WinSeparator guibg=None]]
-vim.opt.cursorline = true
-vim.opt.signcolumn = "yes"
+opt.cursorline = true
+opt.signcolumn = "yes"
 
-vim.opt.shortmess:append("I")
-vim.opt.backspace = '2'
+opt.shortmess:append("I")
 
-vim.opt.autowrite = true
-vim.opt.autoread = true
-vim.opt.swapfile = false
+opt.autowrite = true
+opt.autoread = true
+opt.swapfile = false
 
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.shiftround = true
-vim.opt.expandtab = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.shiftround = true
+opt.expandtab = true
 
-vim.wo.number = true
-vim.wo.relativenumber = true
+opt.relativenumber = true
+opt.number = true
 
-vim.opt.updatetime = 300
-vim.opt.scrolloff = 10
+opt.updatetime = 300
+opt.scrolloff = 10
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
