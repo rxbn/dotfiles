@@ -1,6 +1,7 @@
 require("dap-go").setup()
 require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
 require("dapui").setup()
+---@diagnostic disable-next-line: missing-parameter
 require("nvim-dap-virtual-text").setup()
 
 local dap, dapui = require("dap"), require("dapui")
