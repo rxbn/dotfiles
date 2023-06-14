@@ -141,20 +141,25 @@ return {
         taplo = {},
       }
 
-      local function setup(server)
-        local server_opts = vim.tbl_deep_extend("force", {
-          capabilities = require("rxbn.lsp").capabilities,
+      local function setup(server, server_opts)
+        if not server_opts then
+          return
+        end
+
+        if type(server_opts) ~= "table" then
+          server_opts = {}
+        end
+
+        server_opts = vim.tbl_deep_extend("force", {
           on_attach = require("rxbn.lsp").on_attach,
-        }, servers[server] or {})
+          capabilities = require("rxbn.lsp").capabilities,
+        }, server_opts)
 
         require("lspconfig")[server].setup(server_opts)
       end
 
       for server, server_opts in pairs(servers) do
-        if server_opts then
-          server_opts = server_opts == true and {} or server_opts
-          setup(server)
-        end
+        setup(server, server_opts)
       end
     end,
   },
