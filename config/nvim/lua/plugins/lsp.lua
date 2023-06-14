@@ -46,20 +46,20 @@ return {
       },
       {
         "jose-elias-alvarez/null-ls.nvim",
-        config = function()
-          require("null-ls").setup({
+        opts = function()
+          local nullls = require("null-ls")
+          return {
             sources = {
-              require("null-ls").builtins.formatting.prettier,
-              require("null-ls").builtins.formatting.shfmt,
-              require("null-ls").builtins.formatting.rustfmt,
-              require("null-ls").builtins.formatting.stylua,
-              require("null-ls").builtins.diagnostics.yamllint,
-              require("null-ls").builtins.diagnostics.ansiblelint,
-              require("null-ls").builtins.diagnostics.golangci_lint,
-              require("null-ls").builtins.diagnostics.markdownlint,
+              nullls.builtins.formatting.prettier,
+              nullls.builtins.formatting.shfmt,
+              nullls.builtins.formatting.rustfmt,
+              nullls.builtins.formatting.stylua,
+              nullls.builtins.diagnostics.yamllint,
+              nullls.builtins.diagnostics.ansiblelint,
+              nullls.builtins.diagnostics.golangci_lint,
+              nullls.builtins.diagnostics.markdownlint,
             },
-            on_attach = require("rxbn.lsp").on_attach,
-          })
+          }
         end,
       },
       {
@@ -141,14 +141,9 @@ return {
         taplo = {},
       }
 
-      local updated_capabilities = vim.lsp.protocol.make_client_capabilities()
-      vim.tbl_deep_extend("force", updated_capabilities, require("cmp_nvim_lsp").default_capabilities())
-      updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
-      updated_capabilities.textDocument.completion.completionItem.snippetSupport = true
-
       local function setup(server)
         local server_opts = vim.tbl_deep_extend("force", {
-          capabilities = vim.deepcopy(updated_capabilities),
+          capabilities = require("rxbn.lsp").capabilities,
           on_attach = require("rxbn.lsp").on_attach,
         }, servers[server] or {})
 

@@ -1,5 +1,3 @@
-local M = {}
-
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
 local augroup_format = vim.api.nvim_create_augroup("custom-lsp-format", { clear = true })
 local nmap = require("rxbn.keymap").nmap
@@ -39,7 +37,7 @@ local format_on_save = function(client)
   end
 end
 
-M.on_attach = function(client, bufnr)
+local custom_on_attach = function(client, bufnr)
   if client.name == "copilot" then
     return
   end
@@ -94,4 +92,13 @@ M.on_attach = function(client, bufnr)
   end
 end
 
-return M
+local updated_capabilities = vim.lsp.protocol.make_client_capabilities()
+updated_capabilities.textDocument.completion.completionItem.snippetSupport = true
+updated_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
+vim.tbl_deep_extend("force", updated_capabilities, require("cmp_nvim_lsp").default_capabilities())
+updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
+
+return {
+  on_attach = custom_on_attach,
+  capabilities = updated_capabilities,
+}
