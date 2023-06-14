@@ -5,12 +5,12 @@ return {
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end,
       },
     },
     cmd = "Telescope",
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
     keys = {
       { "<leader>pf", "<Cmd>Telescope find_files<CR>" },
       { "<c-p>", "<Cmd>Telescope git_files<CR>" },
