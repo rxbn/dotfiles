@@ -13,7 +13,7 @@ return {
     end,
     keys = {
       { "<leader>pf", "<Cmd>Telescope find_files<CR>" },
-      { "<c-p>", "<Cmd>Telescope git_files<CR>" },
+      { "<c-p>",      "<Cmd>Telescope git_files<CR>" },
       {
         "<leader>ps",
         function()
@@ -32,7 +32,6 @@ return {
         end,
       },
       { "<leader>fb", "<Cmd>Telescope buffers<CR>" },
-      { "<leader>lt", "<Cmd>TodoTelescope<CR>" },
       {
         "<leader>/",
         function()
