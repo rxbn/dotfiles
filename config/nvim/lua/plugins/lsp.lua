@@ -72,6 +72,7 @@ return {
         },
       },
       "b0o/schemastore.nvim",
+      "someone-stole-my-name/yaml-companion.nvim",
     },
     config = function()
       local servers = {
@@ -94,16 +95,12 @@ return {
             },
           },
         },
-        yamlls = {
-          settings = {
-            yaml = {
-              schemaStore = {
-                enable = false,
-              },
-              schemas = require("schemastore").yaml.schemas(),
-            },
+        yamlls = require("yaml-companion").setup({
+          lspconfig = {
+            on_attach = require("rxbn.lsp").on_attach,
+            capabilities = require("rxbn.lsp").capabilities,
           },
-        },
+        }),
         gopls = {
           settings = {
             gopls = {
