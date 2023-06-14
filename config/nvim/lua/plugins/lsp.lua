@@ -6,35 +6,8 @@ return {
       "BufNewFile",
     },
     dependencies = {
-      {
-        "williamboman/mason.nvim",
-        build = ":MasonUpdate",
-        opts = {},
-      },
-      {
-        "williamboman/mason-lspconfig.nvim",
-        opts = {
-          ensure_installed = {
-            "lua_ls",
-            "yamlls",
-            "gopls",
-            "jsonls",
-            "pylsp",
-            "terraformls",
-            "ansiblels",
-            "jsonnet_ls",
-            "bashls",
-            "dockerls",
-            "tflint",
-            "rust_analyzer",
-            "marksman",
-            "tsserver",
-            "tailwindcss",
-            "prismals",
-            "taplo",
-          },
-        },
-      },
+      "mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
       {
         "glepnir/lspsaga.nvim",
         event = "LspAttach",
@@ -138,26 +111,32 @@ return {
         taplo = {},
       }
 
-      local function setup(server, server_opts)
-        if not server_opts then
-          return
-        end
-
-        if type(server_opts) ~= "table" then
-          server_opts = {}
-        end
-
-        server_opts = vim.tbl_deep_extend("force", {
+      local function setup(server)
+        local server_opts = vim.tbl_deep_extend("force", {
           on_attach = require("rxbn.lsp").on_attach,
           capabilities = require("rxbn.lsp").capabilities,
-        }, server_opts)
+        }, servers[server])
 
         require("lspconfig")[server].setup(server_opts)
       end
 
+      local ensure_installed = {}
       for server, server_opts in pairs(servers) do
-        setup(server, server_opts)
+        if server_opts then
+          server_opts = server_opts == true and {} or server_opts
+          ensure_installed[#ensure_installed + 1] = server
+        end
       end
+
+      require("mason-lspconfig").setup({
+        ensure_installed = ensure_installed,
+        handlers = { setup },
+      })
     end,
+  },
+  {
+    "williamboman/mason.nvim",
+    cmd = "Mason",
+    opts = {},
   },
 }
