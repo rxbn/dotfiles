@@ -9,7 +9,6 @@ return {
         "nvim-treesitter/nvim-treesitter-context",
         opts = {},
       },
-      "nvim-treesitter/nvim-treesitter-textobjects",
       "HiPhish/nvim-ts-rainbow2",
     },
     config = function()
