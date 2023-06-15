@@ -190,6 +190,7 @@ mas "Affinity Photo", id: 824183456
 mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
+mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309

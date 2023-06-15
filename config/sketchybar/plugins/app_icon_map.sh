@@ -1,4 +1,7 @@
 case $@ in
+"Infuse")
+	icon_result=":playing:"
+	;;
 "WireGuard")
 	icon_result=":vpn:"
 	;;
