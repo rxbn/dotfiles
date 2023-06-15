@@ -35,6 +35,9 @@ symbol = " "
 [lua]
 symbol = "󰢱 "
 
+[docker_context]
+symbol = "󰡨 "
+
 [kubernetes]
 disabled = false
 symbol = "󱃾 "
