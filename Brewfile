@@ -29,6 +29,8 @@ brew "direnv"
 brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
