@@ -33,6 +33,9 @@ export WHITE='\033[1;37m'
 export ANSIBLE_VAULT_PASSWORD_FILE="~/bin/ansible-vault-pass"
 export ANSIBLE_INVENTORY="inventory/hosts"
 
+# Homebrew
+export HOMEBREW_NO_ANALYTICS=1
+
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
