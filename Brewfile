@@ -39,6 +39,8 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Stricter gofmt
+brew "gofumpt"
 # Fast linters runner for Go
 brew "golangci-lint"
 # GNU grep, egrep and fgrep

@@ -21,18 +21,27 @@ local buf_inoremap = function(map_opts)
   imap(map_opts)
 end
 
-local format_on_save = function(client)
-  if client.server_capabilities.documentFormattingProvider then
+local lsp_formatting = function()
+  vim.lsp.buf.format({
+    filter = function(client)
+      return client.name == "null-ls"
+    end,
+    async = false,
+  })
+end
+
+local format_on_save = function(client, bufnr)
+  if client.supports_method("textDocument/formatting") then
     vim.api.nvim_clear_autocmds({
       group = augroup_format,
-      buffer = 0,
+      buffer = bufnr,
     })
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = augroup_format,
+      buffer = bufnr,
       callback = function()
-        vim.lsp.buf.format({ async = false })
+        lsp_formatting()
       end,
-      buffer = 0,
     })
   end
 end
@@ -64,11 +73,11 @@ local custom_on_attach = function(client, bufnr)
         buffer = 0,
       })
       vim.cmd("w")
-      format_on_save(client)
+      format_on_save(client, bufnr)
     end,
   })
 
-  format_on_save(client)
+  format_on_save(client, bufnr)
 
   if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_clear_autocmds({

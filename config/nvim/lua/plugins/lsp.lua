@@ -24,6 +24,10 @@ return {
               nullls.builtins.formatting.shfmt,
               nullls.builtins.formatting.rustfmt,
               nullls.builtins.formatting.stylua,
+              nullls.builtins.formatting.gofumpt,
+              nullls.builtins.formatting.jsonnetfmt.with({
+                extra_args = { "--pad-arrays" },
+              }),
               nullls.builtins.diagnostics.yamllint,
               nullls.builtins.diagnostics.ansiblelint,
               nullls.builtins.diagnostics.golangci_lint,
@@ -71,13 +75,6 @@ return {
             capabilities = require("rxbn.lsp").capabilities,
           },
         }),
-        gopls = {
-          settings = {
-            gopls = {
-              gofumpt = true,
-            },
-          },
-        },
         jsonls = {
           settings = {
             json = {
@@ -86,17 +83,13 @@ return {
             },
           },
         },
+        jsonnet_ls = {
+          cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
+        },
+        gopls = {},
         pylsp = {},
         terraformls = {},
         ansiblels = {},
-        jsonnet_ls = {
-          cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
-          settings = {
-            formatting = {
-              PadArrays = true,
-            },
-          },
-        },
         bashls = {},
         dockerls = {},
         tflint = {},
