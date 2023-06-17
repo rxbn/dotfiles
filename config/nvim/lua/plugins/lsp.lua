@@ -25,6 +25,9 @@ return {
               nullls.builtins.formatting.rustfmt,
               nullls.builtins.formatting.stylua,
               nullls.builtins.formatting.gofumpt,
+              nullls.builtins.formatting.terraform_fmt,
+              nullls.builtins.formatting.taplo,
+              nullls.builtins.formatting.autopep8,
               nullls.builtins.formatting.jsonnetfmt.with({
                 extra_args = { "--pad-arrays" },
               }),
