@@ -19,6 +19,8 @@ brew "yamllint"
 brew "ansible-lint"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
+# Automatically formats Python code to conform to the PEP 8 style guide
+brew "autopep8"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Debugger for the Go programming language
