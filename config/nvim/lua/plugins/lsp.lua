@@ -19,6 +19,7 @@ return {
         opts = function()
           local nullls = require("null-ls")
           return {
+            on_attach = require("rxbn.lsp").on_attach,
             sources = {
               nullls.builtins.formatting.prettier,
               nullls.builtins.formatting.shfmt,

@@ -31,7 +31,7 @@ local lsp_formatting = function()
 end
 
 local format_on_save = function(client, bufnr)
-  if client.supports_method("textDocument/formatting") then
+  if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_clear_autocmds({
       group = augroup_format,
       buffer = bufnr,
