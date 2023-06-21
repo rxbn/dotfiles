@@ -13,14 +13,8 @@ tap "koekeishiya/formulae"
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# Linter for YAML files
-brew "yamllint"
-# Checks ansible playbooks for practices and behaviour
-brew "ansible-lint"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
-# Automatically formats Python code to conform to the PEP 8 style guide
-brew "autopep8"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Debugger for the Go programming language
@@ -41,10 +35,6 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Stricter gofmt
-brew "gofumpt"
-# Fast linters runner for Go
-brew "golangci-lint"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Manage workspaces composed of git repositories
@@ -69,16 +59,14 @@ brew "kubectx"
 brew "kubent"
 # Implementation of the file(1) command
 brew "libmagic"
-# Platform built on V8 to build network applications
-brew "node"
-# CLI for Node.js style checker and lint tool for Markdown files
-brew "markdownlint-cli"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
+brew "node"
 # OpenShift command-line interface tools
 brew "openshift-cli"
 # SDK for building Kubernetes applications
@@ -87,8 +75,6 @@ brew "operator-sdk"
 brew "pnpm"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
-brew "prettier"
 # Password generator
 brew "pwgen"
 # Python version management
@@ -99,20 +85,14 @@ brew "restic"
 brew "ripgrep"
 # Safe, concurrent, practical language
 brew "rust"
-# Format Rust code
-brew "rustfmt"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Autoformat shell script source code
-brew "shfmt"
 # Editor of encrypted files
 brew "sops"
 # Proxy server that works as a poor man's VPN
 brew "sshuttle"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Opinionated Lua code formatter
-brew "stylua"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to build, change, and version infrastructure
