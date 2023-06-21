@@ -131,6 +131,7 @@ return {
   {
     "williamboman/mason.nvim",
     cmd = "Mason",
+    build = ":MasonUpdate",
     opts = {
       ensure_installed = {
         "prettierd",
