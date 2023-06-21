@@ -36,7 +36,16 @@ return {
       {
         "mfussenegger/nvim-dap-python",
         config = function()
-          require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+          local debugpy_path = require("mason-core.path").concat({
+            vim.fn.stdpath("data"),
+            "mason",
+            "packages",
+            "debugpy",
+            "venv",
+            "bin",
+            "python",
+          })
+          require("dap-python").setup(debugpy_path)
         end,
       },
       {

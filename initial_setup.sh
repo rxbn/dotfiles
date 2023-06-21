@@ -106,10 +106,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
-# Configure python dap
-python -m venv ~/.virtualenvs/debugpy
-~/.virtualenvs/debugpy/bin/python -m pip install debugpy
-
 # Disable animations when opening and closing windows.
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 

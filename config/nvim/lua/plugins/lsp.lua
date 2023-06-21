@@ -143,6 +143,8 @@ return {
         "ansible-lint",
         "golangci-lint",
         "markdownlint",
+        "delve",
+        "debugpy",
       },
     },
     config = function(_, opts)

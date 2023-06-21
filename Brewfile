@@ -17,8 +17,6 @@ brew "ansible"
 brew "argocd"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Debugger for the Go programming language
-brew "delve"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Simple, fast and user-friendly alternative to find
