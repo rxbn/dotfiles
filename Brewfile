@@ -69,7 +69,7 @@ brew "node"
 brew "openshift-cli"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
-# 📦🚀 Fast, disk space efficient package manager
+# Fast, disk space efficient package manager
 brew "pnpm"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
