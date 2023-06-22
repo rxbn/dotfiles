@@ -14,7 +14,7 @@ return {
     end,
     keys = {
       { "<leader>pf", "<Cmd>Telescope find_files<CR>" },
-      { "<c-p>",      "<Cmd>Telescope git_files<CR>" },
+      { "<c-p>", "<Cmd>Telescope git_files<CR>" },
       {
         "<leader>ps",
         function()
