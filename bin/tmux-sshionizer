@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+function select_server() {
+	local hosts
+	hosts=$(awk -F '[ ,]' '{print $1}' ~/.ssh/known_hosts | ggrep -Pv '(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[\da-f]*:[\da-f:]*:[\da-f]*)' | sort -u)
+
+	echo "$hosts" | fzf
+}
+
+if [[ $# -eq 1 ]]; then
+	selected_server=$1
+else
+	selected_server=$(select_server)
+fi
+
+if [[ -z $selected_server ]]; then
+	exit 0
+fi
+
+session_name=$(basename "$selected_server" | tr . _)
+
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+	tmux new-session -s "$session_name" ssh "$selected_server"
+	exit 0
+fi
+
+if ! tmux has-session -t="$session_name" 2>/dev/null; then
+	tmux new-session -ds "$session_name" ssh "$selected_server"
+fi
+
+if [[ -z $TMUX ]]; then
+	tmux attach-session -t "$session_name"
+else
+	tmux switch-client -t "$session_name"
+fi

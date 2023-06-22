@@ -87,6 +87,7 @@ autoload -Uz compinit && compinit -i
 eval "$(direnv hook zsh)"
 
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^g "tmux-sshionizer\n"
 
 # make fzf beautiful
 export FZF_DEFAULT_OPTS=" \
