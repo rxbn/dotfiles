@@ -21,7 +21,6 @@ return {
           return {
             on_attach = require("rxbn.lsp").on_attach,
             sources = {
-              nullls.builtins.formatting.prettierd,
               nullls.builtins.formatting.shfmt,
               nullls.builtins.formatting.rustfmt,
               nullls.builtins.formatting.stylua,
@@ -29,6 +28,9 @@ return {
               nullls.builtins.formatting.terraform_fmt,
               nullls.builtins.formatting.taplo,
               nullls.builtins.formatting.autopep8,
+              nullls.builtins.formatting.prettierd.with({
+                extra_filetypes = { "prisma" },
+              }),
               nullls.builtins.formatting.jsonnetfmt.with({
                 extra_args = { "--pad-arrays" },
               }),
