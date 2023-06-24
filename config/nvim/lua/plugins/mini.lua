@@ -1,11 +1,5 @@
 return {
   {
-    "echasnovski/mini.surround",
-    event = { "BufReadPost", "BufNewFile" },
-    opts = {},
-  },
-
-  {
     "JoosepAlviste/nvim-ts-context-commentstring",
     lazy = true,
   },
