@@ -22,11 +22,9 @@ return {
             on_attach = require("rxbn.lsp").on_attach,
             sources = {
               nullls.builtins.formatting.shfmt,
-              nullls.builtins.formatting.rustfmt,
               nullls.builtins.formatting.stylua,
               nullls.builtins.formatting.gofumpt,
               nullls.builtins.formatting.terraform_fmt,
-              nullls.builtins.formatting.taplo,
               nullls.builtins.formatting.prettierd.with({
                 extra_filetypes = { "prisma" },
               }),
@@ -97,12 +95,10 @@ return {
         bashls = {},
         dockerls = {},
         tflint = {},
-        rust_analyzer = {},
         marksman = {},
         tsserver = {},
         tailwindcss = {},
         prismals = {},
-        taplo = {},
       }
 
       local function setup(server)
@@ -136,7 +132,6 @@ return {
       ensure_installed = {
         "prettierd",
         "shfmt",
-        "rustfmt",
         "stylua",
         "gofumpt",
         "yamllint",

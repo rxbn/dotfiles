@@ -16,7 +16,6 @@ return {
         ensure_installed = {
           "lua",
           "go",
-          "rust",
           "json",
           "yaml",
           "markdown",
