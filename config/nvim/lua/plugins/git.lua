@@ -6,6 +6,7 @@ return {
   },
   {
     "tpope/vim-fugitive",
+    cmd = "Git",
     keys = {
       { "<leader>gs", "<Cmd>Git<CR>" },
       { "<leader>ga", "<Cmd>Git add --all<CR>" },
