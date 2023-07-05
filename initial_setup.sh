@@ -142,6 +142,7 @@ ln -sf "${repo_path}/config/yamllint/config" ~/.config/yamllint/config
 ln -sf "${repo_path}/bin/ansible-vault-pass" ~/bin/ansible-vault-pass
 ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
+ln -sf "${repo_path}/bin/open-iterm" ~/bin/open-iterm
 ln -sf "${repo_path}/work/kubeconfigs-envrc" ~/work/kubeconfigs/.global-envrc
 ln -sf "${repo_path}/cargo/config.toml" ~/.cargo/config.toml
 
