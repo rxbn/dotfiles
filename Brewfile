@@ -116,7 +116,7 @@ brew "containeroo/tap/otpgen"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
 # Flux CLI
-brew "fluxcd/tap/flux@0.41"
+brew "fluxcd/tap/flux"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
