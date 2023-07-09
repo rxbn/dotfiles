@@ -3,6 +3,7 @@
 if application "Safari" is running then
 	tell application "Safari"
 		make new document
+		activate
 	end tell
 else
 	activate application "Safari"
