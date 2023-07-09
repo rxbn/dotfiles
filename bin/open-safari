@@ -1,0 +1,10 @@
+#!/usr/bin/osascript
+
+if application "Safari" is running then
+	tell application "Safari"
+		make new document
+	end tell
+else
+	activate application "Safari"
+end if
+# vi: ft=applescript
