@@ -5,6 +5,11 @@ nmap({ "<leader>pv", vim.cmd.Ex })
 
 nmap({ "<c-q>", "<Cmd>nohlsearch<CR>" })
 
+nmap({ "<m-.>", "<Cmd>bnext<CR>" })
+nmap({ "<m-,>", "<Cmd>bprevious<CR>" })
+nmap({ "<m-c>", "<Cmd>bd<CR>" })
+nmap({ "<m-C>", "<Cmd>bd!<CR>" })
+
 nmap({ "<c-d>", "<c-d>zz" })
 nmap({ "<c-u>", "<c-u>zz" })
 nmap({ "n", "nzzzv" })
