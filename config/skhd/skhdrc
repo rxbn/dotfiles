@@ -61,6 +61,7 @@ alt + shift - d : yabai -m window --resize right:100:0 || yabai -m window --resi
 alt - e : yabai -m space --layout bsp; sketchybar --trigger window_focus
 alt - s : yabai -m space --layout stack; sketchybar --trigger window_focus
 
+alt - space         : yabai -m window --toggle sticky; yabai -m window --toggle topmost; sketchybar --trigger windows_on_spaces
 alt + shift - space : yabai -m window --toggle float; sketchybar --trigger window_focus
 
 # make floating window fill screen
