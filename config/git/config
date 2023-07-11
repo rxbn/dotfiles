@@ -1,15 +1,21 @@
-[core]
-  editor = nvim
 [include]
   path = ~/.config/git/personal.conf
 [includeIf "gitdir:~/work/"]
   path = ~/.config/git/work.conf
-[pull]
-  rebase = false
 [init]
   defaultBranch = master
 [url "git@github.com:"]
   insteadOf = https://github.com
+[core]
+  editor = nvim
+[pull]
+  rebase = true
+[fetch]
+  prune = true
+[diff]
+  colorMoved = zebra
+[push]
+  autoSetupRemote = true
 [gpg]
   format = ssh
 [gpg "ssh"]
@@ -18,6 +24,4 @@
   gpgsign = true
 [user]
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICqqCfH9YbiT1SVZmbabK8B+k5B80mN0x0jcD4COLhWj
-[push]
-  autoSetupRemote = true
 # vi: ft=gitconfig
