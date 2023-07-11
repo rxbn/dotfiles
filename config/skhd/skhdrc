@@ -28,8 +28,7 @@ alt + ctrl - l : yabai -m window --insert east
 alt - b : yabai -m space --focus recent
 
 # move focused window to previous workspace
-alt + shift - b : yabai -m window --space recent; \
-                  yabai -m space --focus recent
+alt + shift - b : yabai -m window --space recent; yabai -m space --focus recent
 
 # move focused window to next/prev workspace
 alt + shift - 1 : yabai -m window --space 1 && sketchybar --trigger windows_on_spaces
@@ -65,13 +64,13 @@ alt - space         : yabai -m window --toggle sticky; yabai -m window --toggle 
 alt + shift - space : yabai -m window --toggle float; sketchybar --trigger window_focus
 
 # make floating window fill screen
-alt + cmd - up     : yabai -m window --grid 1:1:0:0:1:1
+alt + cmd - up : yabai -m window --grid 1:1:0:0:1:1
 
 # make floating window fill left-half of screen
-alt + cmd - left   : yabai -m window --grid 1:2:0:0:1:1
+alt + cmd - left : yabai -m window --grid 1:2:0:0:1:1
 
 # make floating window fill right-half of screen
-alt + cmd - right  : yabai -m window --grid 1:2:1:0:1:1
+alt + cmd - right : yabai -m window --grid 1:2:1:0:1:1
 
 # close focused window
 alt - w : yabai -m window --close
@@ -83,12 +82,12 @@ alt - f : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
 # focus monitor
-alt + ctrl - x  : yabai -m display --focus recent
-alt + ctrl - z  : yabai -m display --focus prev
-alt + ctrl - c  : yabai -m display --focus next
-alt + ctrl - 1  : yabai -m display --focus 1
-alt + ctrl - 2  : yabai -m display --focus 2
-alt + ctrl - 3  : yabai -m display --focus 3
+alt + ctrl - x : yabai -m display --focus recent
+alt + ctrl - z : yabai -m display --focus prev
+alt + ctrl - c : yabai -m display --focus next
+alt + ctrl - 1 : yabai -m display --focus 1
+alt + ctrl - 2 : yabai -m display --focus 2
+alt + ctrl - 3 : yabai -m display --focus 3
 
 # focus space
 alt - 1 : yabai -m space --focus 1
