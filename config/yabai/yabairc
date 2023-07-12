@@ -85,6 +85,7 @@ yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Nextcloud$" manage=off
 yabai -m rule --add app="^Notes$" title="^Settings$" manage=off
+yabai -m rule --add app="^Photo Booth$" manage=off
 yabai -m rule --add app="^Podcasts$" manage=off
 yabai -m rule --add app="^Reminders$" manage=off
 yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advanced)$" manage=off
