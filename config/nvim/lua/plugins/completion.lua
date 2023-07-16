@@ -62,6 +62,16 @@ return {
     opts = function()
       local cmp = require("cmp")
       return {
+        window = {
+          completion = {
+            border = "rounded",
+            winhighlight = "Normal:CmpNormal",
+          },
+          documentation = {
+            border = "rounded",
+            winhighlight = "Normal:CmpNormal",
+          },
+        },
         completion = {
           completeopt = "menu,menuone,noinsert",
         },
