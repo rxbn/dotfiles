@@ -63,14 +63,8 @@ return {
       local cmp = require("cmp")
       return {
         window = {
-          completion = {
-            border = "rounded",
-            winhighlight = "Normal:CmpNormal",
-          },
-          documentation = {
-            border = "rounded",
-            winhighlight = "Normal:CmpNormal",
-          },
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
         },
         completion = {
           completeopt = "menu,menuone,noinsert",
