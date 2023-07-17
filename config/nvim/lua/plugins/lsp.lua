@@ -11,6 +11,7 @@ return {
         opts = {
           ui = {
             kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+            code_action = "󰌵",
           },
         },
       },
