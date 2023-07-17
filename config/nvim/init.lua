@@ -1,3 +1,4 @@
+require("rxbn.globals")
 require("core.options")
 require("core.keymaps")
 require("core.filetypes")
