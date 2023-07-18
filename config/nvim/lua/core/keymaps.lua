@@ -10,6 +10,7 @@ nmap({ "<m-,>", "<Cmd>bprevious<CR>" })
 nmap({ "<m-c>", "<Cmd>bd<CR>" })
 nmap({ "<m-C>", "<Cmd>bd!<CR>" })
 
+nmap({ "J", "mzJ`z" })
 nmap({ "<c-d>", "<c-d>zz" })
 nmap({ "<c-u>", "<c-u>zz" })
 nmap({ "n", "nzzzv" })
