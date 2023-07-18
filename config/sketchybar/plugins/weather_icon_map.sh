@@ -12,16 +12,16 @@ case $@ in
 	icon_result="􀇗" # rainy with clouds and sun
 	;;
 "7" | "10" | "31")
-	icon_result="􀇑􀆬" # sleet with clouds and sun
+	icon_result="􀆬􀇑" # sleet with clouds and sun
 	;;
 "8" | "11" | "30" | "34")
-	icon_result="􀇏􀆬" # snow with clouds and sun
+	icon_result="􀆬􀇏" # snow with clouds and sun
 	;;
 "12" | "41")
 	icon_result="􀇙" # thunderstorm with clouds and sun
 	;;
 "13" | "36" | "38")
-	icon_result="􀇟􀆬" # thunderstorm with rain and sun
+	icon_result="􀆬􀇟" # thunderstorm with rain and sun
 	;;
 "14" | "17" | "64" | "67" | "114" | "117")
 	icon_result="􀇇" # rainy
@@ -39,19 +39,19 @@ case $@ in
 	icon_result="􀇟" # thunderstorm with rain
 	;;
 "27")
-	icon_result="􀇋􀆬" # fog with sun
+	icon_result="􀆬􀇋" # fog with sun
 	;;
 "28" | "78" | "128")
 	icon_result="􀇋" # foggy
 	;;
 "37" | "39")
-	icon_result="􀇏􀋦􀆬" # thunderstorm with snow and sun
+	icon_result="􀆬􀋦􀇏" # thunderstorm with snow and sun
 	;;
 "40" | "140")
 	icon_result="􀇓" # thunderstorm with clouds
 	;;
 "42" | "142")
-	icon_result="􀇏􀋦" # thunderstorm with snow
+	icon_result="􀋦􀇏" # thunderstorm with snow
 	;;
 "51" | "101")
 	icon_result="􀆺" # moon
@@ -63,25 +63,25 @@ case $@ in
 	icon_result="􀇝" # moon with rain
 	;;
 "133")
-	icon_result="􀇉􀆺" # heavy rain with moon
+	icon_result="􀆺􀇉" # heavy rain with moon
 	;;
 "57" | "60" | "107" | "110" | "131")
-	icon_result="􀇑􀆺" # sleet with moon
+	icon_result="􀆺􀇑" # sleet with moon
 	;;
 "58" | "61" | "108" | "111" | "130" | "134")
-	icon_result="􀇏􀆺" # snow with moon
+	icon_result="􀆺􀇏" # snow with moon
 	;;
 "62" | "112" | "141")
 	icon_result="􀇡" # thunderstorm with moon
 	;;
 "63" | "113" | "136" | "138")
-	icon_result="􀇟􀆺" # thunderstorm with rain and moon
+	icon_result="􀆺􀇟" # thunderstorm with rain and moon
 	;;
 "76" | "77" | "127")
-	icon_result="􀇋􀆺" # fog with moon
+	icon_result="􀆺􀇋" # fog with moon
 	;;
 "137" | "139")
-	icon_result="􀇏􀋦􀆺" # thunderstorm with snow and moon
+	icon_result="􀆺􀋦􀇏" # thunderstorm with snow and moon
 	;;
 *)
 	icon_result="􀃬"
