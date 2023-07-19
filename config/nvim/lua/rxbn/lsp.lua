@@ -51,7 +51,6 @@ local custom_on_attach = function(client, bufnr)
     return
   end
 
-  buf_nnoremap({ "<leader>rn", "<Cmd>Lspsaga rename<CR>" })
   buf_nnoremap({ "<leader>ca", "<Cmd>Lspsaga code_action<CR>" })
   buf_nnoremap({ "gd", vim.lsp.buf.definition })
   buf_nnoremap({ "gt", vim.lsp.buf.type_definition })
@@ -78,6 +77,10 @@ local custom_on_attach = function(client, bufnr)
   })
 
   format_on_save(client, bufnr)
+
+  if client.server_capabilities.renameProvider then
+    buf_nnoremap({ "<leader>r", "<Cmd>Lspsaga rename<CR>" })
+  end
 
   if client.server_capabilities.documentHighlightProvider then
     vim.api.nvim_clear_autocmds({
