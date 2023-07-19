@@ -151,8 +151,6 @@ cask "nextcloud"
 cask "nvidia-geforce-now"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Collaboration platform for API development
-cask "postman"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
