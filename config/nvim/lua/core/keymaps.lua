@@ -1,5 +1,6 @@
 local nmap = require("rxbn.keymap").nmap
 local vmap = require("rxbn.keymap").vmap
+local xmap = require("rxbn.keymap").xmap
 
 nmap({ "<leader>pv", vim.cmd.Ex })
 
@@ -9,6 +10,8 @@ nmap({ "<m-.>", "<Cmd>bnext<CR>" })
 nmap({ "<m-,>", "<Cmd>bprevious<CR>" })
 nmap({ "<m-c>", "<Cmd>bd<CR>" })
 nmap({ "<m-C>", "<Cmd>bd!<CR>" })
+
+xmap({ "<leader>p", [["_dP]] })
 
 nmap({ "J", "mzJ`z" })
 nmap({ "<c-d>", "<c-d>zz" })
