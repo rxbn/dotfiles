@@ -137,6 +137,8 @@ cask "aldente"
 cask "alfred"
 # Open links in any browser
 cask "choosy"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
