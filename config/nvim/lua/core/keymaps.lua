@@ -11,6 +11,9 @@ nmap({ "<m-,>", "<Cmd>bprevious<CR>" })
 nmap({ "<m-c>", "<Cmd>bd<CR>" })
 nmap({ "<m-C>", "<Cmd>bd!<CR>" })
 
+nmap({ "<c-n>", "<Cmd>cnext<CR>zz" })
+nmap({ "<c-m>", "<Cmd>cprev<CR>zz" })
+
 xmap({ "<leader>p", [["_dP]] })
 
 nmap({ "J", "mzJ`z" })
