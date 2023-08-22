@@ -51,16 +51,16 @@ local custom_on_attach = function(client, bufnr)
     return
   end
 
-  buf_nnoremap({ "<leader>ca", "<Cmd>Lspsaga code_action<CR>" })
+  buf_nnoremap({ "<leader>ca", vim.lsp.buf.code_action })
   buf_nnoremap({ "gd", vim.lsp.buf.definition })
   buf_nnoremap({ "gt", vim.lsp.buf.type_definition })
   buf_nnoremap({ "gi", vim.lsp.buf.implementation })
   buf_nnoremap({ "gr", "<Cmd>Telescope lsp_references<CR>" })
-  buf_nnoremap({ "<leader>dn", "<Cmd>Lspsaga diagnostic_jump_next<CR>" })
-  buf_nnoremap({ "<leader>dp", "<Cmd>Lspsaga diagnostic_jump_prev<CR>" })
+  buf_nnoremap({ "<leader>dn", vim.diagnostic.goto_next })
+  buf_nnoremap({ "<leader>dp", vim.diagnostic.goto_prev })
   buf_nnoremap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>" })
-  buf_nnoremap({ "<leader>ds", "<Cmd>Lspsaga show_line_diagnostics<CR>" })
-  buf_nnoremap({ "K", "<Cmd>Lspsaga hover_doc<CR>" })
+  buf_nnoremap({ "<leader>ds", vim.diagnostic.open_float })
+  buf_nnoremap({ "K", vim.lsp.buf.hover })
 
   buf_inoremap({ "<c-s>", vim.lsp.buf.signature_help })
 
@@ -79,7 +79,7 @@ local custom_on_attach = function(client, bufnr)
   format_on_save(client, bufnr)
 
   if client.server_capabilities.renameProvider then
-    buf_nnoremap({ "<leader>r", "<Cmd>Lspsaga rename<CR>" })
+    buf_nnoremap({ "<leader>r", vim.lsp.buf.rename })
   end
 
   if client.server_capabilities.documentHighlightProvider then

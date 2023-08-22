@@ -53,7 +53,6 @@ return {
           vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
         end,
       },
-      "roobert/tailwindcss-colorizer-cmp.nvim",
       {
         "zbirenbaum/copilot-cmp",
         opts = {},
@@ -119,7 +118,6 @@ return {
         }),
         formatting = {
           format = require("lspkind").cmp_format({
-            before = require("tailwindcss-colorizer-cmp").formatter,
             with_text = true,
             menu = {
               buffer = "[buf]",

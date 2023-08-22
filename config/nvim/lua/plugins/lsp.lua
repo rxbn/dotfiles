@@ -6,16 +6,6 @@ return {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       {
-        "nvimdev/lspsaga.nvim",
-        event = "LspAttach",
-        opts = {
-          ui = {
-            kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
-            code_action = "󰌵",
-          },
-        },
-      },
-      {
         "jose-elias-alvarez/null-ls.nvim",
         opts = function()
           local nullls = require("null-ls")
@@ -49,8 +39,6 @@ return {
           },
         },
       },
-      "b0o/schemastore.nvim",
-      "someone-stole-my-name/yaml-companion.nvim",
     },
     config = function()
       local servers = {
@@ -73,23 +61,11 @@ return {
             },
           },
         },
-        yamlls = require("yaml-companion").setup({
-          lspconfig = {
-            on_attach = require("rxbn.lsp").on_attach,
-            capabilities = require("rxbn.lsp").capabilities,
-          },
-        }),
-        jsonls = {
-          settings = {
-            json = {
-              schemas = require("schemastore").json.schemas(),
-              validate = { enable = true },
-            },
-          },
-        },
         jsonnet_ls = {
           cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
         },
+        yamlls = {},
+        jsonls = {},
         gopls = {},
         terraformls = {},
         ansiblels = {},
