@@ -9,7 +9,6 @@ return {
         flavour = "frappe",
         integrations = {
           harpoon = true,
-          lsp_saga = true,
           mason = true,
           treesitter = true,
           treesitter_context = true,
