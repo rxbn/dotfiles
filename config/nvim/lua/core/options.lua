@@ -5,7 +5,7 @@ local opt = vim.opt
 
 opt.termguicolors = true
 opt.guicursor = ""
-opt.showmode = true
+opt.showmode = false
 opt.showcmd = true
 opt.laststatus = 3
 vim.cmd([[highlight WinSeparator guibg=None]])
