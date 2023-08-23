@@ -47,9 +47,6 @@ eval $(thefuck --alias)
 # enable fluxctl autocompletion
 command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
 
-# enable zsh-autosuggestions
-source ~/.config/plugins/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -95,12 +92,16 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
 --color=marker:#f2d5cf,fg+:#c6d0f5,prompt:#ca9ee6,hl+:#e78284"
 
+# Allow comments even in interactive shells.
 set -k
+
+# Load zsh-autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Load zsh-syntax-highlighting theme
 source ${HOME}/.config/plugins/zsh/catppuccin-zsh-syntax-highlighting/themes/catppuccin_frappe-zsh-syntax-highlighting.zsh
 
 # Load zsh-syntax-highlighting; should be last.
-source ${HOME}/.config/plugins/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"

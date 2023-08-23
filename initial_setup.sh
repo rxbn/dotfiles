@@ -84,8 +84,6 @@ defaults write com.apple.Safari AutoFillPasswords -int 0
 defaults write -g ApplePressAndHoldEnabled -bool false # Enable key repeat
 
 # Install zsh plugins
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/plugins/zsh/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.config/plugins/zsh/zsh-autosuggestions
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/.config/plugins/zsh/catppuccin-zsh-syntax-highlighting
 
 # Install kubectl plugins

@@ -109,6 +109,10 @@ brew "watch"
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 # Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
 brew "containeroo/tap/ci-thief"
 # A blazing fast CLI tool to do Jira stuff like a real hacker
