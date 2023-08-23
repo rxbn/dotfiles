@@ -16,16 +16,11 @@ setopt INC_APPEND_HISTORY
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
 fi
 
 # Basic auto/tab complete:
-autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
 _comp_options+=(globdots)
 
 # Enable reverse history search with ctrl-r
@@ -44,31 +39,8 @@ bindkey '^e' edit-command-line
 
 eval $(thefuck --alias)
 
-# fzf
+# Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# make ssh autocompletion faster
-
-# Highlight the current autocomplete option
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-
-# Better SSH/Rsync/SCP Autocomplete
-zstyle ':completion:*:(scp|rsync):*' tag-order ' hosts:-ipaddr:ip\ address hosts:-host:host files'
-zstyle ':completion:*:(ssh|scp|rsync):*:hosts-host' ignored-patterns '*(.|:)*'loopback ip6-loopback localhost ip6-localhost broadcasthost
-zstyle ':completion:*:(ssh|scp|rsync):*:hosts-ipaddr' ignored-patterns '^(<->.<->.<->.<->|(|::)([[:xdigit:].]##:(#c,2))##(|%*))' '127.0.0.<->' '255.255.255.255' '::1' 'fe80::*'
-
-h=()
-if [[ -r ~/.ssh/config ]]; then
-    h+=($(grep -Po '(?<=^Host\s).*' ~/.ssh/config))
-fi
-if [[ -r ~/.ssh/sshop_config ]]; then
-    h+=($(grep -Po '(?<=^Host\s).*' ~/.ssh/sshop_config))
-fi
-
-if [[ $#h -gt 0 ]]; then
-  zstyle ':completion:*:(ssh|scp|rsync):*' hosts $h
-  zstyle ':completion:*:slogin:*' hosts $h
-fi
 
 # Allow for autocomplete to be case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
@@ -77,13 +49,14 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 # Initialize the autocompletion
 autoload -Uz compinit && compinit -i
 
-# direnv init
+# Initialize direnv
 eval "$(direnv hook zsh)"
 
+# Set key bindings for tmux-sessionizer and tmux-sshionizer
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^g "tmux-sshionizer\n"
 
-# make fzf beautiful
+# Make fzf beautiful
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#414559,bg:#303446,spinner:#f2d5cf,hl:#e78284 \
 --color=fg:#c6d0f5,header:#e78284,info:#ca9ee6,pointer:#f2d5cf \
