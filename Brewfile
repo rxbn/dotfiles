@@ -101,6 +101,8 @@ brew "tflint"
 brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
+# Plugin manager for tmux
+brew "tpm"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
