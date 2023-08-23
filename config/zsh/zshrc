@@ -44,9 +44,6 @@ bindkey '^e' edit-command-line
 
 eval $(thefuck --alias)
 
-# enable fluxctl autocompletion
-command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
-
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
