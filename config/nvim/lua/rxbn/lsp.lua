@@ -110,6 +110,20 @@ updated_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 vim.tbl_deep_extend("force", updated_capabilities, require("cmp_nvim_lsp").default_capabilities())
 updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
 
+local border_style = "rounded"
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = border_style,
+})
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+  border = border_style,
+})
+
+vim.diagnostic.config({
+  float = { border = border_style },
+})
+
 return {
   on_attach = custom_on_attach,
   capabilities = updated_capabilities,
