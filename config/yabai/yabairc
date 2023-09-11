@@ -77,7 +77,6 @@ yabai -m rule --add app="^Final Cut Pro$" manage=off
 yabai -m rule --add app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add app="^Finder$" title="^Finder Settings$" manage=off
 yabai -m rule --add app="^Firefox$" title="^Library$" manage=off
-yabai -m rule --add app="^NVIDIA GeForce NOW$" manage=off
 yabai -m rule --add app="^Home$" manage=off
 yabai -m rule --add app="^Infuse$" manage=off
 yabai -m rule --add app="^LanguageTool$" manage=off

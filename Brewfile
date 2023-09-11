@@ -133,7 +133,7 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Apple TV Aerial screensaver
 cask "aerial"
@@ -155,8 +155,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "iterm2"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# Cloud gaming platform
-cask "nvidia-geforce-now"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Tool that provides consistent, highly configurable symbols for apps
@@ -171,12 +169,13 @@ cask "thunderbird"
 cask "tunnelblick"
 # Multimedia player
 cask "vlc"
-# Desktop client for WhatsApp
+# Native desktop client for WhatsApp
 cask "whatsapp"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Photo", id: 824183456
+mas "Auto HD FPS for YouTube", id: 1546729687
 mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
