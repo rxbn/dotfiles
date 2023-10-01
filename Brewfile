@@ -135,8 +135,6 @@ brew "koekeishiya/formulae/yabai"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# Apple TV Aerial screensaver
-cask "aerial"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application launcher and productivity software
