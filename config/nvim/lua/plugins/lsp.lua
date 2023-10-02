@@ -6,7 +6,7 @@ return {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         opts = function()
           local nullls = require("null-ls")
           return {
