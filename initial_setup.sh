@@ -115,7 +115,7 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${repo_path}/ite
 
 # Download SketchyBar font
 # renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.17/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
