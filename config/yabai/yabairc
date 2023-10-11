@@ -79,7 +79,7 @@ yabai -m rule --add app="^Notes$" title="^Settings$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off
 yabai -m rule --add app="^Podcasts$" manage=off
 yabai -m rule --add app="^Reminders$" manage=off
-yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advanced)$" manage=off
+yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Profile|Extension|Feature Flag)s|AutoFill|Se(arch|curity)|Privacy|Advanced|Developer)$" manage=off
 yabai -m rule --add app="^Screen Sharing$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Sonos$" manage=off
