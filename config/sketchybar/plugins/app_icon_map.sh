@@ -62,9 +62,6 @@ case $@ in
 "Discord")
 	icon_result=":discord:"
 	;;
-"Firefox")
-	icon_result=":firefox:"
-	;;
 "Mail")
 	icon_result=":mail:"
 	;;

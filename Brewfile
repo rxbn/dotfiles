@@ -139,14 +139,10 @@ cask "1password-cli"
 cask "aldente"
 # Application launcher and productivity software
 cask "alfred"
-# Open links in any browser
-cask "choosy"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Web browser
-cask "firefox"
 # Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
