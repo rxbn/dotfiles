@@ -72,6 +72,7 @@ yabai -m rule --add app="^Infuse$" manage=off
 yabai -m rule --add app="^LanguageTool$" manage=off
 yabai -m rule --add app="^Mail$" title="^(General|Accounts|Junk Mail|Fonts & Colors|Viewing|Composing|Signatures|Rules|Extensions|Privacy)$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Minecraft Launcher$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Nextcloud$" manage=off
 yabai -m rule --add app="^Notes$" title="^Settings$" manage=off
@@ -82,6 +83,7 @@ yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Profil
 yabai -m rule --add app="^Screen Sharing$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Sonos$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Things$" manage=off

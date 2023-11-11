@@ -147,6 +147,8 @@ cask "docker"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Sandbox construction video game
+cask "minecraft"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -157,6 +159,8 @@ cask "sf-symbols"
 cask "slack"
 # Control your Sonos system
 cask "sonos"
+# Music streaming service
+cask "spotify"
 # Customizable email client
 cask "thunderbird"
 # Free and open-source OpenVPN client

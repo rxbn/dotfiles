@@ -1,4 +1,7 @@
 case $@ in
+"Spotify")
+	icon_result=":spotify:"
+	;;
 "Docker" | "Docker Desktop")
 	icon_result=":docker:"
 	;;
