@@ -18,6 +18,7 @@ bar=(
 	sticky=on
 	padding_right=10
 	padding_left=10
+	topmost=window
 )
 
 sketchybar --bar "${bar[@]}"
@@ -38,6 +39,7 @@ defaults=(
 	background.height=26
 	background.corner_radius=9
 	background.border_width=2
+	scroll_texts=on
 )
 
 sketchybar --default "${defaults[@]}"
@@ -50,6 +52,8 @@ source "$ITEM_DIR/front_app.sh"
 # Right
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/weather.sh"
+
+sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update
