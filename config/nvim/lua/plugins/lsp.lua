@@ -32,12 +32,7 @@ return {
       },
       {
         "j-hui/fidget.nvim",
-        tag = "legacy",
-        opts = {
-          window = {
-            relative = "editor",
-          },
-        },
+        opts = {},
       },
     },
     config = function()
