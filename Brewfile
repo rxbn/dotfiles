@@ -119,6 +119,8 @@ brew "containeroo/tap/ci-thief"
 brew "containeroo/tap/jiractl"
 # Simple CLI tool to generate OTP tokens
 brew "containeroo/tap/otpgen"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
 # Flux CLI
