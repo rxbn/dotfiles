@@ -13,10 +13,10 @@ alt - p : yabai -m window --focus stack.prev || yabai -m window --focus north
 alt - n : yabai -m window --focus stack.next || yabai -m window --focus south
 
 # shift window in current workspace
-alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west && sketchybar --trigger windows_on_spaces)
-alt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south && sketchybar --trigger windows_on_spaces)
-alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north && sketchybar --trigger windows_on_spaces)
-alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east && sketchybar --trigger windows_on_spaces)
+alt + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
+alt + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
+alt + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
+alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
 
 # set insertion point in focused container
 alt + ctrl - h : yabai -m window --insert west
@@ -31,15 +31,15 @@ alt - b : yabai -m space --focus recent
 alt + shift - b : yabai -m window --space recent; yabai -m space --focus recent
 
 # move focused window to next/prev workspace
-alt + shift - 1 : yabai -m window --space 1 && sketchybar --trigger windows_on_spaces
-alt + shift - 2 : yabai -m window --space 2 && sketchybar --trigger windows_on_spaces
-alt + shift - 3 : yabai -m window --space 3 && sketchybar --trigger windows_on_spaces
-alt + shift - 4 : yabai -m window --space 4 && sketchybar --trigger windows_on_spaces
-alt + shift - 5 : yabai -m window --space 5 && sketchybar --trigger windows_on_spaces
-alt + shift - 6 : yabai -m window --space 6 && sketchybar --trigger windows_on_spaces
-alt + shift - 7 : yabai -m window --space 7 && sketchybar --trigger windows_on_spaces
-alt + shift - 8 : yabai -m window --space 8 && sketchybar --trigger windows_on_spaces
-alt + shift - 9 : yabai -m window --space 9 && sketchybar --trigger windows_on_spaces
+alt + shift - 1 : yabai -m window --space 1
+alt + shift - 2 : yabai -m window --space 2
+alt + shift - 3 : yabai -m window --space 3
+alt + shift - 4 : yabai -m window --space 4
+alt + shift - 5 : yabai -m window --space 5
+alt + shift - 6 : yabai -m window --space 6
+alt + shift - 7 : yabai -m window --space 7
+alt + shift - 8 : yabai -m window --space 8
+alt + shift - 9 : yabai -m window --space 9
 
 # # mirror tree y-axis
 alt + shift - y : yabai -m space --mirror y-axis
@@ -60,7 +60,7 @@ alt + shift - d : yabai -m window --resize right:100:0 || yabai -m window --resi
 alt - e : yabai -m space --layout bsp; sketchybar --trigger window_focus
 alt - s : yabai -m space --layout stack; sketchybar --trigger window_focus
 
-alt - space         : yabai -m window --toggle sticky; sketchybar --trigger windows_on_spaces
+alt - space         : yabai -m window --toggle sticky
 alt + shift - space : yabai -m window --toggle float; sketchybar --trigger window_focus
 
 # make floating window fill screen
