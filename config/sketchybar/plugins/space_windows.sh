@@ -11,8 +11,6 @@ if [ "$SENDER" = "space_windows_change" ]; then
 		while read -r app; do
 			icon_strip+=" $($CONFIG_DIR/plugins/app_icon_map.sh "$app")"
 		done <<<"${apps}"
-	else
-		icon_strip=""
 	fi
 	args+=(--set space.$space label="$icon_strip")
 
