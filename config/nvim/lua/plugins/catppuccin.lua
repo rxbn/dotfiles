@@ -12,6 +12,7 @@ return {
           mason = true,
           treesitter = true,
           treesitter_context = true,
+          rainbow_delimiters = true,
           dap = {
             enabled = true,
             enable_ui = true,
