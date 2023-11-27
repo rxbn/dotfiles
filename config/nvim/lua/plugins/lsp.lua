@@ -12,13 +12,6 @@ return {
           return {
             on_attach = require("rxbn.lsp").on_attach,
             sources = {
-              nullls.builtins.formatting.shfmt,
-              nullls.builtins.formatting.stylua,
-              nullls.builtins.formatting.gofumpt,
-              nullls.builtins.formatting.terraform_fmt,
-              nullls.builtins.formatting.prettierd.with({
-                extra_filetypes = { "prisma" },
-              }),
               nullls.builtins.diagnostics.yamllint,
               nullls.builtins.diagnostics.ansiblelint,
               nullls.builtins.diagnostics.golangci_lint,

@@ -21,15 +21,6 @@ local buf_inoremap = function(map_opts)
   imap(map_opts)
 end
 
-local lsp_formatting = function()
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name == "null-ls"
-    end,
-    async = false,
-  })
-end
-
 local format_on_save = function(client, bufnr)
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_clear_autocmds({
@@ -39,8 +30,8 @@ local format_on_save = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = augroup_format,
       buffer = bufnr,
-      callback = function()
-        lsp_formatting()
+      callback = function(args)
+        require("conform").format({ bufnr = args.bufnr })
       end,
     })
   end
