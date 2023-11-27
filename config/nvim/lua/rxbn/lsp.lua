@@ -1,5 +1,4 @@
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
-local augroup_format = vim.api.nvim_create_augroup("custom-lsp-format", { clear = true })
 local nmap = require("rxbn.keymap").nmap
 local imap = require("rxbn.keymap").imap
 
@@ -21,22 +20,6 @@ local buf_inoremap = function(map_opts)
   imap(map_opts)
 end
 
-local format_on_save = function(client, bufnr)
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_clear_autocmds({
-      group = augroup_format,
-      buffer = bufnr,
-    })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup_format,
-      buffer = bufnr,
-      callback = function(args)
-        require("conform").format({ bufnr = args.bufnr })
-      end,
-    })
-  end
-end
-
 local custom_on_attach = function(client, bufnr)
   if client.name == "copilot" then
     return
@@ -54,20 +37,6 @@ local custom_on_attach = function(client, bufnr)
   buf_nnoremap({ "K", vim.lsp.buf.hover })
 
   buf_inoremap({ "<c-s>", vim.lsp.buf.signature_help })
-
-  buf_nnoremap({
-    "<leader>w",
-    function()
-      vim.api.nvim_clear_autocmds({
-        group = augroup_format,
-        buffer = 0,
-      })
-      vim.cmd("w")
-      format_on_save(client, bufnr)
-    end,
-  })
-
-  format_on_save(client, bufnr)
 
   if client.server_capabilities.renameProvider then
     buf_nnoremap({ "<leader>r", vim.lsp.buf.rename })
