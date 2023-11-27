@@ -32,7 +32,6 @@ FOLDERS=(
 	~/.ssh
 	~/.cargo
 	~/bin
-	~/.jsonnet/lib
 	~/work/kubeconfigs
 	~/.virtualenvs
 	~/personal

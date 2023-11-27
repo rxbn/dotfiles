@@ -6,31 +6,6 @@ return {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       {
-        "nvimtools/none-ls.nvim",
-        opts = function()
-          local nullls = require("null-ls")
-          return {
-            on_attach = require("rxbn.lsp").on_attach,
-            sources = {
-              nullls.builtins.formatting.shfmt,
-              nullls.builtins.formatting.stylua,
-              nullls.builtins.formatting.gofumpt,
-              nullls.builtins.formatting.terraform_fmt,
-              nullls.builtins.formatting.prettierd.with({
-                extra_filetypes = { "prisma" },
-              }),
-              nullls.builtins.formatting.jsonnetfmt.with({
-                extra_args = { "--pad-arrays" },
-              }),
-              nullls.builtins.diagnostics.yamllint,
-              nullls.builtins.diagnostics.ansiblelint,
-              nullls.builtins.diagnostics.golangci_lint,
-              nullls.builtins.diagnostics.markdownlint,
-            },
-          }
-        end,
-      },
-      {
         "j-hui/fidget.nvim",
         opts = {},
       },
@@ -55,9 +30,6 @@ return {
               },
             },
           },
-        },
-        jsonnet_ls = {
-          cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
         },
         yamlls = {},
         jsonls = {},
