@@ -6,21 +6,6 @@ return {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       {
-        "nvimtools/none-ls.nvim",
-        opts = function()
-          local nullls = require("null-ls")
-          return {
-            on_attach = require("rxbn.lsp").on_attach,
-            sources = {
-              nullls.builtins.diagnostics.yamllint,
-              nullls.builtins.diagnostics.ansiblelint,
-              nullls.builtins.diagnostics.golangci_lint,
-              nullls.builtins.diagnostics.markdownlint,
-            },
-          }
-        end,
-      },
-      {
         "j-hui/fidget.nvim",
         opts = {},
       },
