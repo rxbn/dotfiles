@@ -19,9 +19,6 @@ return {
               nullls.builtins.formatting.prettierd.with({
                 extra_filetypes = { "prisma" },
               }),
-              nullls.builtins.formatting.jsonnetfmt.with({
-                extra_args = { "--pad-arrays" },
-              }),
               nullls.builtins.diagnostics.yamllint,
               nullls.builtins.diagnostics.ansiblelint,
               nullls.builtins.diagnostics.golangci_lint,
@@ -55,9 +52,6 @@ return {
               },
             },
           },
-        },
-        jsonnet_ls = {
-          cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
         },
         yamlls = {},
         jsonls = {},
