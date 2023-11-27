@@ -12,7 +12,7 @@ return {
       typescriptreact = { "eslint_d" },
       yaml = { "yamllint" },
       ["yaml.ansible"] = { "ansible_lint" },
-      go = { "golangci_lint" },
+      go = { "golangcilint" },
       markdown = { "markdownlint" },
     }
 
