@@ -43,6 +43,7 @@ return {
         tsserver = {},
         tailwindcss = {},
         prismals = {},
+        pylsp = {},
       }
 
       local function setup(server)
@@ -82,6 +83,8 @@ return {
         "golangci-lint",
         "markdownlint",
         "delve",
+        "autopep8",
+        "debugpy",
       },
     },
     config = function(_, opts)

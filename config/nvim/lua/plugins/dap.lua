@@ -37,6 +37,21 @@ return {
         opts = {},
       },
       {
+        "mfussenegger/nvim-dap-python",
+        config = function()
+          local debugpy_path = require("mason-core.path").concat({
+            vim.fn.stdpath("data"),
+            "mason",
+            "packages",
+            "debugpy",
+            "venv",
+            "bin",
+            "python",
+          })
+          require("dap-python").setup(debugpy_path)
+        end,
+      },
+      {
         "nvim-telescope/telescope-dap.nvim",
         config = function()
           require("telescope").load_extension("dap")

@@ -21,6 +21,7 @@ return {
         markdown = { "prettierd" },
         prisma = { "prettierd" },
         terraform = { "terraform_fmt" },
+        python = { "autopep8" },
       },
       format_on_save = {
         lsp_fallback = true,
