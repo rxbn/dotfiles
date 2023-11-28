@@ -27,7 +27,7 @@ return {
         "<leader>fG",
         function()
           local opts = {
-            prompt_title = "Live Grep (all files)",
+            prompt_title = "Live Grep (All Files)",
             additional_args = { "--no-ignore", "--hidden" },
           }
           require("telescope.builtin").live_grep(opts)
