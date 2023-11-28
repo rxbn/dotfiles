@@ -9,6 +9,10 @@ return {
         "j-hui/fidget.nvim",
         opts = {},
       },
+      {
+        "ray-x/lsp_signature.nvim",
+        opts = {},
+      },
     },
     config = function()
       local servers = {

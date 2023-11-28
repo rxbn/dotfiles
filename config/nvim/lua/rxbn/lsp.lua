@@ -1,6 +1,5 @@
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
 local nmap = require("rxbn.keymap").nmap
-local imap = require("rxbn.keymap").imap
 
 local buf_nnoremap = function(map_opts)
   if map_opts[3] == nil then
@@ -9,15 +8,6 @@ local buf_nnoremap = function(map_opts)
   map_opts[3].buffer = 0
 
   nmap(map_opts)
-end
-
-local buf_inoremap = function(map_opts)
-  if map_opts[3] == nil then
-    map_opts[3] = {}
-  end
-  map_opts[3].buffer = 0
-
-  imap(map_opts)
 end
 
 local custom_on_attach = function(client, bufnr)
@@ -35,8 +25,6 @@ local custom_on_attach = function(client, bufnr)
   buf_nnoremap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>" })
   buf_nnoremap({ "<leader>ds", vim.diagnostic.open_float })
   buf_nnoremap({ "K", vim.lsp.buf.hover })
-
-  buf_inoremap({ "<c-s>", vim.lsp.buf.signature_help })
 
   if client.server_capabilities.renameProvider then
     buf_nnoremap({ "<leader>r", vim.lsp.buf.rename })
