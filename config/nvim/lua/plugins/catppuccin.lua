@@ -17,6 +17,9 @@ return {
             enabled = true,
             enable_ui = true,
           },
+          indent_blankline = {
+            enabled = true,
+          },
         },
       })
       vim.cmd.colorscheme("catppuccin")
