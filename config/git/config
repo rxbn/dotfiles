@@ -1,7 +1,5 @@
 [include]
   path = ~/.config/git/personal.conf
-[includeIf "gitdir:~/work/"]
-  path = ~/.config/git/work.conf
 [init]
   defaultBranch = master
 [url "git@github.com:"]

@@ -5,9 +5,6 @@ function select_directory() {
 		~ \
 		~/personal \
 		~/personal/ansible \
-		~/work \
-		~/work/kubeconfigs \
-		~/work/openshift4-clusters \
 		~/containeroo \
 		~/tmp \
 		-mindepth 1 -maxdepth 1 -type d \

@@ -33,10 +33,8 @@ FOLDERS=(
 	~/.ssh
 	~/.cargo
 	~/bin
-	~/work/kubeconfigs
 	~/.virtualenvs
 	~/personal
-	~/work
 	~/containeroo
 	~/tmp
 )
@@ -123,11 +121,9 @@ ln -sf "${repo_path}/personal/config/zsh/personal_env" ~/.config/zsh/personal_en
 ln -sf "${repo_path}/ssh/config" ~/.ssh/config
 ln -sf "${repo_path}/personal/ssh/personal" ~/.ssh/personal
 ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc
-ln -sf "${repo_path}/work/config/zsh/work_aliasrc" ~/.config/zsh/work_aliasrc
 ln -sf "${repo_path}/config/starship/starship.toml" ~/.config/starship/starship.toml
 ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf
-ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
 ln -sf "${repo_path}/config/nvim" ~/.config/nvim
 ln -sf "${repo_path}/config/yabai/yabairc" ~/.config/yabai/yabairc
 ln -sf "${repo_path}/config/skhd/skhdrc" ~/.config/skhd/skhdrc
@@ -141,7 +137,6 @@ ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
 ln -sf "${repo_path}/bin/open-iterm" ~/bin/open-iterm
 ln -sf "${repo_path}/bin/open-safari" ~/bin/open-safari
-ln -sf "${repo_path}/work/kubeconfigs-envrc" ~/work/kubeconfigs/.global-envrc
 ln -sf "${repo_path}/cargo/config.toml" ~/.cargo/config.toml
 ln -sf "${repo_path}/personal/config/1Password/ssh/agent.toml" ~/.config/1Password/ssh/agent.toml
 
