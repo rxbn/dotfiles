@@ -26,9 +26,6 @@ case $@ in
 "VLC")
 	icon_result=":vlc:"
 	;;
-"Thunderbird")
-	icon_result=":thunderbird:"
-	;;
 "Notes")
 	icon_result=":notes:"
 	;;
@@ -37,9 +34,6 @@ case $@ in
 	;;
 "App Store")
 	icon_result=":app_store:"
-	;;
-"zoom.us")
-	icon_result=":zoom:"
 	;;
 "WhatsApp")
 	icon_result=":whats_app:"
@@ -91,9 +85,6 @@ case $@ in
 	;;
 "Affinity Photo")
 	icon_result=":affinity_photo:"
-	;;
-"Obsidian")
-	icon_result=":obsidian:"
 	;;
 "Reminders")
 	icon_result=":reminders:"

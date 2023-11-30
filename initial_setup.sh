@@ -12,7 +12,6 @@ DOCK_APPS=(
 	"/Applications/Slack.app/"
 	"/System/Applications/Calendar.app/"
 	"/System/Applications/Notes.app/"
-	"/Applications/Obsidian.app/"
 	"/System/Applications/Music.app/"
 	"/Applications/iTerm.app/"
 )

@@ -137,8 +137,6 @@ cask "iterm2"
 cask "minecraft"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
