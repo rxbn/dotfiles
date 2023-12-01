@@ -13,8 +13,6 @@ tap "koekeishiya/formulae"
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# GitOps Continuous Delivery for Kubernetes
-brew "argocd"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Load/unload environment variables based on $PWD
@@ -35,18 +33,12 @@ brew "gnupg"
 brew "go"
 # GNU grep, egrep and fgrep
 brew "grep"
-# Manage workspaces composed of git repositories
-brew "gws"
 # Kubernetes package manager
 brew "helm"
 # Configurable static site generator
 brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Domain specific configuration language for defining JSON data
-brew "jsonnet"
-# Package manager for Jsonnet
-brew "jsonnet-bundler"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Package manager for kubectl plugins
@@ -65,8 +57,6 @@ brew "minio-mc"
 brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
-# OpenShift command-line interface tools
-brew "openshift-cli"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
 # Fast, disk space efficient package manager
@@ -87,8 +77,6 @@ brew "rust"
 brew "shellcheck"
 # Editor of encrypted files
 brew "sops"
-# Proxy server that works as a poor man's VPN
-brew "sshuttle"
 # Cross-shell prompt for astronauts
 brew "starship"
 # User interface to the TELNET protocol
@@ -113,10 +101,6 @@ brew "yq"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
-brew "containeroo/tap/ci-thief"
-# A blazing fast CLI tool to do Jira stuff like a real hacker
-brew "containeroo/tap/jiractl"
 # Simple CLI tool to generate OTP tokens
 brew "containeroo/tap/otpgen"
 # A window border system for macOS
@@ -153,8 +137,6 @@ cask "iterm2"
 cask "minecraft"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
@@ -163,16 +145,10 @@ cask "slack"
 cask "sonos"
 # Music streaming service
 cask "spotify"
-# Customizable email client
-cask "thunderbird"
-# Free and open-source OpenVPN client
-cask "tunnelblick"
 # Multimedia player
 cask "vlc"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# Video communication and virtual meeting platform
-cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Photo", id: 824183456
 mas "Auto HD FPS for YouTube", id: 1546729687
