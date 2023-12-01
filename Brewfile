@@ -69,8 +69,6 @@ brew "pyenv"
 brew "restic"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Safe, concurrent, practical language
-brew "rust"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Editor of encrypted files

@@ -20,9 +20,6 @@ symbol = " "
 [python]
 symbol = " "
 
-[rust]
-symbol = " "
-
 [package]
 symbol = "󰏗 "
 

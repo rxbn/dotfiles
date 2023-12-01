@@ -29,7 +29,6 @@ FOLDERS=(
 	~/.config/1Password/ssh
 	~/.cache/zsh
 	~/.ssh
-	~/.cargo
 	~/bin
 	~/.virtualenvs
 	~/personal/ansible
