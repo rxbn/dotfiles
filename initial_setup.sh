@@ -29,8 +29,8 @@ FOLDERS=(
 	~/.config/1Password/ssh
 	~/.cache/zsh
 	~/.ssh
+	~/.kube
 	~/bin
-	~/.virtualenvs
 	~/personal/ansible
 	~/containeroo
 	~/tmp
