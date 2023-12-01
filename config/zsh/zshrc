@@ -26,7 +26,7 @@ _comp_options+=(globdots)
 # Enable reverse history search with ctrl-r
 bindkey "^R" history-incremental-search-backward
 
-# Load python env
+# Load pyenv
 eval "$(pyenv init -)"
 
 # Edit line in vim with ctrl-e:
