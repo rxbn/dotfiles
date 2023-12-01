@@ -24,7 +24,6 @@ FOLDERS=(
 	~/.config/starship
 	~/.config/yabai
 	~/.config/skhd
-	~/.config/sketchybar
 	~/.config/borders
 	~/.config/tmux
 	~/.config/1Password/ssh
@@ -47,7 +46,8 @@ for folder in "${FOLDERS[@]}"; do
 done
 
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+export PATH="/opt/homebrew/bin:$PATH"
 brew bundle install # Install all packages
 
 touch ~/.hushlogin # Disable login message
