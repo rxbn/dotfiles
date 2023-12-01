@@ -135,7 +135,6 @@ ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
 ln -sf "${repo_path}/bin/open-iterm" ~/bin/open-iterm
 ln -sf "${repo_path}/bin/open-safari" ~/bin/open-safari
-ln -sf "${repo_path}/cargo/config.toml" ~/.cargo/config.toml
 ln -sf "${repo_path}/personal/config/1Password/ssh/agent.toml" ~/.config/1Password/ssh/agent.toml
 
 echo "Done! Please restart your computer."
