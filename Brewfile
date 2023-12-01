@@ -45,8 +45,6 @@ brew "krew"
 brew "kubectx"
 # Easily check your clusters for use of deprecated APIs
 brew "kubent"
-# Implementation of the file(1) command
-brew "libmagic"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
