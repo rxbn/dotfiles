@@ -32,7 +32,7 @@ FOLDERS=(
 	~/.cargo
 	~/bin
 	~/.virtualenvs
-	~/personal
+	~/personal/ansible
 	~/containeroo
 	~/tmp
 )
