@@ -149,7 +149,6 @@ cask "vlc"
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Photo", id: 824183456
-mas "Auto HD FPS for YouTube", id: 1546729687
 mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
@@ -159,6 +158,4 @@ mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Things", id: 904280696
-mas "Vimari", id: 1480933944
 mas "WireGuard", id: 1451685025
