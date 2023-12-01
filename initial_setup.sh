@@ -109,6 +109,7 @@ repo_path=$(pwd)
 
 # Set iTerm2 config path
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${repo_path}/iterm2"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Download SketchyBar font
 # renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
