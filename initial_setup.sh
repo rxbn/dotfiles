@@ -92,8 +92,9 @@ kubectl krew install node-shell
 "$(brew --prefix)/opt/fzf/install"
 
 # Configure pyenv
-pyenv install 3.12.0
-pyenv global 3.12.0
+PYTHON_VERSION=3.12.0
+pyenv install ${PYTHON_VERSION}
+pyenv global ${PYTHON_VERSION}
 
 # Disable animations when opening and closing windows.
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
