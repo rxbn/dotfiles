@@ -36,8 +36,6 @@ bindkey '^e' edit-command-line
 # Load aliases file
 [ -f "$HOME/.config/zsh/aliasrc" ] && source "$HOME/.config/zsh/aliasrc"
 
-eval $(thefuck --alias)
-
 # Load fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

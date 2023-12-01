@@ -79,8 +79,6 @@ brew "telnet"
 brew "terraform"
 # Linter for Terraform files
 brew "tflint"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Terminal multiplexer
 brew "tmux"
 # Plugin manager for tmux
