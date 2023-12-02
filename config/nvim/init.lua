@@ -1,7 +1,7 @@
 require("rxbn.globals")
-require("core.options")
-require("core.keymaps")
-require("core.filetypes")
+require("rxbn.options")
+require("rxbn.keymaps")
+require("rxbn.filetypes")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
