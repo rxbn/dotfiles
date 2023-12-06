@@ -126,6 +126,8 @@ cask "docker"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Software for Logitech devices
+cask "logitech-options"
 # Sandbox construction video game
 cask "minecraft"
 # Desktop sync client for Nextcloud software products
