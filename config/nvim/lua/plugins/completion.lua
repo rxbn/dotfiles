@@ -25,14 +25,12 @@ return {
       },
     },
     opts = function()
+      vim.opt.completeopt = { "menu", "menuone", "noselect" }
       local cmp = require("cmp")
       return {
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
-        },
-        completion = {
-          completeopt = "menu,menuone,noinsert",
         },
         snippet = {
           expand = function(args)
