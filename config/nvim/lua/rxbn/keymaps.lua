@@ -6,13 +6,13 @@ nmap({ "<leader>pv", vim.cmd.Ex })
 
 nmap({ "<c-q>", "<Cmd>nohlsearch<CR>" })
 
-nmap({ "<m-.>", "<Cmd>bnext<CR>" })
-nmap({ "<m-,>", "<Cmd>bprevious<CR>" })
+nmap({ "<c-l>", "<Cmd>bnext<CR>" })
+nmap({ "<c-h>", "<Cmd>bprevious<CR>" })
 nmap({ "<m-c>", "<Cmd>bd<CR>" })
 nmap({ "<m-C>", "<Cmd>bd!<CR>" })
 
-nmap({ "<c-n>", "<Cmd>cnext<CR>zz" })
-nmap({ "<c-m>", "<Cmd>cprev<CR>zz" })
+nmap({ "<c-k>", "<Cmd>cnext<CR>zz" })
+nmap({ "<c-j>", "<Cmd>cprev<CR>zz" })
 
 xmap({ "<leader>p", [["_dP]] })
 
