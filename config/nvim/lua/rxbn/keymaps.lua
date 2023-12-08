@@ -1,6 +1,6 @@
-local nmap = require("rxbn.keymap").nmap
-local vmap = require("rxbn.keymap").vmap
-local xmap = require("rxbn.keymap").xmap
+local nmap = require("rxbn.util.keymap").nmap
+local vmap = require("rxbn.util.keymap").vmap
+local xmap = require("rxbn.util.keymap").xmap
 
 nmap({ "<leader>pv", vim.cmd.Ex })
 

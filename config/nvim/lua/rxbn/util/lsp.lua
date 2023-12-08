@@ -1,5 +1,5 @@
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
-local nmap = require("rxbn.keymap").nmap
+local nmap = require("rxbn.util.keymap").nmap
 
 local buf_nnoremap = function(map_opts)
   if map_opts[3] == nil then

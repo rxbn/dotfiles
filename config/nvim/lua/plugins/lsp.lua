@@ -54,8 +54,8 @@ return {
 
       local function setup(server)
         local server_opts = vim.tbl_deep_extend("force", {
-          on_attach = require("rxbn.lsp").on_attach,
-          capabilities = require("rxbn.lsp").capabilities,
+          on_attach = require("rxbn.util.lsp").on_attach,
+          capabilities = require("rxbn.util.lsp").capabilities,
         }, servers[server])
 
         require("lspconfig")[server].setup(server_opts)

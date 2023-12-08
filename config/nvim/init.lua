@@ -1,4 +1,4 @@
-require("rxbn.globals")
+require("rxbn.util.globals")
 require("rxbn.options")
 require("rxbn.keymaps")
 require("rxbn.filetypes")
