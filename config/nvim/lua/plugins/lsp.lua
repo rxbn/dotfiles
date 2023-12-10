@@ -7,7 +7,13 @@ return {
       "williamboman/mason-lspconfig.nvim",
       {
         "j-hui/fidget.nvim",
-        opts = {},
+        opts = {
+          notification = {
+            window = {
+              winblend = 0,
+            },
+          },
+        },
       },
       {
         "ray-x/lsp_signature.nvim",

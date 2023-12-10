@@ -8,18 +8,10 @@ return {
       require("catppuccin").setup({
         flavour = "frappe",
         integrations = {
+          fidget = true,
           harpoon = true,
           mason = true,
-          treesitter = true,
           treesitter_context = true,
-          rainbow_delimiters = true,
-          dap = {
-            enabled = true,
-            enable_ui = true,
-          },
-          indent_blankline = {
-            enabled = true,
-          },
         },
       })
       vim.cmd.colorscheme("catppuccin")
