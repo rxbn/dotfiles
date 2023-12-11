@@ -13,9 +13,8 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt INC_APPEND_HISTORY
 
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if type brew &>/dev/null; then
+	FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
 # Basic auto/tab complete:
@@ -30,7 +29,8 @@ bindkey "^R" history-incremental-search-backward
 eval "$(pyenv init -)"
 
 # Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
+autoload edit-command-line
+zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # Load aliases file
@@ -41,7 +41,7 @@ bindkey '^e' edit-command-line
 
 # Allow for autocomplete to be case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
-  '+l:|?=** r:|?=**'
+	'+l:|?=** r:|?=**'
 
 # Initialize the autocompletion
 autoload -Uz compinit && compinit -i
