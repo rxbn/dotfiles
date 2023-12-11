@@ -48,7 +48,9 @@ return {
         gopls = {},
         terraformls = {},
         ansiblels = {},
-        bashls = {},
+        bashls = {
+          filetypes = { "sh", "bash", "zsh" },
+        },
         dockerls = {},
         tflint = {},
         marksman = {},

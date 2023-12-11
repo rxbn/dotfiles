@@ -8,6 +8,8 @@ return {
     conform.setup({
       formatters_by_ft = {
         sh = { "shfmt" },
+        bash = { "shfmt" },
+        zsh = { "shfmt" },
         lua = { "stylua" },
         go = { "gofumpt" },
         javascript = { "prettierd" },
