@@ -8,6 +8,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "shaunsingh/sfmono-nerd-font-ligaturized"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
@@ -122,8 +123,8 @@ cask "alfred"
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Developer targeted fonts with a high number of glyphs
-cask "font-jetbrains-mono-nerd-font"
+# SFMono with Nerd Font Glyphs and Fira Code Ligatures
+cask "font-sf-mono-nerd-font-ligaturized"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Software for Logitech devices
