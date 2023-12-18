@@ -24,10 +24,10 @@ return {
         opts = {},
       },
     },
-    opts = function()
+    config = function()
       vim.opt.completeopt = { "menu", "menuone", "noselect" }
       local cmp = require("cmp")
-      return {
+      cmp.setup({
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
@@ -92,7 +92,7 @@ return {
             },
           }),
         },
-      }
+      })
     end,
   },
   {
