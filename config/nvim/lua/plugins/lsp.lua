@@ -88,21 +88,21 @@ return {
     cmd = "Mason",
     opts = {
       ensure_installed = {
-        -- formatters
+        -- Formatter
+        "autopep8",
+        "gofumpt",
         "prettierd",
         "shfmt",
         "stylua",
-        "gofumpt",
-        "autopep8",
-        -- linters
-        "yamllint",
+        -- Linter
         "ansible-lint",
         "golangci-lint",
         "markdownlint",
         "pylint",
-        -- debug adapters
-        "delve",
+        "yamllint",
+        -- DAP
         "debugpy",
+        "delve",
       },
     },
     config = function(_, opts)
