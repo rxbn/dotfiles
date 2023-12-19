@@ -8,8 +8,6 @@ nmap({ "<c-q>", "<Cmd>nohlsearch<CR>" })
 
 nmap({ "<c-l>", "<Cmd>bnext<CR>" })
 nmap({ "<c-h>", "<Cmd>bprevious<CR>" })
-nmap({ "<m-c>", "<Cmd>bd<CR>" })
-nmap({ "<m-C>", "<Cmd>bd!<CR>" })
 
 nmap({ "<c-k>", "<Cmd>cnext<CR>zz" })
 nmap({ "<c-j>", "<Cmd>cprev<CR>zz" })

@@ -50,25 +50,6 @@ return {
             }),
             { "i", "c" }
           ),
-          ["<m-y>"] = cmp.mapping(
-            cmp.mapping.confirm({
-              behavior = cmp.ConfirmBehavior.Replace,
-              select = false,
-            }),
-            { "i", "c" }
-          ),
-          ["<c-space>"] = cmp.mapping({
-            i = cmp.mapping.complete(),
-            c = function(_)
-              if cmp.visible() then
-                if not cmp.confirm({ select = true }) then
-                  return
-                end
-              else
-                cmp.complete()
-              end
-            end,
-          }),
           ["<tab>"] = cmp.config.disable,
         },
         sources = cmp.config.sources({
