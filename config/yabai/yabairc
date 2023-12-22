@@ -42,46 +42,24 @@ yabai -m config left_padding 8
 yabai -m config right_padding 8
 yabai -m config window_gap 10
 
-yabai -m rule --add app="^1Password$" manage=off
-yabai -m rule --add app="^1Password for Safari$" manage=off
-yabai -m rule --add app="^Activity Monitor$" manage=off
-yabai -m rule --add app="^Affinity Photo$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^AlDente$" manage=off
-yabai -m rule --add app="^App Store$" manage=off
-yabai -m rule --add app="^Audio MIDI Setup$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Calendar$" title="^(General|Accounts|Alerts|Advanced)$" manage=off
-yabai -m rule --add app="^Clock$" manage=off
-yabai -m rule --add app="^Dictionary$" manage=off
-yabai -m rule --add app="^Discord$" manage=off
-yabai -m rule --add app="^Docker Desktop$" manage=off
 yabai -m rule --add app="^FaceTime$" manage=off
-yabai -m rule --add app="^Final Cut Pro$" manage=off
 yabai -m rule --add app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add app="^Finder$" title="^Finder Settings$" manage=off
-yabai -m rule --add app="^Home$" manage=off
 yabai -m rule --add app="^Infuse$" manage=off
-yabai -m rule --add app="^LanguageTool$" manage=off
 yabai -m rule --add app="^Mail$" title="^(General|Accounts|Junk Mail|Fonts & Colors|Viewing|Composing|Signatures|Rules|Extensions|Privacy)$" manage=off
-yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Minecraft Launcher$" manage=off
-yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Nextcloud$" manage=off
 yabai -m rule --add app="^Notes$" title="^Settings$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off
-yabai -m rule --add app="^Podcasts$" manage=off
-yabai -m rule --add app="^Reminders$" manage=off
 yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Profile|Extension|Feature Flag)s|AutoFill|Se(arch|curity)|Privacy|Advanced|Developer)$" manage=off
 yabai -m rule --add app="^Screen Sharing$" manage=off
-yabai -m rule --add app="^Slack$" manage=off
-yabai -m rule --add app="^Sonos$" manage=off
-yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^WhatsApp$" manage=off
-yabai -m rule --add app="^Weather$" manage=off
-yabai -m rule --add app="^WireGuard$" manage=off
+yabai -m rule --add app="^VLC$" manage=off
 yabai -m rule --add app="^coreautha$" manage=off
 
 echo "yabai configuration loaded.."
