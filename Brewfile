@@ -76,8 +76,6 @@ brew "sops"
 brew "starship"
 # User interface to the TELNET protocol
 brew "telnet"
-# Linter for Terraform files
-brew "tflint"
 # Terminal multiplexer
 brew "tmux"
 # Plugin manager for tmux
