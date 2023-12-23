@@ -6,8 +6,8 @@ nmap({ "<leader>pv", vim.cmd.Ex })
 
 nmap({ "<c-q>", "<Cmd>nohlsearch<CR>" })
 
-nmap({ "<c-m>", "<Cmd>cnext<CR>zz" })
-nmap({ "<c-n>", "<Cmd>cprev<CR>zz" })
+nmap({ "<leader>qn", "<Cmd>cnext<CR>zz" })
+nmap({ "<leader>qp", "<Cmd>cprev<CR>zz" })
 
 xmap({ "<leader>p", [["_dP]] })
 
