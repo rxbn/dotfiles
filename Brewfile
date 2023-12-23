@@ -94,8 +94,6 @@ brew "zsh-syntax-highlighting"
 brew "containeroo/tap/otpgen"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
-# Fork of Yabai for my personal use
-brew "felixkratz/formulae/fyabai", args: ["HEAD"]
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
 # Flux CLI
@@ -108,6 +106,8 @@ brew "goreleaser/tap/goreleaser"
 brew "hashicorp/tap/terraform"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
