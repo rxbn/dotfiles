@@ -92,7 +92,7 @@ kubectl krew install node-shell
 "$(brew --prefix)/opt/fzf/install"
 
 # Configure pyenv
-# renovate datasource=github-releases depName=python/cpython
+# renovate datasource=github-tags depName=python/cpython
 PYTHON_VERSION=v3.12.0
 pyenv install ${PYTHON_VERSION//v/}
 pyenv global ${PYTHON_VERSION//v/}
