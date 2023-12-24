@@ -8,7 +8,7 @@
     {
       "fileMatch": ["initial_setup\\.sh$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*)\\s.*\\/download\\/(?<currentValue>.*?)\\/"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_VERSION=(?<currentValue>.*)\\s"
       ],
       "datasourceTemplate": "github-releases"
     }

@@ -92,9 +92,10 @@ kubectl krew install node-shell
 "$(brew --prefix)/opt/fzf/install"
 
 # Configure pyenv
-PYTHON_VERSION=3.12.0
-pyenv install ${PYTHON_VERSION}
-pyenv global ${PYTHON_VERSION}
+# renovate datasource=github-releases depName=python/cpython
+PYTHON_VERSION=v3.12.0
+pyenv install ${PYTHON_VERSION//v/}
+pyenv global ${PYTHON_VERSION//v/}
 
 # Disable animations when opening and closing windows.
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -110,7 +111,8 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Download SketchyBar font
 # renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.20/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
+SKETCHYBAR_APP_FONT_VERSION=v1.0.20
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKETCHYBAR_APP_FONT_VERSION/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
