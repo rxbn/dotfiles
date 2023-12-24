@@ -1,13 +1,45 @@
 return {
   {
     "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    opts = {},
     keys = {
-      { "<c-e>", '<Cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>' },
-      { "<leader>a", '<Cmd>lua require("harpoon.mark").add_file()<CR>' },
-      { "<c-h>", '<Cmd>lua require("harpoon.ui").nav_file(1)<CR>' },
-      { "<c-j>", '<Cmd>lua require("harpoon.ui").nav_file(2)<CR>' },
-      { "<c-k>", '<Cmd>lua require("harpoon.ui").nav_file(3)<CR>' },
-      { "<c-l>", '<Cmd>lua require("harpoon.ui").nav_file(4)<CR>' },
+      {
+        "<leader>a",
+        function()
+          require("harpoon"):list():append()
+        end,
+      },
+      {
+        "<c-e>",
+        function()
+          require("harpoon").ui:toggle_quick_menu(require("harpoon"):list())
+        end,
+      },
+      {
+        "<c-h>",
+        function()
+          require("harpoon"):list():select(1)
+        end,
+      },
+      {
+        "<c-j>",
+        function()
+          require("harpoon"):list():select(2)
+        end,
+      },
+      {
+        "<c-k>",
+        function()
+          require("harpoon"):list():select(3)
+        end,
+      },
+      {
+        "<c-l>",
+        function()
+          require("harpoon"):list():select(4)
+        end,
+      },
     },
   },
 }
