@@ -106,6 +106,7 @@ return {
         "markdownlint",
         "pylint",
         "yamllint",
+        "shellcheck",
         -- DAP
         "debugpy",
         "delve",
