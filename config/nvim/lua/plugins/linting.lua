@@ -1,6 +1,17 @@
 return {
   "mfussenegger/nvim-lint",
   event = { "BufReadPre", "BufNewFile" },
+  init = function()
+    local linters = {
+      "ansible-lint",
+      "golangci-lint",
+      "markdownlint",
+      "pylint",
+      "yamllint",
+      "shellcheck",
+    }
+    require("rxbn.util.mason").install_packages(linters)
+  end,
   config = function()
     local lint = require("lint")
 
