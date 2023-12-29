@@ -2,18 +2,19 @@ return {
   {
     "mfussenegger/nvim-dap",
     init = function()
-      local debuggers = {
-        "debugpy",
-        "delve",
-      }
-      require("rxbn.util.mason").install_packages(debuggers)
-
       vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "", numhl = "" })
       vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DapBreakpoint", linehl = "", numhl = "" })
       vim.fn.sign_define(
         "DapBreakpointCondition",
         { text = "", texthl = "DapBreakpointCondition", linehl = "", numhl = "" }
       )
+    end,
+    config = function()
+      local debuggers = {
+        "debugpy",
+        "delve",
+      }
+      require("rxbn.util.mason").install_packages(debuggers)
     end,
     dependencies = {
       {

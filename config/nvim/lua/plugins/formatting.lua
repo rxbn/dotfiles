@@ -2,16 +2,6 @@ return {
   "stevearc/conform.nvim",
   event = "BufWritePre",
   cmd = "ConformInfo",
-  init = function()
-    local formatters = {
-      "autopep8",
-      "gofumpt",
-      "prettierd",
-      "shfmt",
-      "stylua",
-    }
-    require("rxbn.util.mason").install_packages(formatters)
-  end,
   opts = {
     formatters_by_ft = {
       sh = { "shfmt" },
@@ -38,4 +28,16 @@ return {
       timeout_ms = 1000,
     },
   },
+  config = function(_, opts)
+    local formatters = {
+      "autopep8",
+      "gofumpt",
+      "prettierd",
+      "shfmt",
+      "stylua",
+    }
+    require("rxbn.util.mason").install_packages(formatters)
+
+    require("conform").setup(opts)
+  end,
 }
