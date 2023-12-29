@@ -9,5 +9,15 @@ Use with caution. Everything in here is highly opinionated.
 ## Configure macOS
 
 ```bash
+mkdir ~/personal
+cd ~/personal
+git clone https://github.com/rxbn/dotfiles.git
+cd dotfiles
 bash ./initial_setup.sh
+
+# After reboot
+brew services start borders
+brew services start sketchybar
+skhd --start-service
+yabai --start-service
 ```

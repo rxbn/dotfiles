@@ -71,13 +71,9 @@ killall Dock
 defaults write com.apple.finder _FXSortFoldersFirst -int 1     # Keep folders on top
 defaults write com.apple.finder NewWindowTarget -string "PfHo" # New Finder windows open home directory
 
-# Let 1Password handle autofill in Safari
-defaults write com.apple.Safari AutoFillCreditCardData -int 0
-defaults write com.apple.Safari AutoFillFromAddressBook -int 0
-defaults write com.apple.Safari AutoFillMiscellaneousForms -int 0
-defaults write com.apple.Safari AutoFillPasswords -int 0
-
 defaults write -g ApplePressAndHoldEnabled -bool false # Enable key repeat
+
+defaults write NSGlobalDomain _HIHideMenuBar -bool true # Hide menu bar
 
 # Install zsh plugins
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/.config/plugins/zsh/catppuccin-zsh-syntax-highlighting
