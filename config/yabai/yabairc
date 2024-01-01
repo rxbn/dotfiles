@@ -64,6 +64,7 @@ yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Profil
 yabai -m rule --add app="^Screen Sharing$" manage=off
 yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^UTM$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
 yabai -m rule --add app="^coreautha$" manage=off
 

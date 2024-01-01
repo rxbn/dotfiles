@@ -136,6 +136,8 @@ cask "slack"
 cask "sonos"
 # Music streaming service
 cask "spotify"
+# Virtual machines UI using QEMU
+cask "utm"
 # Multimedia player
 cask "vlc"
 # Native desktop client for WhatsApp
