@@ -45,4 +45,8 @@ export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
 
 # Personal env vars
 source ~/.config/zsh/personal_env
+
+# Locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 # vi: ft=zsh
