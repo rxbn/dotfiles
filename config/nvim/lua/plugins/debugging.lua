@@ -19,11 +19,10 @@ return {
     dependencies = {
       {
         "rcarriga/nvim-dap-ui",
-        opts = {},
-        config = function(_, opts)
+        config = function()
           local dap = require("dap")
           local dapui = require("dapui")
-          dapui.setup(opts)
+          dapui.setup()
           dap.listeners.before.attach.dapui_config = function()
             dapui.open()
           end

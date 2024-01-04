@@ -92,9 +92,8 @@ return {
   {
     "williamboman/mason.nvim",
     cmd = "Mason",
-    opts = {},
-    config = function(_, opts)
-      require("mason").setup(opts)
+    config = function()
+      require("mason").setup()
       local mr = require("mason-registry")
       mr:on("package:install:success", function()
         vim.defer_fn(function()
