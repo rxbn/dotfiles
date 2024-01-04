@@ -6,6 +6,8 @@ function select_directory() {
 		~/personal \
 		~/personal/ansible \
 		~/containeroo \
+		~/work \
+		~/work/kubeconfigs \
 		~/tmp \
 		-mindepth 1 -maxdepth 1 -type d \
 		-not -path "*/.*" | fzf

@@ -1,4 +1,16 @@
 case $@ in
+"Microsoft Excel")
+	icon_result=":microsoft_excel:"
+	;;
+"Microsoft Word")
+	icon_result=":microsoft_word:"
+	;;
+"Microsoft Outlook")
+	icon_result=":mail:"
+	;;
+"Microsoft Teams (work or school)")
+	icon_result=":microsoft_teams:"
+	;;
 "Spotify")
 	icon_result=":spotify:"
 	;;

@@ -114,8 +114,12 @@ cask "1password-cli"
 cask "aldente"
 # Application launcher and productivity software
 cask "alfred"
+# Application uninstaller
+cask "appcleaner"
 # Voice and text chat software
 cask "discord"
+# Drivers for DisplayLink docks, adapters and monitors
+cask "displaylink"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Developer targeted fonts with a high number of glyphs
@@ -124,6 +128,12 @@ cask "font-jetbrains-mono-nerd-font"
 cask "iterm2"
 # Software for Logitech devices
 cask "logitech-options"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Office suite
+cask "microsoft-office"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Sandbox construction video game
 cask "minecraft"
 # Desktop sync client for Nextcloud software products
