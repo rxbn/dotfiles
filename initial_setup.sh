@@ -115,6 +115,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKET
 ln -sf "${repo_path}/zprofile" ~/.zprofile
 ln -sf "${repo_path}/personal/config/zsh/personal_env" ~/.config/zsh/personal_env
 ln -sf "${repo_path}/personal/ssh/config" ~/.ssh/config
+ln -sf "${repo_path}/work/ssh/config" ~/.ssh/work_config
 ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc
 ln -sf "${repo_path}/work/config/zsh/work_aliasrc" ~/.config/zsh/work_aliasrc
 ln -sf "${repo_path}/config/starship/starship.toml" ~/.config/starship/starship.toml
