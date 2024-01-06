@@ -21,6 +21,20 @@ return {
           require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
         end,
       },
+      {
+        "<leader>pws",
+        function()
+          local word = vim.fn.expand("<cword>")
+          require("telescope.builtin").grep_string({ search = word })
+        end,
+      },
+      {
+        "<leader>pWs",
+        function()
+          local word = vim.fn.expand("<cWORD>")
+          require("telescope.builtin").grep_string({ search = word })
+        end,
+      },
       { "<leader>vh", "<Cmd>Telescope help_tags<CR>" },
       { "<leader>fg", "<Cmd>Telescope live_grep<CR>" },
       {
