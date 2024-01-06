@@ -1,33 +1,27 @@
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
 local nmap = require("rxbn.util.keymap").nmap
-
-local buf_nnoremap = function(map_opts)
-  if map_opts[3] == nil then
-    map_opts[3] = {}
-  end
-  map_opts[3].buffer = 0
-
-  nmap(map_opts)
-end
+local imap = require("rxbn.util.keymap").imap
 
 local custom_on_attach = function(client, bufnr)
   if client.name == "copilot" then
     return
   end
 
-  buf_nnoremap({ "<leader>ca", vim.lsp.buf.code_action })
-  buf_nnoremap({ "gd", vim.lsp.buf.definition })
-  buf_nnoremap({ "gt", vim.lsp.buf.type_definition })
-  buf_nnoremap({ "gi", vim.lsp.buf.implementation })
-  buf_nnoremap({ "gr", "<Cmd>Telescope lsp_references<CR>" })
-  buf_nnoremap({ "]d", vim.diagnostic.goto_next })
-  buf_nnoremap({ "[d", vim.diagnostic.goto_prev })
-  buf_nnoremap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>" })
-  buf_nnoremap({ "<leader>ds", vim.diagnostic.open_float })
-  buf_nnoremap({ "K", vim.lsp.buf.hover })
+  local map_opts = { buffer = bufnr }
+  nmap({ "<leader>ca", vim.lsp.buf.code_action, map_opts })
+  nmap({ "gd", vim.lsp.buf.definition, map_opts })
+  nmap({ "gt", vim.lsp.buf.type_definition, map_opts })
+  nmap({ "gi", vim.lsp.buf.implementation, map_opts })
+  nmap({ "gr", "<Cmd>Telescope lsp_references<CR>", map_opts })
+  nmap({ "]d", vim.diagnostic.goto_next, map_opts })
+  nmap({ "[d", vim.diagnostic.goto_prev, map_opts })
+  nmap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>", map_opts })
+  nmap({ "<leader>ds", vim.diagnostic.open_float, map_opts })
+  nmap({ "K", vim.lsp.buf.hover, map_opts })
+  imap({ "<c-s>", vim.lsp.buf.signature_help, map_opts })
 
   if client.server_capabilities.renameProvider then
-    buf_nnoremap({ "<leader>r", vim.lsp.buf.rename })
+    nmap({ "<leader>r", vim.lsp.buf.rename, map_opts })
   end
 
   if client.server_capabilities.documentHighlightProvider then
