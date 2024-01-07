@@ -66,6 +66,5 @@ yabai -m rule --add app="^System Information$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^UTM$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
-yabai -m rule --add app="^coreautha$" manage=off
 
 echo "yabai configuration loaded.."
