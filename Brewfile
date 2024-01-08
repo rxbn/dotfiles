@@ -12,6 +12,8 @@ tap "koekeishiya/formulae"
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Load/unload environment variables based on $PWD
