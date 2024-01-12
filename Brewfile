@@ -58,6 +58,8 @@ brew "minio-mc"
 brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
+# Drop-in replacement for Terraform. Infrastructure as Code Tool
+brew "opentofu"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
 # Fast, disk space efficient package manager
@@ -92,6 +94,8 @@ brew "yq"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
+brew "containeroo/tap/ci-thief"
 # Simple CLI tool to generate OTP tokens
 brew "containeroo/tap/otpgen"
 # A window border system for macOS
