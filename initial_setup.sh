@@ -18,6 +18,7 @@ DOCK_APPS=(
 
 FOLDERS=(
 	~/.config/git
+	~/.config/direnv
 	~/.config/zsh
 	~/.config/plugins/zsh
 	~/.config/yamllint
@@ -122,6 +123,7 @@ ln -sf "${repo_path}/config/starship/starship.toml" ~/.config/starship/starship.
 ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf
 ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
+ln -sf "${repo_path}/config/direnv/direnv.toml" ~/.config/direnv/direnv.toml
 ln -sf "${repo_path}/config/nvim" ~/.config/nvim
 ln -sf "${repo_path}/config/yabai/yabairc" ~/.config/yabai/yabairc
 ln -sf "${repo_path}/config/skhd/skhdrc" ~/.config/skhd/skhdrc
