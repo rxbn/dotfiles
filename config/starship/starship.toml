@@ -1,5 +1,3 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
 palette = "catppuccin_frappe"
 
 [directory]
@@ -38,7 +36,7 @@ symbol = "󰡨 "
 [kubernetes]
 disabled = false
 symbol = "󱃾 "
-detect_files = ["kubeconfig"]
+detect_files = [ "kubeconfig" ]
 
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"

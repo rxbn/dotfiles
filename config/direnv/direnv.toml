@@ -1,2 +1,2 @@
 [whitelist]
-prefix = ["~/work", "~/personal", "~/containeroo"]
+prefix = [ "~/work", "~/personal", "~/containeroo" ]
