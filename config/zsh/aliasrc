@@ -30,6 +30,7 @@ alias gica='git commit --amend --no-edit'
 alias gipf='git push --force'
 alias gipt='git push --tags'
 alias vim='nvim'
+alias vimdiff='nvim -d'
 
 function gic() {
 	# shellcheck disable=SC2124
