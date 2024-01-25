@@ -8,6 +8,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "loft-sh/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
@@ -116,6 +117,8 @@ brew "hashicorp/tap/terraform"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "loft-sh/tap/vcluster"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -172,5 +175,6 @@ mas "Keynote", id: 409183694
 mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
+mas "OpenIn", id: 1643649331
 mas "Pages", id: 409201541
 mas "WireGuard", id: 1451685025
