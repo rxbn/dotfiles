@@ -5,16 +5,7 @@ set -o errexit
 declare -a DOCK_APPS
 declare -a FOLDERS
 
-DOCK_APPS=(
-	"/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app/"
-	"/System/Applications/Mail.app/"
-	"/System/Applications/Messages.app/"
-	"/Applications/Slack.app/"
-	"/System/Applications/Calendar.app/"
-	"/System/Applications/Notes.app/"
-	"/System/Applications/Music.app/"
-	"/Applications/iTerm.app/"
-)
+DOCK_APPS=()
 
 FOLDERS=(
 	~/.config/git
