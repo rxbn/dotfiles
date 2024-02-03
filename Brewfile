@@ -139,16 +139,12 @@ cask "docker"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Software for Logitech devices
-cask "logitech-options"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
 cask "microsoft-office"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Sandbox construction video game
-cask "minecraft"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # Tool that provides consistent, highly configurable symbols for apps
@@ -172,7 +168,6 @@ mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
-mas "LanguageTool", id: 1534275760
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
