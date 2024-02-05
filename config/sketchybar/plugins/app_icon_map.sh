@@ -230,7 +230,7 @@ case $@ in
 "Logseq")
 	icon_result=":logseq:"
 	;;
-"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件")
+"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件" | "Microsoft Outlook")
 	icon_result=":mail:"
 	;;
 "MAMP" | "MAMP PRO")
@@ -467,7 +467,7 @@ case $@ in
 "WezTerm")
 	icon_result=":wezterm:"
 	;;
-"WhatsApp")
+"WhatsApp" | "‎WhatsApp")
 	icon_result=":whats_app:"
 	;;
 "Xcode")
