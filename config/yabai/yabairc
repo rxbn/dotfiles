@@ -68,4 +68,10 @@ yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^UTM$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
 
+yabai -m rule --add app="^Microsoft Teams \(work or school\)$" space=4
+yabai -m rule --add app="^Microsoft Outlook$" space=5
+yabai -m rule --add app="^Music$" space=8
+yabai -m rule --add app="^Messages$" space=9
+yabai -m rule --add app="^Slack$" space=9
+
 echo "yabai configuration loaded.."
