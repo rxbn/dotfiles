@@ -133,7 +133,7 @@ cask "appcleaner"
 cask "discord"
 # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
