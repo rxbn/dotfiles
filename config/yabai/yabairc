@@ -71,6 +71,7 @@ yabai -m rule --add app="^Microsoft Teams \(work or school\)$" space=4
 yabai -m rule --add app="^Microsoft Outlook$" space=5
 yabai -m rule --add app="^Microsoft Outlook$" title="^[0-9] Reminders?$" sticky=on manage=off
 yabai -m rule --add app="^Music$" space=8
+yabai -m rule --add app="^Sonos$" space=8
 yabai -m rule --add app="^Messages$" space=9
 yabai -m rule --add app="^Slack$" space=9
 
