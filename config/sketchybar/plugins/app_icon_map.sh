@@ -104,6 +104,9 @@ case $@ in
 "Cypress")
 	icon_result=":cypress:"
 	;;
+"DaVinci Resolve")
+	icon_result=":davinciresolve:"
+	;;
 "Default")
 	icon_result=":default:"
 	;;
@@ -124,6 +127,9 @@ case $@ in
 	;;
 "GrandTotal" | "Receipts")
 	icon_result=":dollar:"
+	;;
+"Double Commander")
+	icon_result=":doublecmd:"
 	;;
 "Drafts")
 	icon_result=":drafts:"
@@ -191,7 +197,7 @@ case $@ in
 "Iris")
 	icon_result=":iris:"
 	;;
-"iTerm2")
+"iTerm" | "iTerm2")
 	icon_result=":iterm:"
 	;;
 "Jellyfin Media Player")
@@ -224,13 +230,22 @@ case $@ in
 "LibreWolf")
 	icon_result=":libre_wolf:"
 	;;
+"Adobe Lightroom")
+	icon_result=":lightroom:"
+	;;
+"Lightroom Classic")
+	icon_result=":lightroomclassic:"
+	;;
 "Linear")
 	icon_result=":linear:"
+	;;
+"Logic Pro")
+	icon_result=":logicpro:"
 	;;
 "Logseq")
 	icon_result=":logseq:"
 	;;
-"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件" | "Microsoft Outlook")
+"Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "邮件")
 	icon_result=":mail:"
 	;;
 "MAMP" | "MAMP PRO")
@@ -257,6 +272,9 @@ case $@ in
 "Microsoft Excel")
 	icon_result=":microsoft_excel:"
 	;;
+"Microsoft Outlook")
+	icon_result=":microsoft_outlook:"
+	;;
 "Microsoft PowerPoint")
 	icon_result=":microsoft_power_point:"
 	;;
@@ -272,6 +290,9 @@ case $@ in
 "Miro")
 	icon_result=":miro:"
 	;;
+"MongoDB Compass"*)
+	icon_result=":mongodb:"
+	;;
 "mpv")
 	icon_result=":mpv:"
 	;;
@@ -283,6 +304,9 @@ case $@ in
 	;;
 "网易云音乐")
 	icon_result=":netease_music:"
+	;;
+"Noodl" | "Noodl Editor")
+	icon_result=":noodl:"
 	;;
 "NordVPN")
 	icon_result=":nord_vpn:"
@@ -314,6 +338,9 @@ case $@ in
 "1Password")
 	icon_result=":one_password:"
 	;;
+"ChatGPT")
+	icon_result=":openai:"
+	;;
 "Orion" | "Orion RC")
 	icon_result=":orion:"
 	;;
@@ -325,6 +352,9 @@ case $@ in
 	;;
 "Preview" | "预览" | "Skim" | "zathura")
 	icon_result=":pdf:"
+	;;
+"Adobe Photoshop"*)
+	icon_result=":photoshop:"
 	;;
 "Pi-hole Remote")
 	icon_result=":pihole:"
@@ -340,6 +370,12 @@ case $@ in
 	;;
 "PyCharm")
 	icon_result=":pycharm:"
+	;;
+"QQ")
+	icon_result=":qq:"
+	;;
+"QQ音乐" | "QQMusic")
+	icon_result=":qqmusic:"
 	;;
 "qutebrowser")
 	icon_result=":qute_browser:"
@@ -461,7 +497,7 @@ case $@ in
 "WebStorm")
 	icon_result=":web_storm:"
 	;;
-"微信")
+"微信" | "WeChat")
 	icon_result=":wechat:"
 	;;
 "WezTerm")
