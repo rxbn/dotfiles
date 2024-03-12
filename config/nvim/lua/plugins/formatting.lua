@@ -20,7 +20,6 @@ return {
         json = { "prettierd" },
         yaml = { "prettierd" },
         markdown = { "prettierd" },
-        prisma = { "prettierd" },
         terraform = { "terraform_fmt" },
         python = { "autopep8" },
       },

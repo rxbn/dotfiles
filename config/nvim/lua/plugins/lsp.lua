@@ -50,7 +50,6 @@ return {
         marksman = {},
         tsserver = {},
         tailwindcss = {},
-        prismals = {},
         pylsp = {},
         clangd = {
           cmd = {
