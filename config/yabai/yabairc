@@ -75,4 +75,6 @@ yabai -m rule --add app="^Sonos$" space=8
 yabai -m rule --add app="^Messages$" space=9
 yabai -m rule --add app="^Slack$" space=9
 
+yabai -m rule --apply
+
 echo "yabai configuration loaded.."
