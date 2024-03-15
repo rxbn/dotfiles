@@ -135,6 +135,8 @@ cask "discord"
 cask "displaylink"
 # App to build and share containerised applications and microservices
 cask "docker"
+# Web browser
+cask "firefox"
 # Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
