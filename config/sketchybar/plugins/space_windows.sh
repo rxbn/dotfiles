@@ -7,7 +7,9 @@ if [ "$SENDER" = "space_windows_change" ]; then
 	icon_strip=" "
 	if [ "${apps}" != "" ]; then
 		while read -r app; do
-			icon_strip+=" $($CONFIG_DIR/plugins/app_icon_map.sh "$app")"
+			for _ in $(seq 1 "$(echo "$INFO" | jq -r ".apps.\"$app\"")"); do
+				icon_strip+=" $("$CONFIG_DIR"/plugins/app_icon_map.sh "$app")"
+			done
 		done <<<"${apps}"
 	fi
 
