@@ -83,7 +83,7 @@ case $@ in
 "Brave Browser")
 	icon_result=":brave_browser:"
 	;;
-"Calendar" | "日历" | "Fantastical" | "Cron" | "Amie")
+"Calendar" | "日历" | "Fantastical" | "Cron" | "Amie" | "Calendrier" | "Notion Calendar")
 	icon_result=":calendar:"
 	;;
 "Caprine")
@@ -167,7 +167,7 @@ case $@ in
 "Folx")
 	icon_result=":folx:"
 	;;
-"System Preferences" | "System Settings" | "系统设置")
+"System Preferences" | "System Settings" | "系统设置" | "Réglages Système")
 	icon_result=":gear:"
 	;;
 "GitHub Desktop")
@@ -239,6 +239,9 @@ case $@ in
 "Linear")
 	icon_result=":linear:"
 	;;
+"LM Studio")
+	icon_result=":lm_studio:"
+	;;
 "Logic Pro")
 	icon_result=":logicpro:"
 	;;
@@ -296,7 +299,10 @@ case $@ in
 "mpv")
 	icon_result=":mpv:"
 	;;
-"Music" | "音乐")
+"Mullvad Browser")
+	icon_result=":mullvad_browser:"
+	;;
+"Music" | "音乐" | "Musique")
 	icon_result=":music:"
 	;;
 "Neovide" | "neovide")
@@ -350,7 +356,7 @@ case $@ in
 "Parallels Desktop")
 	icon_result=":parallels:"
 	;;
-"Preview" | "预览" | "Skim" | "zathura")
+"Preview" | "预览" | "Skim" | "zathura" | "Aperçu")
 	icon_result=":pdf:"
 	;;
 "Adobe Photoshop"*)
@@ -386,7 +392,7 @@ case $@ in
 "Reeder")
 	icon_result=":reeder5:"
 	;;
-"Reminders" | "提醒事项")
+"Reminders" | "提醒事项" | "Rappels")
 	icon_result=":reminders:"
 	;;
 "Replit")
@@ -460,6 +466,9 @@ case $@ in
 	;;
 "Todoist")
 	icon_result=":todoist:"
+	;;
+"Toggl Track")
+	icon_result=":toggl_track:"
 	;;
 "Tor Browser")
 	icon_result=":tor_browser:"
