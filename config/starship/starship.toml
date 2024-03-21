@@ -6,6 +6,10 @@ truncation_length = 8
 style = "bold lavender"
 read_only = " "
 
+[direnv]
+disabled = false
+style = "bold yellow"
+
 [git_metrics]
 disabled = false
 
