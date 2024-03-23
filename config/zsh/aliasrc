@@ -31,6 +31,8 @@ alias gipf='git push --force'
 alias gipt='git push --tags'
 alias vim='nvim'
 alias vimdiff='nvim -d'
+alias terraform='tofu'
+alias tf='tofu'
 
 function gic() {
 	# shellcheck disable=SC2124

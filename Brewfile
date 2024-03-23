@@ -3,7 +3,6 @@ tap "felixkratz/formulae"
 tap "fluxcd/tap"
 tap "go-task/tap"
 tap "goreleaser/tap"
-tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
@@ -111,8 +110,6 @@ brew "fluxcd/tap/flux"
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser/tap/goreleaser"
-# Terraform
-brew "hashicorp/tap/terraform"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
