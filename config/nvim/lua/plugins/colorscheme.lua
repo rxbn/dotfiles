@@ -11,7 +11,6 @@ return {
           fidget = true,
           harpoon = true,
           mason = true,
-          treesitter_context = true,
         },
       })
       vim.cmd.colorscheme("catppuccin")
