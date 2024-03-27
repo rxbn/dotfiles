@@ -84,6 +84,8 @@ brew "telnet"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
 # Executes a program periodically, showing output fullscreen
