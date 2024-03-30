@@ -128,6 +128,8 @@ cask "aldente"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
 # Voice and text chat software
 cask "discord"
 # Drivers for DisplayLink docks, adapters and monitors
@@ -148,6 +150,8 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
