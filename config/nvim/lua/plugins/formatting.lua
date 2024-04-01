@@ -5,6 +5,11 @@ return {
     cmd = "ConformInfo",
     opts = {
       notify_on_error = false,
+      formatters = {
+        terraform_fmt = {
+          command = "tofu",
+        },
+      },
       formatters_by_ft = {
         sh = { "shfmt" },
         bash = { "shfmt" },
