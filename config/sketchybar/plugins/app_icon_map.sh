@@ -14,6 +14,9 @@ case $@ in
 "Live")
 	icon_result=":ableton:"
 	;;
+"Adobe Bridge 2024")
+	icon_result=":adobe_bridge:"
+	;;
 "Affinity Designer")
 	icon_result=":affinity_designer:"
 	;;
@@ -347,6 +350,9 @@ case $@ in
 "ChatGPT")
 	icon_result=":openai:"
 	;;
+"OpenVPN Connect")
+	icon_result=":openvpn_connect:"
+	;;
 "Orion" | "Orion RC")
 	icon_result=":orion:"
 	;;
@@ -373,6 +379,9 @@ case $@ in
 	;;
 "PomoDone App")
 	icon_result=":pomodone:"
+	;;
+"Postman")
+	icon_result=":postman:"
 	;;
 "PyCharm")
 	icon_result=":pycharm:"
