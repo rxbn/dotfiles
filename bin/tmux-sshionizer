@@ -3,7 +3,7 @@
 function select_server() {
 	local hosts
 	hosts=$(awk -F '[ ,]' '{print $1}' ~/.ssh/known_hosts | ggrep -Pv '(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[\da-f]*:[\da-f:]*:[\da-f]*)' | sort -u)
-	hosts=$(echo "$hosts" | grep -v git)
+	hosts=$(echo "$hosts" | grep -vE "git|ssh.dev.azure.com")
 
 	echo "$hosts" | fzf
 }
