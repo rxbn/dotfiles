@@ -71,6 +71,9 @@ case $@ in
 "Bear")
 	icon_result=":bear:"
 	;;
+"Bilibili" | "哔哩哔哩")
+	icon_result=":bilibili:"
+	;;
 "Bitwarden")
 	icon_result=":bit_warden:"
 	;;
@@ -193,6 +196,9 @@ case $@ in
 	;;
 "IntelliJ IDEA")
 	icon_result=":idea:"
+	;;
+"Inkdrop")
+	icon_result=":inkdrop:"
 	;;
 "Insomnia")
 	icon_result=":insomnia:"
@@ -353,6 +359,9 @@ case $@ in
 "OpenVPN Connect")
 	icon_result=":openvpn_connect:"
 	;;
+"Opera")
+	icon_result=":opera:"
+	;;
 "Orion" | "Orion RC")
 	icon_result=":orion:"
 	;;
@@ -364,6 +373,9 @@ case $@ in
 	;;
 "Preview" | "预览" | "Skim" | "zathura" | "Aperçu")
 	icon_result=":pdf:"
+	;;
+"PDF Expert")
+	icon_result=":pdf_expert:"
 	;;
 "Adobe Photoshop"*)
 	icon_result=":photoshop:"
@@ -494,7 +506,7 @@ case $@ in
 "Tweetbot" | "Twitter")
 	icon_result=":twitter:"
 	;;
-"Neovide" | "MacVim" | "Vim" | "VimR")
+"MacVim" | "Vim" | "VimR")
 	icon_result=":vim:"
 	;;
 "Vivaldi")
@@ -526,6 +538,9 @@ case $@ in
 	;;
 "Xcode")
 	icon_result=":xcode:"
+	;;
+"Яндекс Музыка")
+	icon_result=":yandex_music:"
 	;;
 "Yuque" | "语雀")
 	icon_result=":yuque:"
