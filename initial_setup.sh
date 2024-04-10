@@ -82,7 +82,7 @@ kubectl krew install node-shell
 
 # Configure pyenv
 # renovate datasource=github-tags depName=python/cpython
-PYTHON_VERSION=v3.12.2
+PYTHON_VERSION=v3.12.3
 pyenv install ${PYTHON_VERSION//v/}
 pyenv global ${PYTHON_VERSION//v/}
 
