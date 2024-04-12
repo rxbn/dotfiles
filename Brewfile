@@ -16,6 +16,8 @@ brew "ansible"
 brew "argocd"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+brew "cilium-cli"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Simple, fast and user-friendly alternative to find
