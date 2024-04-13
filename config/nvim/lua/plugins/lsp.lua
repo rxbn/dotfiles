@@ -4,7 +4,10 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      {
+        "williamboman/mason-lspconfig.nvim",
+        tag = "stable",
+      },
       {
         "j-hui/fidget.nvim",
         opts = {
