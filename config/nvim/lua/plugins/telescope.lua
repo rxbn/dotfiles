@@ -12,6 +12,7 @@ return {
     cmd = "Telescope",
     config = function()
       require("telescope").load_extension("fzf")
+      require("telescope").load_extension("yaml_schema")
     end,
     keys = {
       { "<leader>pf", "<Cmd>Telescope find_files<CR>" },
@@ -59,6 +60,7 @@ return {
           require("telescope.builtin").current_buffer_fuzzy_find(opts)
         end,
       },
+      { "<leader>fy", "<Cmd>Telescope yaml_schema<CR>" },
     },
   },
 }

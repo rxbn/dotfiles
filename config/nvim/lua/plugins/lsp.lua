@@ -9,6 +9,12 @@ return {
         tag = "stable",
       },
       {
+        "someone-stole-my-name/yaml-companion.nvim",
+        config = function()
+          require("yaml-companion").load_matcher("kubernetes_crds")
+        end,
+      },
+      {
         "j-hui/fidget.nvim",
         opts = {
           notification = {
@@ -40,7 +46,12 @@ return {
             },
           },
         },
-        yamlls = {},
+        yamlls = require("yaml-companion").setup({
+          lspconfig = {
+            on_attach = require("rxbn.util.lsp").on_attach,
+            capabilities = require("rxbn.util.lsp").capabilities,
+          },
+        }),
         jsonls = {},
         gopls = {},
         terraformls = {},
