@@ -77,9 +77,6 @@ kubectl krew install tree
 kubectl krew install neat
 kubectl krew install node-shell
 
-# Install fzf
-"$(brew --prefix)/opt/fzf/install"
-
 # Configure pyenv
 # renovate datasource=github-tags depName=python/cpython
 PYTHON_VERSION=v3.12.3

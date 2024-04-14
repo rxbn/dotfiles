@@ -38,7 +38,7 @@ bindkey '^e' edit-command-line
 [ -f "$HOME/.config/zsh/work_aliasrc" ] && source "$HOME/.config/zsh/work_aliasrc"
 
 # Load fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 
 # Allow for autocomplete to be case insensitive
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
