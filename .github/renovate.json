@@ -10,6 +10,14 @@
       "matchStrings": [
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_VERSION=(?<currentValue>.*)\\s"
       ]
+    },
+    {
+      "fileMatch": [
+        "config/nvim/lua/yaml-companion/_matchers/custom_kubernetes\\.lua$"
+      ],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)(versioning=(?<versioning>.*?))?\\s.*? k8s_version = \"(?<currentValue>.*)\""
+      ]
     }
   ]
 }

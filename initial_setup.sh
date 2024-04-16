@@ -27,6 +27,7 @@ FOLDERS=(
 	~/containeroo
 	~/tmp
 	~/work/kubeconfigs
+	~/.yamlls/schemas
 )
 
 # Install Rosetta 2
@@ -96,9 +97,13 @@ defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${repo_path}/ite
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Download SketchyBar font
-# renovate datasource=github-releases depName=kvndrsslr/sketchybar-app-font
+# renovate: datasource=github-releases depName=kvndrsslr/sketchybar-app-font
 SKETCHYBAR_APP_FONT_VERSION=v2.0.17
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKETCHYBAR_APP_FONT_VERSION/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
+
+# Clone Kubernetes JSON schemas
+git clone https://github.com/yannh/kubernetes-json-schema.git ~/.yamlls/schemas/kubernetes-json-schema
+git clone https://github.com/datreeio/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
