@@ -11,7 +11,7 @@ return {
       {
         "someone-stole-my-name/yaml-companion.nvim",
         config = function()
-          require("yaml-companion").load_matcher("kubernetes_crds")
+          require("yaml-companion").load_matcher("custom_kubernetes")
         end,
       },
       {
@@ -47,9 +47,21 @@ return {
           },
         },
         yamlls = require("yaml-companion").setup({
+          builtin_matchers = {
+            kubernetes = { enabled = false },
+            cloud_init = { enabled = false },
+          },
+
           lspconfig = {
             on_attach = require("rxbn.util.lsp").on_attach,
             capabilities = require("rxbn.util.lsp").capabilities,
+            settings = {
+              yaml = {
+                schemas = {
+                  kubernetes = "",
+                },
+              },
+            },
           },
         }),
         jsonls = {},
