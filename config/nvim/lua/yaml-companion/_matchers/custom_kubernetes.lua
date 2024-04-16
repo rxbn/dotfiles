@@ -1,8 +1,10 @@
 local M = {}
 
+local homedir = vim.fn.expand("~")
 local builtin_resources = require("yaml-companion.builtin.kubernetes.resources")
 local k8s_version = "v1.29.3"
-local k8s_builtin_url = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/"
+local k8s_builtin_url = homedir
+  .. "/.yamlls/schemas/kubernetes-json-schema/"
   .. k8s_version
   .. "-standalone-strict/all.json"
 
@@ -11,7 +13,11 @@ local k8s_builtin_schema = {
   uri = k8s_builtin_url,
 }
 
-local crds_base_url = "https://raw.githubusercontent.com/datreeio/CRDs-catalog/main"
+local crds_base_url = homedir .. "/.yamlls/schemas/CRDs-catalog/"
+
+local function file_exists(path)
+  return vim.fn.filereadable(path) == 1
+end
 
 M.match = function(bufnr)
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
@@ -40,10 +46,12 @@ M.match = function(bufnr)
 
     local url =
       string.format("%s/%s/%s_%s.json", crds_base_url, string.lower(group), string.lower(resource), api_version)
-    return {
-      name = "Kubernetes CRD",
-      uri = url,
-    }
+    if file_exists(url) then
+      return {
+        name = "Kubernetes CRD",
+        uri = url,
+      }
+    end
   end
 
   return nil
