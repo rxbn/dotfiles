@@ -4,7 +4,7 @@ local xmap = require("rxbn.util.keymap").xmap
 
 nmap({ "<leader>pv", vim.cmd.Ex })
 
-nmap({ "<c-q>", "<Cmd>nohlsearch<CR>" })
+nmap({ "<Esc>", "<Cmd>nohlsearch<CR>" })
 
 nmap({ "]q", "<Cmd>cnext<CR>zz" })
 nmap({ "[q", "<Cmd>cprev<CR>zz" })
