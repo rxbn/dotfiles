@@ -180,4 +180,5 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
 mas "Pages", id: 409201541
+mas "Vimari", id: 1480933944
 mas "WireGuard", id: 1451685025
