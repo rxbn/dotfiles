@@ -6,7 +6,7 @@ return {
       "mason.nvim",
       {
         "williamboman/mason-lspconfig.nvim",
-        tag = "stable",
+        tag = "v1.27.0",
       },
       {
         "someone-stole-my-name/yaml-companion.nvim",
