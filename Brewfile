@@ -146,6 +146,8 @@ cask "firefox"
 cask "font-jetbrains-mono-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Software for Logitech devices
+cask "logitech-options"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
