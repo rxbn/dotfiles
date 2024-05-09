@@ -98,7 +98,7 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 # Download SketchyBar font
 # renovate: datasource=github-releases depName=kvndrsslr/sketchybar-app-font
-SKETCHYBAR_APP_FONT_VERSION=v2.0.17
+SKETCHYBAR_APP_FONT_VERSION=v2.0.18
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKETCHYBAR_APP_FONT_VERSION/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 
 # Clone Kubernetes JSON schemas
