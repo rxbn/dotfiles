@@ -65,11 +65,17 @@ case $@ in
 "Audacity")
 	icon_result=":audacity:"
 	;;
+"Bambu Studio")
+	icon_result=":bambu_studio:"
+	;;
 "MoneyMoney")
 	icon_result=":bank:"
 	;;
 "Bear")
 	icon_result=":bear:"
+	;;
+"BetterTouchTool")
+	icon_result=":bettertouchtool:"
 	;;
 "Bilibili" | "哔哩哔哩")
 	icon_result=":bilibili:"
@@ -89,6 +95,9 @@ case $@ in
 "Brave Browser")
 	icon_result=":brave_browser:"
 	;;
+"Calculator" | "Calculette")
+	icon_result=":calculator:"
+	;;
 "Calendar" | "日历" | "Fantastical" | "Cron" | "Amie" | "Calendrier" | "Notion Calendar")
 	icon_result=":calendar:"
 	;;
@@ -107,8 +116,14 @@ case $@ in
 "Color Picker" | "数码测色计")
 	icon_result=":color_picker:"
 	;;
+"CotEditor")
+	icon_result=":coteditor:"
+	;;
 "Cypress")
 	icon_result=":cypress:"
+	;;
+"DataSpell")
+	icon_result=":dataspell:"
 	;;
 "DaVinci Resolve")
 	icon_result=":davinciresolve:"
@@ -173,6 +188,9 @@ case $@ in
 "Folx")
 	icon_result=":folx:"
 	;;
+"Fusion")
+	icon_result=":fusion:"
+	;;
 "System Preferences" | "System Settings" | "系统设置" | "Réglages Système")
 	icon_result=":gear:"
 	;;
@@ -199,6 +217,9 @@ case $@ in
 	;;
 "Inkdrop")
 	icon_result=":inkdrop:"
+	;;
+"Inkscape")
+	icon_result=":inkscape:"
 	;;
 "Insomnia")
 	icon_result=":insomnia:"
@@ -251,6 +272,9 @@ case $@ in
 "LM Studio")
 	icon_result=":lm_studio:"
 	;;
+"LocalSend")
+	icon_result=":localsend:"
+	;;
 "Logic Pro")
 	icon_result=":logicpro:"
 	;;
@@ -290,6 +314,9 @@ case $@ in
 "Microsoft PowerPoint")
 	icon_result=":microsoft_power_point:"
 	;;
+"Microsoft Remote Desktop")
+	icon_result=":microsoft_remote_desktop:"
+	;;
 "Microsoft Teams" | "Microsoft Teams (work or school)")
 	icon_result=":microsoft_teams:"
 	;;
@@ -316,6 +343,9 @@ case $@ in
 	;;
 "Neovide" | "neovide")
 	icon_result=":neovide:"
+	;;
+"Neovim" | "neovim" | "nvim")
+	icon_result=":neovim:"
 	;;
 "网易云音乐")
 	icon_result=":netease_music:"
@@ -371,6 +401,9 @@ case $@ in
 "Parallels Desktop")
 	icon_result=":parallels:"
 	;;
+"Parsec")
+	icon_result=":parsec:"
+	;;
 "Preview" | "预览" | "Skim" | "zathura" | "Aperçu")
 	icon_result=":pdf:"
 	;;
@@ -403,6 +436,9 @@ case $@ in
 	;;
 "QQ音乐" | "QQMusic")
 	icon_result=":qqmusic:"
+	;;
+"Quantumult X")
+	icon_result=":quantumult_x:"
 	;;
 "qutebrowser")
 	icon_result=":qute_browser:"
@@ -529,6 +565,9 @@ case $@ in
 	;;
 "微信" | "WeChat")
 	icon_result=":wechat:"
+	;;
+"企业微信" | "WeCom")
+	icon_result=":wecom:"
 	;;
 "WezTerm")
 	icon_result=":wezterm:"
