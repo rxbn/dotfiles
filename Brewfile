@@ -4,7 +4,6 @@ tap "fluxcd/tap"
 tap "go-task/tap"
 tap "goreleaser/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "loft-sh/tap"
@@ -132,6 +131,8 @@ cask "aldente"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Chromium based browser
+cask "arc"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Voice and text chat software
@@ -162,8 +163,6 @@ cask "raspberry-pi-imager"
 cask "sf-symbols"
 # Team communication and collaboration software
 cask "slack"
-# Control your Sonos system
-cask "sonos"
 # Music streaming service
 cask "spotify"
 # Virtual machines UI using QEMU
@@ -174,7 +173,6 @@ cask "vlc"
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Photo", id: 824183456
-mas "Dark Reader for Safari", id: 1438243180
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
 mas "Infuse", id: 1136220934
@@ -182,7 +180,5 @@ mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
-mas "OpenIn", id: 1643649331
 mas "Pages", id: 409201541
-mas "Vimari", id: 1480933944
 mas "WireGuard", id: 1451685025
