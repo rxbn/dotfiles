@@ -47,12 +47,12 @@ touch ~/.hushlogin # Disable login message
 
 defaults write "Apple Global Domain" AppleReduceDesktopTinting -int 1 # Disable window tinting
 
-defaults write com.apple.dock autohide -int 1            # Automatically hide Dock
-defaults write com.apple.dock tilesize -int 50           # Set Dock size
-defaults write com.apple.dock orientation -string "left" # Position Dock left
-defaults write com.apple.dock magnification -int 1       # Enable magnification
-defaults write com.apple.dock largesize -int 80          # Set magnification size
-defaults write com.apple.dock show-recents -int 0        # Do not display recent apps
+defaults write com.apple.dock autohide -int 1             # Automatically hide Dock
+defaults write com.apple.dock tilesize -int 50            # Set Dock size
+defaults write com.apple.dock orientation -string "right" # Position Dock right
+defaults write com.apple.dock magnification -int 1        # Enable magnification
+defaults write com.apple.dock largesize -int 80           # Set magnification size
+defaults write com.apple.dock show-recents -int 0         # Do not display recent apps
 
 # Configure Dock apps
 defaults write com.apple.dock persistent-apps -array
@@ -103,7 +103,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKET
 
 # Clone Kubernetes JSON schemas
 git clone https://github.com/yannh/kubernetes-json-schema.git ~/.yamlls/schemas/kubernetes-json-schema
-git clone https://github.com/datreeio/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
+git clone https://github.com/InfinityFlowApp/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
