@@ -18,6 +18,7 @@ FOLDERS=(
 	~/.config/skhd
 	~/.config/borders
 	~/.config/tmux
+	~/.config/wezterm
 	~/.config/1Password/ssh
 	~/.cache/zsh
 	~/.ssh
@@ -92,10 +93,6 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 repo_path=$(pwd)
 
-# Set iTerm2 config path
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${repo_path}/iterm2"
-defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-
 # Download SketchyBar font
 # renovate: datasource=github-releases depName=kvndrsslr/sketchybar-app-font
 SKETCHYBAR_APP_FONT_VERSION=v2.0.18
@@ -125,11 +122,10 @@ ln -sf "${repo_path}/config/borders/bordersrc" ~/.config/borders/bordersrc
 ln -sf "${repo_path}/config/tmux/tmux.conf" ~/.config/tmux/tmux.conf
 ln -sf "${repo_path}/config/zsh/zshrc" ~/.config/zsh/.zshrc
 ln -sf "${repo_path}/config/yamllint/config" ~/.config/yamllint/config
+ln -sf "${repo_path}/config/wezterm/wezterm.lua" ~/.config/wezterm/wezterm.lua
 ln -sf "${repo_path}/bin/ansible-vault-pass" ~/bin/ansible-vault-pass
 ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
-ln -sf "${repo_path}/bin/open-iterm" ~/bin/open-iterm
-ln -sf "${repo_path}/bin/open-safari" ~/bin/open-safari
 ln -sf "${repo_path}/personal/config/1Password/ssh/agent.toml" ~/.config/1Password/ssh/agent.toml
 ln -sf "${repo_path}/work/kubeconfigs-envrc" ~/work/kubeconfigs/.global-envrc
 

@@ -143,10 +143,8 @@ cask "displaylink"
 cask "docker"
 # Web browser
 cask "firefox"
-# Developer targeted fonts with a high number of glyphs
-cask "font-jetbrains-mono-nerd-font"
-# Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2"
+# Typeface made for developers
+cask "font-jetbrains-mono"
 # Software for Logitech devices
 cask "logitech-options"
 # Provides updates to various Microsoft products
@@ -157,6 +155,8 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
@@ -169,13 +169,14 @@ cask "spotify"
 cask "utm"
 # Multimedia player
 cask "vlc"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Affinity Photo", id: 824183456
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
-mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Microsoft Remote Desktop", id: 1295203466
