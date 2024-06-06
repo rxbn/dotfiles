@@ -18,7 +18,6 @@ local custom_on_attach = function(client, bufnr)
   nmap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>", map_opts })
   nmap({ "<leader>ds", vim.diagnostic.open_float, map_opts })
   nmap({ "K", vim.lsp.buf.hover, map_opts })
-  imap({ "<c-s>", vim.lsp.buf.signature_help, map_opts })
 
   if client.server_capabilities.renameProvider then
     nmap({ "<leader>r", vim.lsp.buf.rename, map_opts })
