@@ -32,6 +32,7 @@ export WHITE='\033[1;37m'
 # Ansible
 export ANSIBLE_VAULT_PASSWORD_FILE="~/bin/ansible-vault-pass"
 export ANSIBLE_INVENTORY="hosts.yml"
+export ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
