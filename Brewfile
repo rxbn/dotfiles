@@ -55,8 +55,6 @@ brew "kustomize"
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
-# Simple tool to make locally trusted development certificates
-brew "mkcert"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
@@ -87,8 +85,6 @@ brew "telnet"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
 # Executes a program periodically, showing output fullscreen
@@ -145,8 +141,6 @@ cask "docker"
 cask "firefox"
 # Typeface made for developers
 cask "font-jetbrains-mono"
-# Software for Logitech devices
-cask "logitech-options"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
