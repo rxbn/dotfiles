@@ -5,6 +5,7 @@ function select_directory() {
 		~ \
 		~/personal \
 		~/personal/ansible \
+		~/personal/kubeconfigs \
 		~/containeroo \
 		~/work \
 		~/work/ansible \
