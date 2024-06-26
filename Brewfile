@@ -3,6 +3,7 @@ tap "felixkratz/formulae"
 tap "fluxcd/tap"
 tap "go-task/tap"
 tap "goreleaser/tap"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
@@ -51,6 +52,8 @@ brew "kubectx"
 brew "kubent"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
@@ -111,6 +114,8 @@ brew "fluxcd/tap/flux"
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser/tap/goreleaser"
+# Vault
+brew "hashicorp/tap/vault"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
@@ -139,7 +144,6 @@ cask "displaylink"
 cask "docker"
 # Web browser
 cask "firefox"
-# Typeface made for developers
 cask "font-jetbrains-mono"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
