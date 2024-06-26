@@ -25,6 +25,7 @@ FOLDERS=(
 	~/.kube
 	~/bin
 	~/personal/ansible
+	~/personal/kubeconfigs
 	~/containeroo
 	~/tmp
 	~/work/kubeconfigs
@@ -126,6 +127,5 @@ ln -sf "${repo_path}/bin/ansible-vault-pass" ~/bin/ansible-vault-pass
 ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
 ln -sf "${repo_path}/personal/config/1Password/ssh/agent.toml" ~/.config/1Password/ssh/agent.toml
-ln -sf "${repo_path}/work/kubeconfigs-envrc" ~/work/kubeconfigs/.global-envrc
 
 echo "Done! Please restart your computer."
