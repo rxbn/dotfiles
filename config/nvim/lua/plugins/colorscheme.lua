@@ -4,6 +4,7 @@ return {
     name = "catppuccin",
     lazy = false,
     priority = 1000,
+    tag = "stable",
     config = function()
       require("catppuccin").setup({
         flavour = "frappe",
