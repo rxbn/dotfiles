@@ -126,6 +126,8 @@ brew "loft-sh/tap/vcluster"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# Professional image editing software
+cask "affinity-photo"
 # Menu bar tool to limit maximum charging percentage
 cask "aldente"
 # Application launcher and productivity software
@@ -172,7 +174,6 @@ cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
-mas "Affinity Photo", id: 824183456
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
