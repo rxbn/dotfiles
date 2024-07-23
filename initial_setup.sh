@@ -100,7 +100,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKET
 
 # Clone Kubernetes JSON schemas
 git clone https://github.com/yannh/kubernetes-json-schema.git ~/.yamlls/schemas/kubernetes-json-schema
-git clone https://github.com/InfinityFlowApp/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
+git clone https://github.com/datreeio/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
