@@ -8,28 +8,28 @@ declare -a FOLDERS
 DOCK_APPS=()
 
 FOLDERS=(
-	~/.config/git
-	~/.config/direnv
-	~/.config/zsh
-	~/.config/plugins/zsh
-	~/.config/yamllint
-	~/.config/starship
-	~/.config/yabai
-	~/.config/skhd
-	~/.config/borders
-	~/.config/tmux
-	~/.config/wezterm
-	~/.config/1Password/ssh
-	~/.cache/zsh
-	~/.ssh
-	~/.kube
-	~/bin
-	~/personal/ansible
-	~/personal/kubeconfigs
-	~/containeroo
-	~/tmp
-	~/work/kubeconfigs
-	~/.yamlls/schemas
+  ~/.config/git
+  ~/.config/direnv
+  ~/.config/zsh
+  ~/.config/plugins/zsh
+  ~/.config/yamllint
+  ~/.config/starship
+  ~/.config/yabai
+  ~/.config/skhd
+  ~/.config/borders
+  ~/.config/tmux
+  ~/.config/wezterm
+  ~/.config/1Password/ssh
+  ~/.cache/zsh
+  ~/.ssh
+  ~/.kube
+  ~/bin
+  ~/personal/ansible
+  ~/personal/kubeconfigs
+  ~/containeroo
+  ~/tmp
+  ~/work/kubeconfigs
+  ~/.yamlls/schemas
 )
 
 # Install Rosetta 2
@@ -37,7 +37,7 @@ sudo softwareupdate --install-rosetta
 
 # Create folders
 for folder in "${FOLDERS[@]}"; do
-	mkdir -p "$folder"
+  mkdir -p "$folder"
 done
 
 # Install Homebrew
@@ -58,7 +58,7 @@ defaults write com.apple.dock show-recents -int 0  # Do not display recent apps
 # Configure Dock apps
 defaults write com.apple.dock persistent-apps -array
 for app in "${DOCK_APPS[@]}"; do
-	defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+  defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 done
 
 killall Dock
