@@ -8,7 +8,6 @@ read_only = " "
 
 [direnv]
 disabled = false
-style = "bold yellow"
 
 [git_metrics]
 disabled = false
