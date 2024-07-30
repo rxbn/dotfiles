@@ -1,7 +1,6 @@
 tap "containeroo/tap"
 tap "felixkratz/formulae"
 tap "fluxcd/tap"
-tap "go-task/tap"
 tap "goreleaser/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -24,8 +23,6 @@ brew "direnv"
 brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# GitHub command-line tool
-brew "gh"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
@@ -52,8 +49,6 @@ brew "kubectx"
 brew "kubent"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
-# Package manager for the Lua programming language
-brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
@@ -68,8 +63,6 @@ brew "opentofu"
 brew "operator-sdk"
 # Fast, disk space efficient package manager
 brew "pnpm"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
 # Password generator
 brew "pwgen"
 # Python version management
@@ -112,8 +105,6 @@ brew "felixkratz/formulae/borders"
 brew "felixkratz/formulae/sketchybar"
 # Flux CLI
 brew "fluxcd/tap/flux"
-# Task runner / simpler Make alternative written in Go
-brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser/tap/goreleaser"
 # Vault
