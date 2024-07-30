@@ -41,6 +41,10 @@ M.match = function(bufnr)
       end
     end
 
+    if resource == "" then
+      return nil
+    end
+
     local crd_path =
       string.format("%s/%s/%s_%s.json", crds_base_dir, string.lower(group), string.lower(resource), api_version)
     if vim.fn.filereadable(crd_path) == 1 then
