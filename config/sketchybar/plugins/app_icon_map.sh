@@ -101,6 +101,9 @@ case $@ in
 "Brave Browser")
   icon_result=":brave_browser:"
   ;;
+"BusyCal")
+  icon_result=":busycal:"
+  ;;
 "Calculator" | "Calculette")
   icon_result=":calculator:"
   ;;
@@ -230,6 +233,9 @@ case $@ in
 "IntelliJ IDEA")
   icon_result=":idea:"
   ;;
+"Adobe Illustrator"* | "Illustrator")
+  icon_result=":illustrator:"
+  ;;
 "Adobe InDesign"* | "InDesign")
   icon_result=":indesign:"
   ;;
@@ -310,6 +316,9 @@ case $@ in
   ;;
 "Maps" | "Google Maps")
   icon_result=":maps:"
+  ;;
+"Marta")
+  icon_result=":marta:"
   ;;
 "Matlab")
   icon_result=":matlab:"
@@ -493,6 +502,9 @@ case $@ in
   ;;
 "Rider" | "JetBrains Rider")
   icon_result=":rider:"
+  ;;
+"Royal TSX")
+  icon_result=":royaltsx:"
   ;;
 "Safari" | "Safari浏览器" | "Safari Technology Preview")
   icon_result=":safari:"
