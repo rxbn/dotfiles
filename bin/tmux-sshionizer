@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
-function select_server() {
-  local hosts
-  hosts=$(awk -F '[ ,]' '{print $1}' ~/.ssh/known_hosts | ggrep -Pv '(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|[\da-f]*:[\da-f:]*:[\da-f]*)' | sort -u)
-  hosts=$(echo "$hosts" | grep -vE "git|ssh.dev.azure.com")
+source "${HOME}/personal/dotfiles/work/config/zsh/work_env"
 
-  echo "$hosts" | fzf
+function select_server() {
+  local hosts=()
+
+  hosts+=("$(ggrep -Eho '[[:space:]]((en?|pr?|in?|te?|de?|vp?)-[-a-z0-9]+)[[:space:]]?' "${WORK_HOSTS_1}" "${WORK_HOSTS_2}")")
+  hosts+=("${WORK_JUMPHOST}")
+  hosts+=("$(yq '.prod.hosts | keys[]' ~/personal/ansible/upgrade-servers/hosts.yml)")
+
+  printf "%s\n" "${hosts[@]}" | tr -d ' \t' | sort -u | fzf
 }
 
 if [[ $# -eq 1 ]]; then
