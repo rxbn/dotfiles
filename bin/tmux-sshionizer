@@ -5,7 +5,7 @@ source "${HOME}/personal/dotfiles/work/config/zsh/work_env"
 function select_server() {
   local hosts=()
 
-  hosts+=("$(ggrep -Eho '[[:space:]]((en?|pr?|in?|te?|de?|vp?)-[-a-z0-9]+)[[:space:]]?' "${WORK_HOSTS_1}" "${WORK_HOSTS_2}")")
+  hosts+=("$(ggrep -Eho '[[:space:]]((en?|pr?|in?|te?|de?|vp?)-[-A-Za-z0-9]+)[[:space:]]?' "${WORK_HOSTS_1}" "${WORK_HOSTS_2}")")
   hosts+=("${WORK_JUMPHOST}")
   hosts+=("$(yq '.prod.hosts | keys[]' ~/personal/ansible/upgrade-servers/hosts.yml)")
 
