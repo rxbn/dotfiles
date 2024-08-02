@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "${HOME}/.config/zsh/personal_env"
+source "${HOME}/personal/dotfiles/personal/config/zsh/personal_env"
 
 weather_icon=(
   label.drawing=off

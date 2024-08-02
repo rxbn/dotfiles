@@ -43,7 +43,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
-
-# Personal env vars
-source ~/.config/zsh/personal_env
 # vi: ft=zsh

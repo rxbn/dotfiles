@@ -104,7 +104,6 @@ git clone https://github.com/datreeio/CRDs-catalog.git ~/.yamlls/schemas/CRDs-ca
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
-ln -sf "${repo_path}/personal/config/zsh/personal_env" ~/.config/zsh/personal_env
 ln -sf "${repo_path}/personal/ssh/config" ~/.ssh/config
 ln -sf "${repo_path}/work/ssh/config" ~/.ssh/work_config
 ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc

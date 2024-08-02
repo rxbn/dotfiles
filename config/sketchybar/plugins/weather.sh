@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "${HOME}/.config/zsh/personal_env"
+source "${HOME}/personal/dotfiles/personal/config/zsh/personal_env"
 
 WEATHER=$(curl --max-time 2 --silent --retry 3 --retry-delay 1 --retry-connrefused "https://app-prod-ws.meteoswiss-app.ch/v1/plzDetail?plz=${ZIP_CODE}00")
 
