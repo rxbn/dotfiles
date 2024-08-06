@@ -50,6 +50,7 @@ return {
       },
       {
         "mfussenegger/nvim-dap-python",
+        lazy = true,
         config = function()
           local debugpy_path = require("mason-core.path").concat({
             ---@diagnostic disable-next-line: assign-type-mismatch
