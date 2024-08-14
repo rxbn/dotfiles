@@ -169,6 +169,7 @@ cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
+mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Microsoft Remote Desktop", id: 1295203466
