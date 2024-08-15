@@ -3,7 +3,7 @@ local M = {}
 local homedir = vim.fn.expand("~")
 local builtin_resources = require("yaml-companion.builtin.kubernetes.resources")
 -- renovate: datasource=github-releases depName=kubernetes/kubernetes
-local k8s_version = "v1.30.3"
+local k8s_version = "v1.31.0"
 local k8s_builtin_path = homedir
   .. "/.yamlls/schemas/kubernetes-json-schema/"
   .. k8s_version
