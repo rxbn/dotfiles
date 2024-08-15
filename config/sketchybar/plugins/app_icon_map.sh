@@ -143,6 +143,9 @@ case $@ in
 "DaVinci Resolve")
   icon_result=":davinciresolve:"
   ;;
+"Deezer")
+  icon_result=":deezer:"
+  ;;
 "Default")
   icon_result=":default:"
   ;;
@@ -202,6 +205,9 @@ case $@ in
   ;;
 "Folx")
   icon_result=":folx:"
+  ;;
+"Fork")
+  icon_result=":fork:"
   ;;
 "Fusion")
   icon_result=":fusion:"
@@ -503,6 +509,9 @@ case $@ in
 "Rider" | "JetBrains Rider")
   icon_result=":rider:"
   ;;
+"Rio")
+  icon_result=":rio:"
+  ;;
 "Royal TSX")
   icon_result=":royaltsx:"
   ;;
@@ -547,6 +556,9 @@ case $@ in
   ;;
 "Sublime Text")
   icon_result=":sublime_text:"
+  ;;
+"superProductivity")
+  icon_result=":superproductivity:"
   ;;
 "Tana")
   icon_result=":tana:"
