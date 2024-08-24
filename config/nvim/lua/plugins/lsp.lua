@@ -4,10 +4,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mason.nvim",
-      {
-        "williamboman/mason-lspconfig.nvim",
-        tag = "v1.27.0",
-      },
+      "williamboman/mason-lspconfig.nvim",
       {
         "someone-stole-my-name/yaml-companion.nvim",
         config = function()
@@ -57,7 +54,6 @@ return {
             kubernetes = { enabled = false },
             cloud_init = { enabled = false },
           },
-
           lspconfig = {
             on_attach = require("rxbn.util.lsp").on_attach,
             capabilities = require("rxbn.util.lsp").capabilities,
@@ -83,6 +79,7 @@ return {
         tsserver = {},
         tailwindcss = {},
         pylsp = {},
+        ruff = {},
       }
 
       local function setup(server)
