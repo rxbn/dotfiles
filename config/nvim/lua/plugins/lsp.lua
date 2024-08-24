@@ -1,13 +1,10 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufNewFile" },
     dependencies = {
       "mason.nvim",
-      {
-        "williamboman/mason-lspconfig.nvim",
-        tag = "v1.27.0",
-      },
+      "williamboman/mason-lspconfig.nvim",
       {
         "someone-stole-my-name/yaml-companion.nvim",
         config = function()
