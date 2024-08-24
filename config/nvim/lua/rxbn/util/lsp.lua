@@ -1,6 +1,5 @@
 local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", { clear = true })
 local nmap = require("rxbn.util.keymap").nmap
-local imap = require("rxbn.util.keymap").imap
 
 local custom_on_attach = function(client, bufnr)
   local map_opts = { buffer = bufnr }
