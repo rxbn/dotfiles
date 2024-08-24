@@ -79,7 +79,6 @@ return {
         tsserver = {},
         tailwindcss = {},
         pylsp = {},
-        ruff = {},
       }
 
       local function setup(server)

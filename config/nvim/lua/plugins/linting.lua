@@ -7,7 +7,6 @@ return {
         "ansible-lint",
         "golangci-lint",
         "markdownlint",
-        "ruff",
         "yamllint",
         "shellcheck",
       }
@@ -19,7 +18,6 @@ return {
         yaml = { "yamllint" },
         go = { "golangcilint" },
         markdown = { "markdownlint" },
-        python = { "ruff" },
       }
 
       local augroup_lint = vim.api.nvim_create_augroup("custom-lsp-lint", { clear = true })
