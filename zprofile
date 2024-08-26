@@ -30,7 +30,7 @@ export LIGHTCYAN='\033[1;36m'
 export WHITE='\033[1;37m'
 
 # Ansible
-export ANSIBLE_VAULT_PASSWORD_FILE="~/bin/ansible-vault-pass"
+export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/bin/ansible-vault-pass"
 export ANSIBLE_INVENTORY="hosts.yml"
 export ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
