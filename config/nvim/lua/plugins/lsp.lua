@@ -76,7 +76,7 @@ return {
         dockerls = {},
         tflint = {},
         marksman = {},
-        tsserver = {},
+        ts_ls = {},
         tailwindcss = {},
         pylsp = {},
       }
