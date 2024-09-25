@@ -172,7 +172,7 @@ mas "Final Cut Pro", id: 424389933
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025

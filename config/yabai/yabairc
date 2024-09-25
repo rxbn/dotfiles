@@ -56,7 +56,7 @@ yabai -m rule --add app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=
 yabai -m rule --add app="^Finder$" title="^Finder Settings$" manage=off
 yabai -m rule --add app="^Infuse$" manage=off
 yabai -m rule --add app="^Mail$" title="^(General|Accounts|Junk Mail|Fonts & Colors|Viewing|Composing|Signatures|Rules|Extensions|Privacy)$" manage=off
-yabai -m rule --add app="^Microsoft Remote Desktop$" manage=off
+yabai -m rule --add app="^Windows App$" manage=off
 yabai -m rule --add app="^Nextcloud$" manage=off
 yabai -m rule --add app="^Notes$" title="^Settings$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off

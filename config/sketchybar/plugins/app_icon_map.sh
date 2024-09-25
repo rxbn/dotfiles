@@ -350,7 +350,7 @@ case $@ in
 "Microsoft PowerPoint")
   icon_result=":microsoft_power_point:"
   ;;
-"Microsoft Remote Desktop")
+"Microsoft Remote Desktop" | "Windows App")
   icon_result=":microsoft_remote_desktop:"
   ;;
 "Microsoft Teams" | "Microsoft Teams (work or school)")
