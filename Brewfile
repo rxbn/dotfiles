@@ -148,8 +148,6 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
