@@ -5,22 +5,12 @@ alias .....='cd ../../../..;'
 alias ....='cd ../../..;'
 alias ...='cd ../..;'
 alias ..='cd ..;'
-alias k='kubectl'
 alias kc='kubectx'
 alias kn='kubens'
 alias grep='ggrep --color'
 alias sed=gsed
-alias kg='kubectl get'
-alias kd='kubectl describe'
-alias ke='kubectl explain'
-alias kexi='kubectl exec -it'
-alias kl='kubectl logs -f'
-alias kgs='kubectl get secret'
-alias kgsv='kubectl get service'
-alias kgc='kubectl get configmap'
-alias kgp='kubectl get pods'
-alias kgi='kubectl get ingress'
 alias kleak="kubectl get secrets -ogo-template='{{ range \$k, \$v := .data }}{{ \$k }}:{{ printf \"\\n\" }}{{ \$v | base64decode }}{{ printf \"\\n\\n\" }}{{ end }}'"
+alias kleakn="kubectl get secrets -ogo-template='{{ range \$k, \$v := .data }}{{ \$k }}:{{ printf \"\\n\" }}{{ \$v | base64decode }}{{ printf \"\\n\\n\" }}{{ end }}' --namespace"
 alias se='sops --encrypt --in-place'
 alias sd='sops --decrypt --in-place'
 alias gia='git add --all'
@@ -74,4 +64,8 @@ function zsh_plugins_update() {
     echo -e "\n"
   done
 }
+
+[ -f ~/.config/plugins/zsh/kubectl-aliases/.kubectl_aliases ] && source \
+  <(cat ~/.config/plugins/zsh/kubectl-aliases/.kubectl_aliases | sed -r 's/(kubectl.*) --watch/watch \1/g')
+
 # vi: ft=zsh
