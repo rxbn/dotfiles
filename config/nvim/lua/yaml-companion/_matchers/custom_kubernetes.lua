@@ -1,58 +1,99 @@
 local M = {}
 
 local homedir = vim.fn.expand("~")
-local builtin_resources = require("yaml-companion.builtin.kubernetes.resources")
 -- renovate: datasource=github-releases depName=kubernetes/kubernetes
 local k8s_version = "v1.31.1"
-local k8s_builtin_path = homedir
-  .. "/.yamlls/schemas/kubernetes-json-schema/"
-  .. k8s_version
-  .. "-standalone-strict/all.json"
 
-local k8s_builtin_schema = {
-  name = "Kubernetes",
-  uri = k8s_builtin_path,
+-- Template for the schema structure
+local k8s_combined_schema_template = {
+  ["$schema"] = "http://json-schema.org/draft-07/schema#",
+  schemaSequence = {},
 }
 
-local crds_base_dir = homedir .. "/.yamlls/schemas/CRDs-catalog/"
+-- Retrieve the list of built-in Kubernetes resources
+local builtin_resources = require("yaml-companion.builtin.kubernetes.resources")
 
 M.match = function(bufnr)
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
-  local group, api_version, resource = "", "", ""
 
+  local api_versions = {}
+  local kinds = {}
+
+  -- Find all occurrences of apiVersion and kind
   for _, line in ipairs(lines) do
-    local kind_match = line:match("^kind:%s*(%S+)")
-    if kind_match and vim.tbl_contains(builtin_resources, kind_match) then
-      return k8s_builtin_schema
-    end
+    local api_version = line:match("^apiVersion:%s*(%S+)")
+    local kind = line:match("^kind:%s*(%S+)")
 
-    local apiVersion_match = line:match("^apiVersion:%s*(%S+)")
-    if apiVersion_match then
-      group, api_version = apiVersion_match:match("([^/]+)/([^/]+)")
+    if api_version then
+      table.insert(api_versions, api_version)
+    end
+    if kind then
+      table.insert(kinds, kind)
     end
   end
 
-  if group ~= "" and api_version ~= "" then
-    for _, line in ipairs(lines) do
-      local kind_match = line:match("^kind:%s*(%S+)")
-      if kind_match then
-        resource = kind_match
-        break
+  -- Get the full path of the current buffer and use it to create a unique schema file name
+  local file_path = vim.api.nvim_buf_get_name(bufnr)
+  local file_suffix = file_path:gsub("[/:\\]", "_") -- Replace path separators with underscores
+  local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/kubernetes_combined" .. file_suffix .. ".json"
+
+  -- Clear the schema sequence to start fresh
+  k8s_combined_schema_template.schemaSequence = {}
+
+  -- Generate the schema sequence for each apiVersion/kind pair
+  for i, api_version in ipairs(api_versions) do
+    local kind = kinds[i]
+    if api_version and kind then
+      local is_builtin = vim.tbl_contains(builtin_resources, kind)
+
+      -- Include the default Kubernetes schema only if a built-in resource is detected
+      if is_builtin then
+        table.insert(k8s_combined_schema_template.schemaSequence, {
+          ["$schema"] = "http://json-schema.org/draft-07/schema#",
+          ["$ref"] = homedir
+            .. "/.yamlls/schemas/kubernetes-json-schema/"
+            .. k8s_version
+            .. "-standalone-strict/all.json",
+        })
+      else
+        -- Handle CRD schema for non-builtin resources
+        local api_group = api_version:match("^[^/]+") -- Everything before the slash
+        local api_version_suffix = api_version:match("/(v%d+.*)") -- Everything after the slash
+
+        if api_group and api_version_suffix then
+          local crd_schema_path = homedir
+            .. "/.yamlls/schemas/CRDs-catalog/"
+            .. api_group
+            .. "/"
+            .. string.lower(kind)
+            .. "_"
+            .. api_version_suffix
+            .. ".json"
+          table.insert(k8s_combined_schema_template.schemaSequence, {
+            ["$schema"] = "http://json-schema.org/draft-07/schema#",
+            ["$ref"] = crd_schema_path,
+          })
+        end
       end
     end
+  end
 
-    if resource == "" then
-      return nil
-    end
+  -- Save the generated schema sequence to the unique cache file, overwriting it
+  local json_output = vim.fn.json_encode(k8s_combined_schema_template)
+  local cache_file = io.open(k8s_combined_schema_path, "w")
+  if cache_file then
+    cache_file:write(json_output)
+    cache_file:close()
+  else
+    vim.api.nvim_err_writeln("Failed to write to cache file: " .. k8s_combined_schema_path)
+  end
 
-    local crd_path =
-      string.format("%s/%s/%s_%s.json", crds_base_dir, string.lower(group), string.lower(resource), api_version)
-    if vim.fn.filereadable(crd_path) == 1 then
-      return {
-        name = "Kubernetes CRD",
-        uri = crd_path,
-      }
-    end
+  -- Return the Kubernetes schema configuration only if there are resources to validate
+  if #k8s_combined_schema_template.schemaSequence > 0 then
+    return {
+      name = "Kubernetes",
+      uri = k8s_combined_schema_path,
+    }
   end
 
   return nil
