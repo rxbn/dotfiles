@@ -6,8 +6,7 @@ local k8s_version = "v1.31.1"
 
 -- Template for the schema structure
 local k8s_combined_schema_template = {
-  ["$schema"] = "http://json-schema.org/draft-07/schema#",
-  schemaSequence = {},
+  oneOf = {},
 }
 
 -- Retrieve the list of built-in Kubernetes resources
@@ -37,10 +36,10 @@ M.match = function(bufnr)
   local file_suffix = file_path:gsub("[/:\\]", "_") -- Replace path separators with underscores
   local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/kubernetes_combined" .. file_suffix .. ".json"
 
-  -- Clear the schema sequence to start fresh
-  k8s_combined_schema_template.schemaSequence = {}
+  -- Clear the schema to start fresh
+  k8s_combined_schema_template.oneOf = {}
 
-  -- Generate the schema sequence for each apiVersion/kind pair
+  -- Generate the schema for each apiVersion/kind pair
   for i, api_version in ipairs(api_versions) do
     local kind = kinds[i]
     if api_version and kind then
@@ -48,8 +47,7 @@ M.match = function(bufnr)
 
       -- Include the default Kubernetes schema only if a built-in resource is detected
       if is_builtin then
-        table.insert(k8s_combined_schema_template.schemaSequence, {
-          ["$schema"] = "http://json-schema.org/draft-07/schema#",
+        table.insert(k8s_combined_schema_template.oneOf, {
           ["$ref"] = homedir
             .. "/.yamlls/schemas/kubernetes-json-schema/"
             .. k8s_version
@@ -69,8 +67,7 @@ M.match = function(bufnr)
             .. "_"
             .. api_version_suffix
             .. ".json"
-          table.insert(k8s_combined_schema_template.schemaSequence, {
-            ["$schema"] = "http://json-schema.org/draft-07/schema#",
+          table.insert(k8s_combined_schema_template.oneOf, {
             ["$ref"] = crd_schema_path,
           })
         end
@@ -78,7 +75,7 @@ M.match = function(bufnr)
     end
   end
 
-  -- Save the generated schema sequence to the unique cache file, overwriting it
+  -- Save the generated schema to the unique cache file, overwriting it
   local json_output = vim.fn.json_encode(k8s_combined_schema_template)
   local cache_file = io.open(k8s_combined_schema_path, "w")
   if cache_file then
@@ -89,7 +86,7 @@ M.match = function(bufnr)
   end
 
   -- Return the Kubernetes schema configuration only if there are resources to validate
-  if #k8s_combined_schema_template.schemaSequence > 0 then
+  if #k8s_combined_schema_template.oneOf > 0 then
     return {
       name = "Kubernetes",
       uri = k8s_combined_schema_path,
