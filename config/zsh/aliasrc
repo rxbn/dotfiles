@@ -11,6 +11,11 @@ alias grep='ggrep --color'
 alias sed=gsed
 alias kleak="kubectl get secrets -ogo-template='{{ range \$k, \$v := .data }}{{ \$k }}:{{ printf \"\\n\" }}{{ \$v | base64decode }}{{ printf \"\\n\\n\" }}{{ end }}'"
 alias kleakn="kubectl get secrets -ogo-template='{{ range \$k, \$v := .data }}{{ \$k }}:{{ printf \"\\n\" }}{{ \$v | base64decode }}{{ printf \"\\n\\n\" }}{{ end }}' --namespace"
+alias fgall='flux get all'
+alias fghrall='flux get helmrelease --all-namespaces'
+alias fr='flux reconcile --with-source'
+alias frhr='flux reconcile helmrelease --with-source --namespace'
+alias frku='flux reconcile kustomization --with-source'
 alias se='sops --encrypt --in-place'
 alias sd='sops --decrypt --in-place'
 alias gia='git add --all'
