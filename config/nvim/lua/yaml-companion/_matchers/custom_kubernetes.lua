@@ -36,6 +36,26 @@ M.match = function(bufnr)
   local file_suffix = file_path:gsub("[/:\\]", "_") -- Replace path separators with underscores
   local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/kubernetes_combined" .. file_suffix .. ".json"
 
+  -- Create an autocmd-group for the schema file
+  local augroup = vim.api.nvim_create_augroup(k8s_combined_schema_path, { clear = true })
+
+  -- Autocmd to trigger the schema update when the file is changed
+  vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
+    group = augroup,
+    buffer = bufnr,
+    callback = function()
+      require("yaml-companion.context").schema(bufnr, M.match(bufnr))
+    end,
+  })
+
+  -- Autocmd to delete the schema file when leaving vim
+  vim.api.nvim_create_autocmd("VimLeavePre", {
+    group = augroup,
+    callback = function()
+      os.remove(k8s_combined_schema_path)
+    end,
+  })
+
   -- Clear the schema to start fresh
   k8s_combined_schema_template.oneOf = {}
 
@@ -51,7 +71,9 @@ M.match = function(bufnr)
           ["$ref"] = homedir
             .. "/.yamlls/schemas/kubernetes-json-schema/"
             .. k8s_version
-            .. "-standalone-strict/all.json",
+            .. "-standalone-strict/"
+            .. string.lower(kind)
+            .. ".json",
         })
       else
         -- Handle CRD schema for non-builtin resources
