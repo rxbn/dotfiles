@@ -34,7 +34,7 @@ M.match = function(bufnr)
   -- Get the full path of the current buffer and use it to create a unique schema file name
   local file_path = vim.api.nvim_buf_get_name(bufnr)
   local file_suffix = file_path:gsub("[/:\\]", "_") -- Replace path separators with underscores
-  local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/kubernetes_combined" .. file_suffix .. ".json"
+  local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/k8s_combined_schema" .. file_suffix .. ".json"
 
   -- Create an autocmd-group for the schema file
   local augroup = vim.api.nvim_create_augroup(k8s_combined_schema_path, { clear = true })
