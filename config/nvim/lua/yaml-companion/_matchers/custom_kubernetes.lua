@@ -1,6 +1,5 @@
 local M = {}
 
-local homedir = vim.fn.expand("~")
 -- renovate: datasource=github-releases depName=kubernetes/kubernetes
 local k8s_version = "v1.31.1"
 
@@ -68,8 +67,7 @@ M.match = function(bufnr)
       -- Include the default Kubernetes schema only if a built-in resource is detected
       if is_builtin then
         table.insert(k8s_combined_schema_template.oneOf, {
-          ["$ref"] = homedir
-            .. "/.yamlls/schemas/kubernetes-json-schema/"
+          ["$ref"] = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/"
             .. k8s_version
             .. "-standalone-strict/"
             .. string.lower(kind)
@@ -81,16 +79,14 @@ M.match = function(bufnr)
         local api_version_suffix = api_version:match("/(v%d+.*)") -- Everything after the slash
 
         if api_group and api_version_suffix then
-          local crd_schema_path = homedir
-            .. "/.yamlls/schemas/CRDs-catalog/"
-            .. api_group
-            .. "/"
-            .. string.lower(kind)
-            .. "_"
-            .. api_version_suffix
-            .. ".json"
           table.insert(k8s_combined_schema_template.oneOf, {
-            ["$ref"] = crd_schema_path,
+            ["$ref"] = "https://raw.githubusercontent.com/datreeio/CRDs-catalog/refs/heads/main/"
+              .. api_group
+              .. "/"
+              .. string.lower(kind)
+              .. "_"
+              .. api_version_suffix
+              .. ".json",
           })
         end
       end
@@ -104,7 +100,7 @@ M.match = function(bufnr)
     cache_file:write(json_output)
     cache_file:close()
   else
-    vim.api.nvim_err_writeln("Failed to write to cache file: " .. k8s_combined_schema_path)
+    vim.api.nvim_err_writeln("Failed to write Kubernetes schema cache file: " .. k8s_combined_schema_path)
   end
 
   -- Return the Kubernetes schema configuration only if there are resources to validate

@@ -29,7 +29,6 @@ FOLDERS=(
   ~/containeroo
   ~/tmp
   ~/work/kubeconfigs
-  ~/.yamlls/schemas
 )
 
 # Install Rosetta 2
@@ -98,10 +97,6 @@ repo_path=$(pwd)
 # renovate: datasource=github-releases depName=kvndrsslr/sketchybar-app-font
 SKETCHYBAR_APP_FONT_VERSION=v2.0.24
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKETCHYBAR_APP_FONT_VERSION/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
-
-# Clone Kubernetes JSON schemas
-git clone https://github.com/yannh/kubernetes-json-schema.git ~/.yamlls/schemas/kubernetes-json-schema
-git clone https://github.com/datreeio/CRDs-catalog.git ~/.yamlls/schemas/CRDs-catalog
 
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
