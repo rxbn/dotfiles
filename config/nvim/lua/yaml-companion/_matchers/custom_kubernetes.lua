@@ -1,14 +1,9 @@
 local M = {}
 
--- renovate: datasource=github-releases depName=kubernetes/kubernetes
-local k8s_version = "v1.31.1"
-
--- Template for the schema structure
 local k8s_combined_schema_template = {
   oneOf = {},
 }
 
--- Retrieve the list of built-in Kubernetes resources
 local builtin_resources = require("yaml-companion.builtin.kubernetes.resources")
 
 M.match = function(bufnr)
@@ -17,7 +12,6 @@ M.match = function(bufnr)
   local api_versions = {}
   local kinds = {}
 
-  -- Find all occurrences of apiVersion and kind
   for _, line in ipairs(lines) do
     local api_version = line:match("^apiVersion:%s*(%S+)")
     local kind = line:match("^kind:%s*(%S+)")
@@ -30,15 +24,12 @@ M.match = function(bufnr)
     end
   end
 
-  -- Get the full path of the current buffer and use it to create a unique schema file name
   local file_path = vim.api.nvim_buf_get_name(bufnr)
-  local file_suffix = file_path:gsub("[/:\\]", "_") -- Replace path separators with underscores
+  local file_suffix = file_path:gsub("[/:\\]", "_")
   local k8s_combined_schema_path = vim.fn.stdpath("cache") .. "/k8s_combined_schema" .. file_suffix .. ".json"
 
-  -- Create an autocmd-group for the schema file
   local augroup = vim.api.nvim_create_augroup(k8s_combined_schema_path, { clear = true })
 
-  -- Autocmd to trigger the schema update when the file is changed
   vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
     group = augroup,
     buffer = bufnr,
@@ -47,7 +38,6 @@ M.match = function(bufnr)
     end,
   })
 
-  -- Autocmd to delete the schema file when leaving vim
   vim.api.nvim_create_autocmd("VimLeavePre", {
     group = augroup,
     callback = function()
@@ -55,28 +45,22 @@ M.match = function(bufnr)
     end,
   })
 
-  -- Clear the schema to start fresh
   k8s_combined_schema_template.oneOf = {}
 
-  -- Generate the schema for each apiVersion/kind pair
   for i, api_version in ipairs(api_versions) do
     local kind = kinds[i]
     if api_version and kind then
       local is_builtin = vim.tbl_contains(builtin_resources, kind)
 
-      -- Include the default Kubernetes schema only if a built-in resource is detected
       if is_builtin then
         table.insert(k8s_combined_schema_template.oneOf, {
-          ["$ref"] = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/"
-            .. k8s_version
-            .. "-standalone-strict/"
+          ["$ref"] = "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/refs/heads/master/master-standalone-strict/"
             .. string.lower(kind)
             .. ".json",
         })
       else
-        -- Handle CRD schema for non-builtin resources
-        local api_group = api_version:match("^[^/]+") -- Everything before the slash
-        local api_version_suffix = api_version:match("/(v%d+.*)") -- Everything after the slash
+        local api_group = api_version:match("^[^/]+")
+        local api_version_suffix = api_version:match("/(v%d+.*)")
 
         if api_group and api_version_suffix then
           table.insert(k8s_combined_schema_template.oneOf, {
@@ -93,7 +77,6 @@ M.match = function(bufnr)
     end
   end
 
-  -- Save the generated schema to the unique cache file, overwriting it
   local json_output = vim.fn.json_encode(k8s_combined_schema_template)
   local cache_file = io.open(k8s_combined_schema_path, "w")
   if cache_file then
@@ -103,7 +86,6 @@ M.match = function(bufnr)
     vim.api.nvim_err_writeln("Failed to write Kubernetes schema cache file: " .. k8s_combined_schema_path)
   end
 
-  -- Return the Kubernetes schema configuration only if there are resources to validate
   if #k8s_combined_schema_template.oneOf > 0 then
     return {
       name = "Kubernetes",
