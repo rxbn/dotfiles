@@ -1,7 +1,7 @@
 local M = {}
 
 -- renovate: datasource=github-releases depName=kubernetes/kubernetes
-local k8s_version = "v1.31.1"
+local k8s_version = "v1.31.2"
 
 -- Template for the schema structure
 local k8s_combined_schema_template = {
