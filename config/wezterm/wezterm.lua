@@ -18,4 +18,6 @@ config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 config.audible_bell = "Disabled"
 
+config.warn_about_missing_glyphs = false
+
 return config
