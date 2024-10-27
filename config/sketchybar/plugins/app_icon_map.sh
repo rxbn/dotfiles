@@ -50,6 +50,9 @@ case $@ in
 "Android Studio")
   icon_result=":android_studio:"
   ;;
+"Anki")
+  icon_result=":anki:"
+  ;;
 "Anytype")
   icon_result=":anytype:"
   ;;
@@ -61,6 +64,9 @@ case $@ in
   ;;
 "Arc")
   icon_result=":arc:"
+  ;;
+"Arduino" | "Arduino IDE")
+  icon_result=":arduino:"
   ;;
 "Atom")
   icon_result=":atom:"
@@ -113,6 +119,9 @@ case $@ in
 "Caprine")
   icon_result=":caprine:"
   ;;
+"Amazon Chime")
+  icon_result=":chime:"
+  ;;
 "Citrix Workspace" | "Citrix Viewer")
   icon_result=":citrix:"
   ;;
@@ -122,14 +131,23 @@ case $@ in
 "Code" | "Code - Insiders")
   icon_result=":code:"
   ;;
+"Cold Turkey Blocker")
+  icon_result=":cold_turkey_blocker:"
+  ;;
 "Color Picker" | "数码测色计")
   icon_result=":color_picker:"
+  ;;
+"Copilot")
+  icon_result=":copilot:"
   ;;
 "CotEditor")
   icon_result=":coteditor:"
   ;;
 "Creative Cloud")
   icon_result=":creative_cloud:"
+  ;;
+"Cursor")
+  icon_result=":cursor:"
   ;;
 "Cypress")
   icon_result=":cypress:"
@@ -172,6 +190,9 @@ case $@ in
   ;;
 "Drafts")
   icon_result=":drafts:"
+  ;;
+"draw.io")
+  icon_result=":draw_io:"
   ;;
 "Dropbox")
   icon_result=":dropbox:"
@@ -431,6 +452,9 @@ case $@ in
 "Opera")
   icon_result=":opera:"
   ;;
+"OrbStack")
+  icon_result=":orbstack:"
+  ;;
 "OrcaSlicer")
   icon_result=":orcaslicer:"
   ;;
@@ -610,6 +634,9 @@ case $@ in
   ;;
 "Tweetbot" | "Twitter")
   icon_result=":twitter:"
+  ;;
+"UTM")
+  icon_result=":utm:"
   ;;
 "MacVim" | "Vim" | "VimR")
   icon_result=":vim:"
