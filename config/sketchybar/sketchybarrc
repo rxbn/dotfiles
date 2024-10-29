@@ -1,61 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env lua
 
-source "$CONFIG_DIR/colors.sh" # Loads all defined colors
-source "$CONFIG_DIR/icons.sh"  # Loads all defined icons
-
-ITEM_DIR="$CONFIG_DIR/items"     # Directory where the items are configured
-PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are stored
-
-FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
-PADDINGS=3    # All paddings use this value (icon, label, background)
-
-# Setting up the general bar appearance of the bar
-bar=(
-  height=38
-  color=$BAR_COLOR
-  shadow=off
-  position=top
-  sticky=on
-  padding_right=10
-  padding_left=10
-  topmost=window
+os.execute(
+	"[ ! -d $HOME/.local/share/sketchybar_lua/ ] && (git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)"
 )
 
-sketchybar --bar "${bar[@]}"
+package.cpath = package.cpath .. ";/Users/" .. os.getenv("USER") .. "/.local/share/sketchybar_lua/?.so"
+package.path = package.path .. ";/Users/" .. os.getenv("USER") .. "/personal/dotfiles/personal/secrets/?.lua"
 
-# Setting up default values
-defaults=(
-  updates=when_shown
-  icon.font="$FONT:Bold:14.0"
-  icon.color=$ICON_COLOR
-  icon.padding_left=$PADDINGS
-  icon.padding_right=$PADDINGS
-  label.font="$FONT:Semibold:13.0"
-  label.color=$LABEL_COLOR
-  label.padding_left=$PADDINGS
-  label.padding_right=$PADDINGS
-  padding_right=$PADDINGS
-  padding_left=$PADDINGS
-  background.height=26
-  background.corner_radius=9
-  background.border_width=2
-  scroll_texts=on
-)
+sbar = require("sketchybar")
 
-sketchybar --default "${defaults[@]}"
+sbar.begin_config()
+require("init")
+sbar.hotload(true)
+sbar.end_config()
 
-# Left
-source "$ITEM_DIR/spaces.sh"
-source "$ITEM_DIR/yabai.sh"
-source "$ITEM_DIR/front_app.sh"
-
-# Right
-source "$ITEM_DIR/calendar.sh"
-source "$ITEM_DIR/weather.sh"
-
-sketchybar --hotload on
-
-# Forcing all item scripts to run (never do this outside of sketchybarrc)
-sketchybar --update
-
-echo "sketchybar configuation loaded.."
+sbar.event_loop()
