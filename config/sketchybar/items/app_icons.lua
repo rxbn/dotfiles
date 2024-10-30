@@ -167,6 +167,7 @@ return {
 	["Microsoft Outlook"] = ":microsoft_outlook:",
 	["Microsoft PowerPoint"] = ":microsoft_power_point:",
 	["Microsoft Remote Desktop"] = ":microsoft_remote_desktop:",
+	["Windows App"] = ":microsoft_remote_desktop:",
 	["Microsoft Teams"] = ":microsoft_teams:",
 	["Microsoft Teams (work or school)"] = ":microsoft_teams:",
 	["Microsoft Word"] = ":microsoft_word:",
@@ -308,4 +309,3 @@ return {
 	["Zotero"] = ":zotero:",
 	["Zulip"] = ":zulip:",
 }
-
