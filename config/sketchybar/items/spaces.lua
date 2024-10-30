@@ -2,11 +2,7 @@ local colors = require("colors")
 local app_icons = require("items.app_icons")
 
 local function mouse_click(env)
-	if env.BUTTON == "right" then
-		sbar.exec("yabai -m space --destroy " .. env.SID)
-	else
-		sbar.exec("yabai -m space --focus " .. env.SID)
-	end
+	sbar.exec("yabai -m space --focus " .. env.SID)
 end
 
 local function space_selection(env)
@@ -65,10 +61,6 @@ local space_creator = sbar.add("item", {
 	label = { drawing = false },
 	associated_display = "active",
 })
-
-space_creator:subscribe("mouse.clicked", function()
-	sbar.exec("yabai -m space --create")
-end)
 
 space_creator:subscribe("space_windows_change", function(env)
 	local space = env.INFO.space
