@@ -1,0 +1,93 @@
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
+on-focus-changed = [
+  'exec-and-forget sketchybar --trigger aerospace_focus_change',
+]
+
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+[mode.main.binding]
+alt-enter = 'exec-and-forget open -n -a WezTerm'
+
+alt-h =         'focus --boundaries-action wrap-around-the-workspace left'
+alt-j =         'focus --boundaries-action wrap-around-the-workspace down'
+alt-k =         'focus --boundaries-action wrap-around-the-workspace up'
+alt-l = 'focus --boundaries-action wrap-around-the-workspace right'
+
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+alt-f = 'fullscreen'
+
+alt-e = 'layout tiles horizontal vertical'
+
+alt-shift-space = 'layout floating tiling'
+
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+alt-shift-9 = 'move-node-to-workspace 9'
+
+alt-r = 'mode resize'
+
+[gaps]
+inner.horizontal = 6
+inner.vertical =   6
+outer.left =       6
+outer.bottom =     6
+outer.top =        6
+outer.right =      6
+
+[mode.resize.binding]
+h = 'resize width -50'
+j = 'resize height +50'
+k = 'resize height -50'
+l = 'resize width +50'
+0 = 'balance-sizes'
+enter = 'mode main'
+esc = 'mode main'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace 3'
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace 4'
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = 'move-node-to-workspace 7'
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace 8'
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace 9'
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace 9'

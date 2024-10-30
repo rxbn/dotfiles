@@ -5,7 +5,6 @@ tap "goreleaser/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "loft-sh/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
@@ -111,10 +110,6 @@ brew "fluxcd/tap/flux"
 brew "goreleaser/tap/goreleaser"
 # Vault
 brew "hashicorp/tap/vault"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
 # Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
 brew "loft-sh/tap/vcluster"
 # Password manager that keeps all passwords secure behind one password

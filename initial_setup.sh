@@ -14,8 +14,7 @@ FOLDERS=(
   ~/.config/plugins/zsh
   ~/.config/yamllint
   ~/.config/starship
-  ~/.config/yabai
-  ~/.config/skhd
+  ~/.config/aerospace
   ~/.config/borders
   ~/.config/tmux
   ~/.config/wezterm
@@ -110,8 +109,7 @@ ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.c
 ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
 ln -sf "${repo_path}/config/direnv/direnv.toml" ~/.config/direnv/direnv.toml
 ln -sf "${repo_path}/config/nvim" ~/.config/nvim
-ln -sf "${repo_path}/config/yabai/yabairc" ~/.config/yabai/yabairc
-ln -sf "${repo_path}/config/skhd/skhdrc" ~/.config/skhd/skhdrc
+ln -sf "${repo_path}/config/aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
 ln -sf "${repo_path}/config/sketchybar" ~/.config/sketchybar
 ln -sf "${repo_path}/config/borders/bordersrc" ~/.config/borders/bordersrc
 ln -sf "${repo_path}/config/tmux/tmux.conf" ~/.config/tmux/tmux.conf

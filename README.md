@@ -18,6 +18,4 @@ bash ./initial_setup.sh
 # After reboot
 brew services start borders
 brew services start sketchybar
-skhd --start-service
-yabai --start-service
 ```
