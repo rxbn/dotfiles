@@ -49,6 +49,8 @@ brew "kubectx"
 brew "kubent"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Powerful, lightweight programming language
+brew "lua"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
