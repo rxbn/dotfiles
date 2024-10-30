@@ -70,6 +70,7 @@ yabai -m rule --add app="^VLC$" manage=off
 yabai -m rule --add app="^Microsoft Teams$" space=3
 yabai -m rule --add app="^Microsoft Outlook$" space=4
 yabai -m rule --add app="^Microsoft Outlook$" title="^[0-9] Reminders?$" sticky=on manage=off
+yabai -m rule --add app="^Notes$" space=7
 yabai -m rule --add app="^Music$" space=8
 yabai -m rule --add app="^Sonos$" space=8
 yabai -m rule --add app="^Messages$" space=9
