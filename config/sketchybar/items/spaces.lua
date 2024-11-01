@@ -71,23 +71,21 @@ space_creator:subscribe("space_windows_change", function(env)
 		end
 	end
 
-	sbar.animate("tanh", 10, function()
-		if icon_strip ~= " " then
-			sbar.set("space." .. space, {
-				label = { string = icon_strip, drawing = true },
-				icon = { drawing = true },
-				background = { drawing = true },
-				padding_left = 2,
-				padding_right = 2,
-			})
-		else
-			sbar.set("space." .. space, {
-				label = { drawing = false },
-				icon = { drawing = false },
-				background = { drawing = false },
-				padding_left = 0,
-				padding_right = 0,
-			})
-		end
-	end)
+	if icon_strip ~= " " then
+		sbar.set("space." .. space, {
+			label = { string = icon_strip, drawing = true },
+			icon = { drawing = true },
+			background = { drawing = true },
+			padding_left = 2,
+			padding_right = 2,
+		})
+	else
+		sbar.set("space." .. space, {
+			label = { drawing = false },
+			icon = { drawing = false },
+			background = { drawing = false },
+			padding_left = 0,
+			padding_right = 0,
+		})
+	end
 end)

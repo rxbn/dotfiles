@@ -17,19 +17,17 @@ local yabai = sbar.add("item", {
 })
 
 local function update_display(icon, label, color)
-	sbar.animate("sin", 10.0, function()
-		yabai:set({ icon = { color = color } })
-		if label == "" then
-			yabai:set({ label = { width = 0 } })
-		else
-			yabai:set({ label = { string = label, width = 40 } })
-		end
-		if icon == "" then
-			yabai:set({ icon = { width = 0 } })
-		else
-			yabai:set({ icon = { string = icon, width = 30 } })
-		end
-	end)
+	yabai:set({ icon = { color = color } })
+	if label == "" then
+		yabai:set({ label = { width = 0 } })
+	else
+		yabai:set({ label = { string = label, width = 40 } })
+	end
+	if icon == "" then
+		yabai:set({ icon = { width = 0 } })
+	else
+		yabai:set({ icon = { string = icon, width = 30 } })
+	end
 end
 
 local function window_state()
