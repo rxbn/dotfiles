@@ -24,8 +24,6 @@ for i = 1, 9, 1 do
 			padding_right = 10,
 			highlight_color = colors.red,
 		},
-		padding_left = 2,
-		padding_right = 2,
 		label = {
 			padding_right = 20,
 			color = colors.grey,
@@ -73,7 +71,23 @@ space_creator:subscribe("space_windows_change", function(env)
 		end
 	end
 
-	sbar.animate("sin", 10.0, function()
-		sbar.set("space." .. space, { label = { string = icon_strip } })
+	sbar.animate("tanh", 10, function()
+		if icon_strip ~= " " then
+			sbar.set("space." .. space, {
+				label = { string = icon_strip, drawing = true },
+				icon = { drawing = true },
+				background = { drawing = true },
+				padding_left = 2,
+				padding_right = 2,
+			})
+		else
+			sbar.set("space." .. space, {
+				label = { drawing = false },
+				icon = { drawing = false },
+				background = { drawing = false },
+				padding_left = 0,
+				padding_right = 0,
+			})
+		end
 	end)
 end)
