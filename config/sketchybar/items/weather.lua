@@ -37,3 +37,13 @@ weather:subscribe({ "routine", "forced" }, function()
 		end
 	)
 end)
+
+weather:subscribe("mouse.clicked", function()
+	sbar.exec(
+		"open https://www.meteoswiss.admin.ch/local-forecasts/"
+			.. secrets.city
+			.. "/"
+			.. secrets.zip_code
+			.. ".html#forecast-tab=detail-view"
+	)
+end)
