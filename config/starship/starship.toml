@@ -42,6 +42,9 @@ symbol = "󱃾 "
 detect_files = [ "kubeconfig" ]
 detect_env_vars = ["NULL"]
 
+[battery]
+disabled = true
+
 [palettes.catppuccin_frappe]
 rosewater = "#f2d5cf"
 flamingo = "#eebebe"
