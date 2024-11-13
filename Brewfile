@@ -19,6 +19,8 @@ brew "bash"
 brew "cilium-cli"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -39,6 +41,8 @@ brew "helm"
 brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Package manager for kubectl plugins
@@ -63,6 +67,8 @@ brew "node"
 brew "opentofu"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Password generator
@@ -131,16 +137,10 @@ cask "alfred"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
-# Tool to flash OS images to SD cards & USB drives
-cask "balenaetcher"
-# Voice and text chat software
-cask "discord"
 # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink"
 # App to build and share containerised applications and microservices
 cask "docker"
-# Web browser
-cask "firefox"
 cask "font-jetbrains-mono"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
@@ -150,8 +150,6 @@ cask "microsoft-office"
 cask "microsoft-teams"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# Imaging utility to install operating systems to a microSD card
-cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
@@ -166,8 +164,6 @@ cask "vlc"
 cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-mas "1Password for Safari", id: 1569813296
-mas "Day One", id: 1055511498
 mas "Final Cut Pro", id: 424389933
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
