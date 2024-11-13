@@ -14,6 +14,8 @@ function select_server() {
 
 if [[ $# -eq 1 ]]; then
   selected_server=$1
+elif [[ $# -eq 2 ]]; then
+  selected_server=$1
 else
   selected_server=$(select_server)
 fi
