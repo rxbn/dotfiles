@@ -10,6 +10,7 @@ local front_app = sbar.add("item", {
 	},
 	associated_display = "active",
 	position = "left",
+	padding_left = 0,
 })
 
 front_app:subscribe("front_app_switched", function(env)

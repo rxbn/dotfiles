@@ -45,9 +45,9 @@ for i = 1, 9, 1 do
 	space:subscribe("mouse.clicked", mouse_click)
 end
 
-local space_creator = sbar.add("item", {
-	padding_left = 10,
-	padding_right = 8,
+local arrow = sbar.add("item", {
+	padding_left = 5,
+	padding_right = 5,
 	icon = {
 		color = colors.white,
 		string = "􀆊",
@@ -60,7 +60,7 @@ local space_creator = sbar.add("item", {
 	associated_display = "active",
 })
 
-space_creator:subscribe("space_windows_change", function(env)
+arrow:subscribe("space_windows_change", function(env)
 	local space = env.INFO.space
 	local apps = env.INFO.apps
 

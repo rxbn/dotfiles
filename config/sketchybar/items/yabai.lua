@@ -14,6 +14,8 @@ local yabai = sbar.add("item", {
 	},
 	position = "left",
 	associated_display = "active",
+	padding_left = 0,
+	padding_right = 0,
 })
 
 local function update_display(icon, label, color)

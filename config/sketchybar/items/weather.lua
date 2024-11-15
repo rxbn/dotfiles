@@ -1,8 +1,6 @@
 local secrets = require("secrets")
 
 local weather = sbar.add("item", {
-	padding_left = 0,
-	padding_right = -5,
 	background = {
 		drawing = true,
 		image = {
@@ -10,10 +8,7 @@ local weather = sbar.add("item", {
 		},
 	},
 	label = {
-		padding_left = 20,
-	},
-	icon = {
-		padding_right = 5,
+		padding_left = 25,
 	},
 	position = "right",
 	update_freq = 600,
