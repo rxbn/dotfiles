@@ -6,7 +6,6 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
-tap "loft-sh/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
@@ -91,6 +90,8 @@ brew "tmux"
 brew "tpm"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "vcluster"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
 # Executes a program periodically, showing output fullscreen
@@ -121,8 +122,6 @@ brew "hashicorp/tap/vault"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
-# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
-brew "loft-sh/tap/vcluster"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
