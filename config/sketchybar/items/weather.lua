@@ -14,7 +14,7 @@ local weather = sbar.add("item", {
 	update_freq = 600,
 })
 
-weather:subscribe({ "routine", "forced" }, function()
+local function update_weather()
 	sbar.exec(
 		"curl --max-time 2 --silent --retry 3 --retry-delay 1 --retry-connrefused https://app-prod-ws.meteoswiss-app.ch/v1/plzDetail?plz="
 			.. secrets.zip_code
@@ -31,14 +31,20 @@ weather:subscribe({ "routine", "forced" }, function()
 			})
 		end
 	)
-end)
+end
 
-weather:subscribe("mouse.clicked", function()
-	sbar.exec(
-		"open https://www.meteoswiss.admin.ch/local-forecasts/"
-			.. secrets.city
-			.. "/"
-			.. secrets.zip_code
-			.. ".html#forecast-tab=detail-view"
-	)
+weather:subscribe({ "routine", "forced" }, update_weather)
+
+weather:subscribe("mouse.clicked", function(env)
+	if env.BUTTON == "left" then
+		sbar.exec(
+			"open https://www.meteoswiss.admin.ch/local-forecasts/"
+				.. secrets.city
+				.. "/"
+				.. secrets.zip_code
+				.. ".html#forecast-tab=detail-view"
+		)
+	elseif env.BUTTON == "right" then
+		update_weather()
+	end
 end)
