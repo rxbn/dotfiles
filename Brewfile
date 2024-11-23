@@ -5,7 +5,7 @@ tap "goreleaser/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
@@ -118,14 +118,12 @@ brew "fluxcd/tap/flux"
 brew "goreleaser/tap/goreleaser"
 # Vault
 brew "hashicorp/tap/vault"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
-# A tiling window manager for macOS based on binary space partitioning.
-brew "koekeishiya/formulae/yabai"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # Professional image editing software
 cask "affinity-photo"
 # Menu bar tool to limit maximum charging percentage
