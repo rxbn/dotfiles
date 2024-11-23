@@ -39,7 +39,10 @@ alt-shift-l = 'move right'
 
 alt-f = 'fullscreen'
 
+alt-b = 'workspace-back-and-forth'
+
 alt-e = 'layout tiles horizontal vertical'
+alt-s = 'layout v_accordion'
 
 alt-shift-space = 'layout floating tiling'
 
@@ -64,7 +67,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 
 alt-r = 'mode resize'
-alt-s = 'mode service'
+alt-shift-semicolon = 'mode service'
 
 [mode.resize.binding]
 h = 'resize width -50'
