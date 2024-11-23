@@ -24,7 +24,6 @@ FOLDERS=(
   ~/.ssh
   ~/.kube
   ~/bin
-  ~/personal/ansible
   ~/personal/kubeconfigs
   ~/containeroo
   ~/tmp

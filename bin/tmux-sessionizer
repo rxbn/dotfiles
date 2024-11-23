@@ -4,11 +4,9 @@ function select_directory() {
   find \
     ~ \
     ~/personal \
-    ~/personal/ansible \
     ~/personal/kubeconfigs \
     ~/containeroo \
     ~/work \
-    ~/work/ansible \
     ~/work/kubeconfigs \
     ~/tmp \
     -mindepth 1 -maxdepth 1 -type d \
