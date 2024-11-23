@@ -13,9 +13,8 @@ FOLDERS=(
   ~/.config/zsh
   ~/.config/plugins/zsh
   ~/.config/yamllint
+  ~/.config/aerospace
   ~/.config/starship
-  ~/.config/yabai
-  ~/.config/skhd
   ~/.config/borders
   ~/.config/tmux
   ~/.config/wezterm
@@ -92,11 +91,6 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 repo_path=$(pwd)
 
-# Download SketchyBar font
-# renovate: datasource=github-releases depName=kvndrsslr/sketchybar-app-font
-SKETCHYBAR_APP_FONT_VERSION=v2.0.28
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/$SKETCHYBAR_APP_FONT_VERSION/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
-
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
 ln -sf "${repo_path}/personal/ssh/config" ~/.ssh/config
@@ -108,9 +102,8 @@ ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf
 ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
 ln -sf "${repo_path}/config/direnv/direnv.toml" ~/.config/direnv/direnv.toml
+ln -sf "${repo_path}/config/aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
 ln -sf "${repo_path}/config/nvim" ~/.config/nvim
-ln -sf "${repo_path}/config/yabai/yabairc" ~/.config/yabai/yabairc
-ln -sf "${repo_path}/config/skhd/skhdrc" ~/.config/skhd/skhdrc
 ln -sf "${repo_path}/config/sketchybar" ~/.config/sketchybar
 ln -sf "${repo_path}/config/borders/bordersrc" ~/.config/borders/bordersrc
 ln -sf "${repo_path}/config/tmux/tmux.conf" ~/.config/tmux/tmux.conf

@@ -14,10 +14,4 @@ cd ~/personal
 git clone https://github.com/rxbn/dotfiles.git
 cd dotfiles
 bash ./initial_setup.sh
-
-# After reboot
-brew services start borders
-brew services start sketchybar
-skhd --start-service
-yabai --start-service
 ```
