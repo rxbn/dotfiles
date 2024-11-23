@@ -140,6 +140,8 @@ cask "arc"
 cask "displaylink"
 # App to build and share containerised applications and microservices
 cask "docker"
+# Web browser
+cask "firefox"
 cask "font-jetbrains-mono"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
@@ -153,8 +155,6 @@ cask "nextcloud"
 cask "sf-symbols"
 # Team communication and collaboration software
 cask "slack"
-# Music streaming service
-cask "spotify"
 # Virtual machines UI using QEMU
 cask "utm"
 # Multimedia player
