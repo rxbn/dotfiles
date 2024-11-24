@@ -1,5 +1,4 @@
 tap "containeroo/tap"
-tap "felixkratz/formulae"
 tap "fluxcd/tap"
 tap "goreleaser/tap"
 tap "hashicorp/tap"
@@ -108,10 +107,6 @@ brew "zsh-syntax-highlighting"
 brew "containeroo/tap/ci-thief"
 # Simple CLI tool to generate OTP tokens
 brew "containeroo/tap/otpgen"
-# A window border system for macOS
-brew "felixkratz/formulae/borders"
-# Custom macOS statusbar with shell plugin, interaction and graph support
-brew "felixkratz/formulae/sketchybar"
 # Flux CLI
 brew "fluxcd/tap/flux"
 # Deliver Go binaries as fast and easily as possible
