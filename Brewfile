@@ -133,8 +133,6 @@ cask "arc"
 cask "displaylink"
 # App to build and share containerised applications and microservices
 cask "docker"
-# Web browser
-cask "firefox"
 cask "font-jetbrains-mono"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
