@@ -22,9 +22,6 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)
 
-# Enable reverse history search with ctrl-r
-bindkey "^R" history-incremental-search-backward
-
 # Load pyenv
 eval "$(pyenv init -)"
 
