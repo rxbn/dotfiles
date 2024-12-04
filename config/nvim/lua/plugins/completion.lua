@@ -1,7 +1,6 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
     dependencies = {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
@@ -74,7 +73,6 @@ return {
   },
   {
     "supermaven-inc/supermaven-nvim",
-    event = "InsertEnter",
     opts = {
       disable_inline_completion = true,
       disable_keymaps = true,

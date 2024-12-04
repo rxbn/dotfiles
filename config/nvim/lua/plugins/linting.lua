@@ -1,7 +1,6 @@
 return {
   {
     "mfussenegger/nvim-lint",
-    event = { "BufReadPre", "BufNewFile" },
     config = function()
       local linters = {
         "ansible-lint",

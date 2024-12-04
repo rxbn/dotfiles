@@ -1,12 +1,10 @@
 return {
   {
     "lewis6991/gitsigns.nvim",
-    event = { "BufReadPre", "BufNewFile" },
     opts = {},
   },
   {
     "tpope/vim-fugitive",
-    cmd = "Git",
     keys = {
       { "<leader>gs", "<Cmd>Git<CR>" },
       { "<leader>ga", "<Cmd>Git add --all<CR>" },

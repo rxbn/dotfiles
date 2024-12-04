@@ -1,7 +1,6 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
@@ -106,7 +105,6 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    cmd = "Mason",
     config = function()
       require("mason").setup()
       local mr = require("mason-registry")
