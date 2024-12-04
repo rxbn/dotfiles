@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-source "${HOME}/personal/dotfiles/work/config/zsh/work_env"
-
 function select_server() {
   local hosts=()
 
-  hosts+=("$(ggrep -Eho '[[:space:]]((en?|pr?|in?|te?|de?|re?|vp?)-[-A-Za-z0-9]+)[[:space:]]?' "${WORK_HOSTS_1}" "${WORK_HOSTS_2}")")
-  hosts+=("${WORK_JUMPHOST}")
   hosts+=("$(yq '.prod.hosts | keys[]' ~/personal/playbook-upgrade-servers/hosts.yml)")
 
   printf "%s\n" "${hosts[@]}" | tr -d ' \t' | sort -u | fzf

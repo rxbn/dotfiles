@@ -25,7 +25,6 @@ FOLDERS=(
   ~/personal/kubeconfigs
   ~/containeroo
   ~/tmp
-  ~/work/kubeconfigs
 )
 
 # Install Rosetta 2
@@ -93,13 +92,10 @@ repo_path=$(pwd)
 # Create symlinks
 ln -sf "${repo_path}/zprofile" ~/.zprofile
 ln -sf "${repo_path}/personal/ssh/config" ~/.ssh/config
-ln -sf "${repo_path}/work/ssh/config" ~/.ssh/work_config
 ln -sf "${repo_path}/config/zsh/aliasrc" ~/.config/zsh/aliasrc
-ln -sf "${repo_path}/work/config/zsh/work_aliasrc" ~/.config/zsh/work_aliasrc
 ln -sf "${repo_path}/config/starship/starship.toml" ~/.config/starship/starship.toml
 ln -sf "${repo_path}/config/git/config" ~/.config/git/config
 ln -sf "${repo_path}/personal/config/git/personal.conf" ~/.config/git/personal.conf
-ln -sf "${repo_path}/work/config/git/work.conf" ~/.config/git/work.conf
 ln -sf "${repo_path}/config/direnv/direnv.toml" ~/.config/direnv/direnv.toml
 ln -sf "${repo_path}/config/aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
 ln -sf "${repo_path}/config/nvim" ~/.config/nvim
