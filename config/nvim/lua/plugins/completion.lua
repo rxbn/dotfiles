@@ -16,7 +16,7 @@ return {
               Supermaven = "",
             },
           })
-          vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = require("catppuccin.palettes.frappe").green })
+          vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = require("catppuccin.palettes.mocha").green })
         end,
       },
     },

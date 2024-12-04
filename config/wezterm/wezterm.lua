@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Catppuccin Frappe"
+config.color_scheme = "Catppuccin Mocha"
 
 config.window_padding = {
 	left = 10,

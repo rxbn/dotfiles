@@ -7,7 +7,7 @@ return {
     tag = "stable",
     config = function()
       require("catppuccin").setup({
-        flavour = "frappe",
+        flavour = "mocha",
         integrations = {
           fidget = true,
           harpoon = true,
