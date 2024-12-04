@@ -1,7 +1,6 @@
 tap "containeroo/tap"
 tap "fluxcd/tap"
 tap "goreleaser/tap"
-tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "nikitabobko/tap"
@@ -9,16 +8,12 @@ tap "nikitabobko/tap"
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# GitOps Continuous Delivery for Kubernetes
-brew "argocd"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 brew "cilium-cli"
 # Load/unload environment variables based on $PWD
 brew "direnv"
-# Convert text between DOS, UNIX, and Mac formats
-brew "dos2unix"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -89,10 +84,6 @@ brew "tmux"
 brew "tpm"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
-brew "vcluster"
-# Disaster recovery for Kubernetes resources and persistent volumes
-brew "velero"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -111,8 +102,6 @@ brew "containeroo/tap/otpgen"
 brew "fluxcd/tap/flux"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser/tap/goreleaser"
-# Vault
-brew "hashicorp/tap/vault"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -129,17 +118,9 @@ cask "alfred"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
-# Drivers for DisplayLink docks, adapters and monitors
-cask "displaylink"
 # App to build and share containerised applications and microservices
 cask "docker"
 cask "font-jetbrains-mono"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-# Office suite
-cask "microsoft-office"
-# Meet, chat, call, and collaborate in just one place
-cask "microsoft-teams"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # Tool that provides consistent, highly configurable symbols for apps
@@ -160,5 +141,4 @@ mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Windows App", id: 1295203466
 mas "WireGuard", id: 1451685025
