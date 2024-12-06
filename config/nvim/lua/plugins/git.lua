@@ -1,5 +1,9 @@
 return {
   {
+    "lewis6991/gitsigns.nvim",
+    opts = {},
+  },
+  {
     "tpope/vim-fugitive",
     keys = {
       { "<leader>gs", "<Cmd>Git<CR>" },
