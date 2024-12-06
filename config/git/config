@@ -2,8 +2,6 @@
   path = ~/.config/git/personal.conf
 [init]
   defaultBranch = master
-[url "git@github.com:"]
-  insteadOf = https://github.com
 [core]
   editor = nvim
 [pull]
