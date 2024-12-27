@@ -6,7 +6,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -n -a WezTerm'
+alt-enter = 'exec-and-forget open -n -a Ghostty'
 
 alt-h = 'focus --boundaries-action wrap-around-the-workspace left'
 alt-j = 'focus --boundaries-action wrap-around-the-workspace down'

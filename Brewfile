@@ -120,7 +120,8 @@ cask "appcleaner"
 cask "arc"
 # App to build and share containerised applications and microservices
 cask "docker"
-cask "font-jetbrains-mono"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # Imaging utility to install operating systems to a microSD card
@@ -133,8 +134,6 @@ cask "slack"
 cask "utm"
 # Multimedia player
 cask "vlc"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 mas "Final Cut Pro", id: 424389933

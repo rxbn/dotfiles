@@ -16,7 +16,7 @@ FOLDERS=(
   ~/.config/aerospace
   ~/.config/starship
   ~/.config/tmux
-  ~/.config/wezterm
+  ~/.config/ghostty
   ~/.config/1Password/ssh
   ~/.cache/zsh
   ~/.ssh
@@ -104,7 +104,7 @@ ln -sf "${repo_path}/config/nvim" ~/.config/nvim
 ln -sf "${repo_path}/config/tmux/tmux.conf" ~/.config/tmux/tmux.conf
 ln -sf "${repo_path}/config/zsh/zshrc" ~/.config/zsh/.zshrc
 ln -sf "${repo_path}/config/yamllint/config" ~/.config/yamllint/config
-ln -sf "${repo_path}/config/wezterm/wezterm.lua" ~/.config/wezterm/wezterm.lua
+ln -sf "${repo_path}/config/ghostty/config" ~/.config/ghostty/config
 ln -sf "${repo_path}/bin/ansible-vault-pass" ~/bin/ansible-vault-pass
 ln -sf "${repo_path}/bin/tmux-sessionizer" ~/bin/tmux-sessionizer
 ln -sf "${repo_path}/bin/tmux-sshionizer" ~/bin/tmux-sshionizer
