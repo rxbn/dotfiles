@@ -33,7 +33,7 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
-local yank_group = vim.api.nvim_create_augroup("HighlightYank", {})
+local yank_group = vim.api.nvim_create_augroup("HighlightYank", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = yank_group,
   pattern = "*",
@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-local rxbn_group = vim.api.nvim_create_augroup("rxbn", {})
+local rxbn_group = vim.api.nvim_create_augroup("rxbn", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
   group = rxbn_group,
   pattern = "*",
