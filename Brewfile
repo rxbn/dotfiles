@@ -100,7 +100,7 @@ brew "containeroo/tap/ci-thief"
 brew "containeroo/tap/otpgen"
 # Flux CLI
 brew "fluxcd/tap/flux"
-# Deliver Go binaries as fast and easily as possible
+# Release engineering, simplified
 brew "goreleaser/tap/goreleaser"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
@@ -123,6 +123,8 @@ cask "docker"
 cask "font-jetbrains-mono"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Team communication and collaboration software
