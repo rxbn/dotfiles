@@ -71,9 +71,11 @@ git clone https://github.com/ahmetb/kubectl-aliases.git ~/.config/plugins/zsh/ku
 
 # Install kubectl plugins
 kubectl krew update
-kubectl krew install tree
+kubectl krew install cnpg
 kubectl krew install neat
 kubectl krew install node-shell
+kubectl krew install resource-capacity
+kubectl krew install tree
 
 # Configure pyenv
 # renovate datasource=github-tags depName=python/cpython
