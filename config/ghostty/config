@@ -1,5 +1,4 @@
 theme = catppuccin-mocha
-font-size = 15
 mouse-hide-while-typing = true
 cursor-style = block
 cursor-style-blink = false
