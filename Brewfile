@@ -118,6 +118,8 @@ cask "alfred"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Terminal emulator that uses platform-native UI and GPU acceleration
@@ -136,10 +138,14 @@ cask "utm"
 cask "vlc"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+mas "1Password for Safari", id: 1569813296
+mas "AdGuard for Safari", id: 1440147259
+mas "Dark Reader for Safari", id: 1438243180
 mas "Final Cut Pro", id: 424389933
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "SponsorBlock", id: 1573461917
 mas "WireGuard", id: 1451685025
