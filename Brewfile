@@ -110,14 +110,10 @@ cask "1password-cli"
 cask "aerospace"
 # Professional image editing software
 cask "affinity-photo"
-# Menu bar tool to limit maximum charging percentage
-cask "aldente"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
-# Chromium based browser
-cask "arc"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -138,6 +134,8 @@ cask "utm"
 cask "vlc"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Gecko based web browser
+cask "zen-browser"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Dark Reader for Safari", id: 1438243180
