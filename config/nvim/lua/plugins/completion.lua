@@ -12,11 +12,15 @@ return {
         config = function()
           require("lspkind").init({
             symbol_map = {
-              Supermaven = "",
+              Copilot = "",
             },
           })
-          vim.api.nvim_set_hl(0, "CmpItemKindSupermaven", { fg = require("catppuccin.palettes.mocha").green })
+          vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = require("catppuccin.palettes.mocha").green })
         end,
+      },
+      {
+        "zbirenbaum/copilot-cmp",
+        opts = {},
       },
     },
     config = function()
@@ -51,7 +55,7 @@ return {
           { name = "nvim_lua" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
-          { name = "supermaven" },
+          { name = "copilot" },
         }, {
           { name = "path" },
           { name = "buffer", keyword_length = 5 },
@@ -72,11 +76,17 @@ return {
     end,
   },
   {
-    "supermaven-inc/supermaven-nvim",
+    "zbirenbaum/copilot.lua",
     opts = {
-      disable_inline_completion = true,
-      disable_keymaps = true,
-      log_level = "off",
+      panel = {
+        enabled = false,
+      },
+      suggestion = {
+        enabled = false,
+      },
+      filetypes = {
+        ["*"] = true,
+      },
     },
   },
 }

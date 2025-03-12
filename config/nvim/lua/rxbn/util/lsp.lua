@@ -2,6 +2,10 @@ local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", {
 local nmap = require("rxbn.util.keymap").nmap
 
 local custom_on_attach = function(client, bufnr)
+  if client.name == "copilot" then
+    return
+  end
+
   local map_opts = { buffer = bufnr }
   nmap({ "<leader>ca", vim.lsp.buf.code_action, map_opts })
   nmap({ "gd", vim.lsp.buf.definition, map_opts })
