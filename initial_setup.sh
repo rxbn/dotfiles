@@ -79,7 +79,7 @@ kubectl krew install tree
 
 # Configure pyenv
 # renovate datasource=github-tags depName=python/cpython
-PYTHON_VERSION=v3.13.2
+PYTHON_VERSION=v3.13.3
 pyenv install ${PYTHON_VERSION//v/}
 pyenv global ${PYTHON_VERSION//v/}
 
