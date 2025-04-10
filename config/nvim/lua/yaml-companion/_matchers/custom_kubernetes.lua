@@ -83,7 +83,11 @@ M.match = function(bufnr)
     cache_file:write(json_output)
     cache_file:close()
   else
-    vim.api.nvim_err_writeln("Failed to write Kubernetes schema cache file: " .. k8s_combined_schema_path)
+    vim.api.nvim_echo(
+      { { "Failed to write Kubernetes schema cache file: " .. k8s_combined_schema_path, "ErrorMsg" } },
+      true,
+      {}
+    )
   end
 
   if #k8s_combined_schema_template.oneOf > 0 then

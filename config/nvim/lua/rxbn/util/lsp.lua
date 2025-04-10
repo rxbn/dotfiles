@@ -12,8 +12,20 @@ local custom_on_attach = function(client, bufnr)
   nmap({ "gt", vim.lsp.buf.type_definition, map_opts })
   nmap({ "gi", vim.lsp.buf.implementation, map_opts })
   nmap({ "gr", "<Cmd>Telescope lsp_references<CR>", map_opts })
-  nmap({ "]d", vim.diagnostic.goto_next, map_opts })
-  nmap({ "[d", vim.diagnostic.goto_prev, map_opts })
+  nmap({
+    "]d",
+    function()
+      vim.diagnostic.jump({ count = 1, float = true })
+    end,
+    map_opts,
+  })
+  nmap({
+    "[d",
+    function()
+      vim.diagnostic.jump({ count = -1, float = true })
+    end,
+    map_opts,
+  })
   nmap({ "<leader>dl", "<Cmd>Telescope diagnostics<CR>", map_opts })
   nmap({ "<leader>ds", vim.diagnostic.open_float, map_opts })
   nmap({ "K", vim.lsp.buf.hover, map_opts })
@@ -50,19 +62,7 @@ updated_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
 vim.tbl_deep_extend("force", updated_capabilities, require("cmp_nvim_lsp").default_capabilities())
 updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
 
-local border_style = "rounded"
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = border_style,
-})
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = border_style,
-})
-
-vim.diagnostic.config({
-  float = { border = border_style },
-})
+vim.diagnostic.config({ virtual_text = true })
 
 return {
   on_attach = custom_on_attach,
