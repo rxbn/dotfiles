@@ -26,6 +26,8 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Kubernetes package manager
@@ -36,6 +38,8 @@ brew "hugo"
 brew "jq"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
+# Run local Kubernetes cluster in Docker
+brew "kind"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Package manager for kubectl plugins
