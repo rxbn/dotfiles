@@ -8,6 +8,8 @@ tap "nikitabobko/tap"
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# CLI tool for building Ansible Execution Environments (Containers)
+brew "ansible-builder"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
@@ -56,6 +58,8 @@ brew "lua"
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
