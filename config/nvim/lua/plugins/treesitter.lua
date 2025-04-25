@@ -7,7 +7,10 @@ return {
         "nvim-treesitter/nvim-treesitter-context",
         opts = {},
       },
-      "HiPhish/rainbow-delimiters.nvim",
+      {
+        "HiPhish/rainbow-delimiters.nvim",
+        submodules = false,
+      },
     },
     config = function()
       ---@diagnostic disable-next-line: missing-fields
