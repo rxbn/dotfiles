@@ -68,6 +68,7 @@ defaults write NSGlobalDomain _HIHideMenuBar -bool true # Hide menu bar
 # Install zsh plugins
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git ~/.config/plugins/zsh/catppuccin-zsh-syntax-highlighting
 git clone https://github.com/ahmetb/kubectl-aliases.git ~/.config/plugins/zsh/kubectl-aliases
+git clone https://github.com/Aloxaf/fzf-tab ~/.config/plugins/zsh/fzf-tab
 
 # Install kubectl plugins
 kubectl krew update

@@ -17,11 +17,6 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
-# Basic auto/tab complete:
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-_comp_options+=(globdots)
-
 # Load pyenv
 eval "$(pyenv init -)"
 
@@ -59,6 +54,17 @@ export FZF_DEFAULT_OPTS=" \
 
 # Allow comments even in interactive shells.
 set -k
+
+# Load fzf-tab plugin
+source ${HOME}/.config/plugins/zsh/fzf-tab/fzf-tab.plugin.zsh
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+zstyle ':fzf-tab:*' fzf-flags
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # Load zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
