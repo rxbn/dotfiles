@@ -16,6 +16,8 @@ brew "bash"
 brew "cilium-cli"
 # Load/unload environment variables based on $PWD
 brew "direnv"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
