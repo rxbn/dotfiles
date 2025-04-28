@@ -11,7 +11,7 @@ local custom_on_attach = function(client, bufnr)
   nmap({ "gd", vim.lsp.buf.definition, map_opts })
   nmap({ "gt", vim.lsp.buf.type_definition, map_opts })
   nmap({ "gi", vim.lsp.buf.implementation, map_opts })
-  nmap({ "gr", "<Cmd>Telescope lsp_references<CR>", map_opts })
+  nmap({ "gr", require("telescope.builtin").lsp_references, map_opts })
   nmap({
     "]d",
     function()
