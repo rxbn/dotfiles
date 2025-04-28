@@ -32,27 +32,13 @@ alias vimdiff='nvim -d'
 alias terraform='tofu'
 alias tf='tofu'
 alias tssh='tmux-sshionizer'
+alias apm='ansible-playbook --diff main.yml'
+alias ap='ansible-playbook --diff'
 
 function gic() {
   # shellcheck disable=SC2124
   text="$@"
   git commit -m "$text"
-}
-
-function apm() {
-  if [[ -f $(pwd)/vars/secrets.yml && -z "$ANSIBLE_VAULT_PASSWORD_FILE" ]]; then
-    ansible-playbook --diff --ask-vault-pass main.yml "$@"
-  else
-    ansible-playbook --diff main.yml "$@"
-  fi
-}
-
-function ap() {
-  if [[ -f $(pwd)/vars/secrets.yml && $ANSIBLE_VAULT_PASSWORD_FILE ]]; then
-    ansible-playbook --diff --ask-vault-pass "$@"
-  else
-    ansible-playbook --diff "$@"
-  fi
 }
 
 function expand-alias() {
