@@ -53,3 +53,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 vim.lsp.set_log_level("off")
+
+vim.keymap.del("n", "grr")
+vim.keymap.del("n", "gri")
+vim.keymap.del("n", "gra")
+vim.keymap.del("n", "grn")
