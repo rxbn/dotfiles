@@ -78,6 +78,7 @@ return {
         ts_ls = {},
         tailwindcss = {},
         pylsp = {},
+        helm_ls = {},
       }
 
       local function setup(server)
