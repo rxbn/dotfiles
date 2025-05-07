@@ -30,8 +30,6 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Fast linters runner for Go
-brew "golangci-lint"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Kubernetes package manager
@@ -88,12 +86,16 @@ brew "sops"
 brew "starship"
 # User interface to the TELNET protocol
 brew "telnet"
+# Official tldr client written in Rust
+brew "tlrc"
 # Terminal multiplexer
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -118,8 +120,6 @@ cask "1password"
 cask "1password-cli"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
-# Professional image editing software
-cask "affinity-photo"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
