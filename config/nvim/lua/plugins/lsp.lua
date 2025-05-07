@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       "mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason-lspconfig.nvim",
       {
         "someone-stole-my-name/yaml-companion.nvim",
         config = function()
@@ -81,13 +81,13 @@ return {
         helm_ls = {},
       }
 
-      local function setup(server)
+      for server in pairs(servers) do
         local server_opts = vim.tbl_deep_extend("force", {
           on_attach = require("rxbn.util.lsp").on_attach,
           capabilities = require("rxbn.util.lsp").capabilities,
         }, servers[server])
 
-        require("lspconfig")[server].setup(server_opts)
+        vim.lsp.config(server, server_opts)
       end
 
       local ensure_installed = {}
@@ -98,14 +98,14 @@ return {
         end
       end
 
+      ---@diagnostic disable-next-line: missing-fields
       require("mason-lspconfig").setup({
         ensure_installed = ensure_installed,
-        handlers = { setup },
       })
     end,
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     config = function()
       require("mason").setup()
       local mr = require("mason-registry")
