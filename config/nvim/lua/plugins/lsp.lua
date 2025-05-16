@@ -5,10 +5,8 @@ return {
       "mason.nvim",
       "mason-org/mason-lspconfig.nvim",
       {
-        "someone-stole-my-name/yaml-companion.nvim",
-        config = function()
-          require("yaml-companion").load_matcher("custom_kubernetes")
-        end,
+        "rxbn/kube-schema.nvim",
+        opts = {},
       },
       {
         "j-hui/fidget.nvim",
@@ -48,23 +46,7 @@ return {
             },
           },
         },
-        yamlls = require("yaml-companion").setup({
-          builtin_matchers = {
-            kubernetes = { enabled = false },
-            cloud_init = { enabled = false },
-          },
-          lspconfig = {
-            on_attach = require("rxbn.util.lsp").on_attach,
-            capabilities = require("rxbn.util.lsp").capabilities,
-            settings = {
-              yaml = {
-                schemas = {
-                  kubernetes = "",
-                },
-              },
-            },
-          },
-        }),
+        yamlls = require("kube-schema").configure_yamlls(),
         jsonls = {},
         gopls = {},
         terraformls = {},
