@@ -5,7 +5,7 @@ return {
       "mason.nvim",
       "mason-org/mason-lspconfig.nvim",
       {
-        "rxbn/kube-schema.nvim",
+        dir = "/Users/robinscherrer/personal/kube-schema.nvim",
         opts = {},
       },
       {
