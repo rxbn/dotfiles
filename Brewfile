@@ -120,6 +120,12 @@ cask "1password"
 cask "1password-cli"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
+# Professional graphic design software
+cask "affinity-designer"
+# Professional image editing software
+cask "affinity-photo"
+# Professional desktop publishing software
+cask "affinity-publisher"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
@@ -145,7 +151,7 @@ cask "vlc"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Gecko based web browser
-cask "zen-browser"
+cask "zen"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
 mas "Dark Reader for Safari", id: 1438243180
