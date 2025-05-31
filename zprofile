@@ -36,6 +36,7 @@ export ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
+export HOMEBREW_NO_ENV_HINTS=1
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
