@@ -74,8 +74,6 @@ brew "pkgconf"
 brew "pnpm"
 # Password generator
 brew "pwgen"
-# Python version management
-brew "pyenv"
 # Fast, efficient and secure backup program
 brew "restic"
 # Search tool like grep and The Silver Searcher

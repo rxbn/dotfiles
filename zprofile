@@ -38,10 +38,6 @@ export ANSIBLE_PYTHON_INTERPRETER=auto_silent
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_ENV_HINTS=1
 
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 # Starship
 export STARSHIP_CONFIG="${HOME}/.config/starship/starship.toml"
 # vi: ft=zsh

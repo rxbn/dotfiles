@@ -3,13 +3,5 @@
   "semanticCommits": "enabled",
   "dependencyDashboard": true,
   "separateMajorMinor": false,
-  "assignees": ["rxbn"],
-  "regexManagers": [
-    {
-      "fileMatch": ["initial_setup\\.sh$"],
-      "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*?_VERSION=(?<currentValue>.*)\\s"
-      ]
-    }
-  ]
+  "assignees": ["rxbn"]
 }

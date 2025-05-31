@@ -78,12 +78,6 @@ kubectl krew install node-shell
 kubectl krew install resource-capacity
 kubectl krew install tree
 
-# Configure pyenv
-# renovate datasource=github-tags depName=python/cpython
-PYTHON_VERSION=v3.13.3
-pyenv install ${PYTHON_VERSION//v/}
-pyenv global ${PYTHON_VERSION//v/}
-
 # Disable animations when opening and closing windows.
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
