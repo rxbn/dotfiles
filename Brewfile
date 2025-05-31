@@ -1,15 +1,11 @@
 tap "containeroo/tap"
 tap "fluxcd/tap"
 tap "goreleaser/tap"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "nikitabobko/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# CLI tool for building Ansible Execution Environments (Containers)
-brew "ansible-builder"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
@@ -68,8 +64,6 @@ brew "node"
 brew "opentofu"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Password generator
