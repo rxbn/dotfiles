@@ -16,6 +16,8 @@ brew "direnv"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
@@ -94,18 +96,16 @@ brew "watch"
 brew "wget"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
-brew "containeroo/tap/ci-thief"
 # Simple CLI tool to generate OTP tokens
 brew "containeroo/tap/otpgen"
 # Flux CLI
 brew "fluxcd/tap/flux"
-# Release engineering, simplified
-brew "goreleaser/tap/goreleaser"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -122,10 +122,12 @@ cask "affinity-publisher"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
+cask "ci-thief"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Desktop sync client for Nextcloud software products
@@ -146,11 +148,12 @@ cask "whatsapp"
 cask "zen"
 mas "1Password for Safari", id: 1569813296
 mas "AdGuard for Safari", id: 1440147259
+mas "Compressor", id: 424390742
 mas "Dark Reader for Safari", id: 1438243180
 mas "Final Cut Pro", id: 424389933
-mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
+mas "Motion", id: 434290957
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "SponsorBlock", id: 1573461917
