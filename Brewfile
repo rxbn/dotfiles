@@ -4,6 +4,8 @@ tap "goreleaser/tap"
 tap "nikitabobko/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -86,8 +88,6 @@ brew "tlrc"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Executes a program periodically, showing output fullscreen
@@ -146,15 +146,11 @@ cask "vlc"
 cask "whatsapp"
 # Gecko based web browser
 cask "zen"
-mas "1Password for Safari", id: 1569813296
-mas "AdGuard for Safari", id: 1440147259
 mas "Compressor", id: 424390742
-mas "Dark Reader for Safari", id: 1438243180
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
 mas "Motion", id: 434290957
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "SponsorBlock", id: 1573461917
 mas "WireGuard", id: 1451685025
