@@ -22,6 +22,8 @@ brew "fd"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
@@ -54,6 +56,8 @@ brew "kubent"
 brew "kustomize"
 # Powerful, lightweight programming language
 brew "lua"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Replacement for ls, cp and other commands for object storage
@@ -118,18 +122,20 @@ cask "affinity-designer"
 cask "affinity-photo"
 # Professional desktop publishing software
 cask "affinity-publisher"
-# Application launcher and productivity software
-cask "alfred"
 # Application uninstaller
 cask "appcleaner"
 # Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
 cask "ci-thief"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Clipboard manager
+cask "maccy"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # Imaging utility to install operating systems to a microSD card
@@ -150,6 +156,7 @@ mas "Compressor", id: 424390742
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 409183694
 mas "Logic Pro", id: 634148309
+mas "Mela", id: 1568924476
 mas "Motion", id: 434290957
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
