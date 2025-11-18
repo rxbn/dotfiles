@@ -26,6 +26,8 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Open-source GitLab command-line tool
+brew "glab"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU Pretty Good Privacy (PGP) package
@@ -64,9 +66,11 @@ brew "mas"
 brew "minio-mc"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Automated testing for Ansible roles
+brew "molecule"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Drop-in replacement for Terraform. Infrastructure as Code Tool
 brew "opentofu"
@@ -134,6 +138,8 @@ cask "discord"
 cask "docker-desktop"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Free and open-source media player
+cask "iina"
 # Clipboard manager
 cask "maccy"
 # Desktop sync client for Nextcloud software products
@@ -146,8 +152,6 @@ cask "sf-symbols"
 cask "slack"
 # Virtual machines UI using QEMU
 cask "utm"
-# Multimedia player
-cask "vlc"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Gecko based web browser
