@@ -69,6 +69,9 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 3'
+[[on-window-detected]]
 if.app-id = 'com.apple.Notes'
 run = 'move-node-to-workspace 7'
 [[on-window-detected]]
