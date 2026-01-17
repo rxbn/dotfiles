@@ -96,6 +96,8 @@ brew "tlrc"
 brew "tmux"
 # Plugin manager for tmux
 brew "tpm"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Executes a program periodically, showing output fullscreen
