@@ -59,7 +59,11 @@ end
 local updated_capabilities = vim.lsp.protocol.make_client_capabilities()
 updated_capabilities.textDocument.completion.completionItem.snippetSupport = true
 updated_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
-vim.tbl_deep_extend("force", updated_capabilities, require("cmp_nvim_lsp").default_capabilities())
+updated_capabilities = vim.tbl_deep_extend(
+  "force",
+  updated_capabilities,
+  require("cmp_nvim_lsp").default_capabilities()
+)
 updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
 
 vim.diagnostic.config({ virtual_text = true })
