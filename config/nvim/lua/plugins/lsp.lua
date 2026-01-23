@@ -49,7 +49,7 @@ return {
         yamlls = require("kube-schema").configure_yamlls(),
         jsonls = {},
         gopls = {},
-        terraformls = {},
+        tofu_ls = {},
         ansiblels = {},
         bashls = {
           filetypes = { "sh", "bash", "zsh" },

@@ -3,11 +3,6 @@ return {
     "stevearc/conform.nvim",
     opts = {
       notify_on_error = false,
-      formatters = {
-        terraform_fmt = {
-          command = "tofu",
-        },
-      },
       formatters_by_ft = {
         sh = { "shfmt" },
         bash = { "shfmt" },
@@ -23,7 +18,7 @@ return {
         json = { "prettierd" },
         yaml = { "prettierd" },
         markdown = { "prettierd" },
-        terraform = { "terraform_fmt" },
+        terraform = { "tofu_fmt" },
         python = { "autopep8" },
       },
       format_on_save = {
