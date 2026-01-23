@@ -18,7 +18,7 @@ brew "direnv"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -121,7 +121,7 @@ cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # Professional graphic design software
 cask "affinity-designer"
 # Professional image editing software
@@ -131,7 +131,7 @@ cask "affinity-publisher"
 # Application uninstaller
 cask "appcleaner"
 # Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
-cask "ci-thief"
+cask "containeroo/tap/ci-thief"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Voice and text chat software
