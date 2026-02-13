@@ -2,6 +2,11 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
+      formatters = {
+        jsonnetfmt = {
+          args = { "--pad-arrays", "-" },
+        },
+      },
       notify_on_error = false,
       formatters_by_ft = {
         sh = { "shfmt" },
@@ -20,6 +25,9 @@ return {
         markdown = { "prettierd" },
         terraform = { "tofu_fmt" },
         python = { "autopep8" },
+        jsonnet = { "jsonnetfmt" },
+        libsonnet = { "jsonnetfmt" },
+        libjsonnet = { "jsonnetfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -34,6 +42,7 @@ return {
         "prettierd",
         "shfmt",
         "stylua",
+        "jsonnetfmt",
       }
       require("rxbn.util.mason").install_packages(formatters)
 

@@ -61,6 +61,9 @@ return {
         tailwindcss = {},
         pylsp = {},
         helm_ls = {},
+        jsonnet_ls = {
+          cmd = { "jsonnet-language-server", "--jpath", vim.fn.expand("~/.jsonnet") },
+        },
       }
 
       for server in pairs(servers) do

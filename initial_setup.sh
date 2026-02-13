@@ -25,6 +25,7 @@ FOLDERS=(
   ~/personal/kubeconfigs
   ~/containeroo
   ~/tmp
+  ~/.jsonnet/lib
 )
 
 # Install Rosetta 2
