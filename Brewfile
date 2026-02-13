@@ -1,6 +1,5 @@
 tap "containeroo/tap"
 tap "fluxcd/tap"
-tap "goreleaser/tap"
 tap "nikitabobko/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
@@ -128,12 +127,12 @@ cask "affinity-designer"
 cask "affinity-photo"
 # Professional desktop publishing software
 cask "affinity-publisher"
-# Application uninstaller
-cask "appcleaner"
 # Simple CLI tool to fetch GitLab CI variables and output them as exportable environment variables.
 cask "containeroo/tap/ci-thief"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
@@ -160,10 +159,9 @@ cask "whatsapp"
 cask "zen"
 mas "Compressor", id: 424390742
 mas "Final Cut Pro", id: 424389933
-mas "Keynote", id: 409183694
+mas "Keynote", id: 361285480
 mas "Logic Pro", id: 634148309
-mas "Mela", id: 1568924476
 mas "Motion", id: 434290957
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 mas "WireGuard", id: 1451685025
