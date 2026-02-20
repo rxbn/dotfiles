@@ -111,8 +111,6 @@ brew "yt-dlp"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Simple CLI tool to generate OTP tokens
-brew "containeroo/tap/otpgen"
 # Flux CLI
 brew "fluxcd/tap/flux"
 # Password manager that keeps all passwords secure behind one password
