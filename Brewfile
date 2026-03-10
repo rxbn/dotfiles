@@ -65,6 +65,8 @@ brew "mas"
 brew "minio-mc"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Deep clean and optimize your Mac
+brew "mole"
 # Automated testing for Ansible roles
 brew "molecule"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -163,3 +165,4 @@ mas "Motion", id: 434290957
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
 mas "WireGuard", id: 1451685025
+uv "syn-commodore"
