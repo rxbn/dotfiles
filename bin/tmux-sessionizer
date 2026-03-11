@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function select_directory() {
+function select_directories() {
   find \
     ~ \
     ~/personal \
@@ -8,34 +8,143 @@ function select_directory() {
     ~/containeroo \
     ~/tmp \
     -mindepth 1 -maxdepth 1 -type d \
-    -not -path "*/.*" | fzf
+    -not -path "*/.*" | fzf \
+    --multi \
+    --expect=ctrl-s,ctrl-p \
+    --header $'Tab toggle  Ctrl-A select all matches  Ctrl-D clear matches  Enter separate sessions  Ctrl-S sync panes  Ctrl-P panes only' \
+    --bind 'ctrl-a:select-all,ctrl-d:deselect-all'
 }
 
-if [[ $# -eq 1 ]]; then
-  selected_dir=$1
+function session_name_for_directory() {
+  basename "$1" | tr . _
+}
+
+function attach_or_switch_session() {
+  local session_name=$1
+
+  if [[ -z $TMUX ]]; then
+    tmux attach-session -t "$session_name"
+  else
+    tmux switch-client -t "$session_name"
+  fi
+}
+
+function next_available_session_name() {
+  local base_name=$1
+  local session_name=$base_name
+  local suffix=2
+
+  while tmux has-session -t="$session_name" 2>/dev/null; do
+    session_name="${base_name}_${suffix}"
+    ((suffix++))
+  done
+
+  printf '%s\n' "$session_name"
+}
+
+function pane_session_size() {
+  local width height
+
+  if [[ -n $TMUX ]]; then
+    width=$(tmux display-message -p '#{client_width}')
+    height=$(tmux display-message -p '#{client_height}')
+  else
+    width=$(tput cols 2>/dev/null)
+    height=$(tput lines 2>/dev/null)
+  fi
+
+  if [[ ! $width =~ ^[0-9]+$ ]] || [[ $width -le 0 ]]; then
+    width=160
+  fi
+
+  if [[ ! $height =~ ^[0-9]+$ ]] || [[ $height -le 0 ]]; then
+    height=48
+  fi
+
+  printf '%s %s\n' "$width" "$height"
+}
+
+function open_individual_sessions() {
+  local attach_session=""
+  local selected_dir session_name
+
+  for selected_dir in "$@"; do
+    [[ -n $selected_dir ]] || continue
+
+    session_name=$(session_name_for_directory "$selected_dir")
+
+    if [[ -z $attach_session ]]; then
+      attach_session=$session_name
+    fi
+
+    if ! tmux has-session -t="$session_name" 2>/dev/null; then
+      tmux new-session -ds "$session_name" -c "$selected_dir"
+    fi
+  done
+
+  [[ -n $attach_session ]] || return 0
+  attach_or_switch_session "$attach_session"
+}
+
+function open_pane_session() {
+  local sync_panes=$1
+  local selected_dirs=("${@:2}")
+  local base_name session_name selected_dir window_target session_width session_height
+
+  [[ ${#selected_dirs[@]} -gt 0 ]] || return 0
+
+  if [[ $sync_panes == "on" ]]; then
+    base_name="$(session_name_for_directory "${selected_dirs[0]}")_sync"
+  else
+    base_name="$(session_name_for_directory "${selected_dirs[0]}")_panes"
+  fi
+  session_name=$(next_available_session_name "$base_name")
+
+  read -r session_width session_height < <(pane_session_size)
+
+  window_target=$(tmux new-session -dP -F '#{session_name}:#{window_id}' \
+    -x "$session_width" -y "$session_height" \
+    -s "$session_name" -c "${selected_dirs[0]}")
+
+  for selected_dir in "${selected_dirs[@]:1}"; do
+    tmux split-window -t "$window_target" -c "$selected_dir"
+    tmux select-layout -t "$window_target" tiled >/dev/null
+  done
+
+  tmux select-layout -t "$window_target" tiled >/dev/null
+
+  if [[ $sync_panes == "on" ]]; then
+    tmux set-window-option -t "$window_target" synchronize-panes on >/dev/null
+  fi
+
+  attach_or_switch_session "$session_name"
+}
+
+action_key="enter"
+selected_dirs=()
+
+if [[ $# -gt 0 ]]; then
+  selected_dirs=("$@")
 else
-  selected_dir=$(select_directory)
+  selection_output=()
+  mapfile -t selection_output < <(select_directories)
+
+  if [[ ${#selection_output[@]} -eq 0 ]]; then
+    exit 0
+  fi
+
+  action_key=${selection_output[0]:-enter}
+  selected_dirs=("${selection_output[@]:1}")
 fi
 
-if [[ -z $selected_dir ]]; then
+if [[ ${#selected_dirs[@]} -eq 0 ]]; then
   exit 0
 fi
 
-session_name=$(basename "$selected_dir" | tr . _)
-
-tmux_running=$(pgrep tmux)
-
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-  tmux new-session -s "$session_name" -c "$selected_dir"
-  exit 0
-fi
-
-if ! tmux has-session -t="$session_name" 2>/dev/null; then
-  tmux new-session -ds "$session_name" -c "$selected_dir"
-fi
-
-if [[ -z $TMUX ]]; then
-  tmux attach-session -t "$session_name"
+if [[ $action_key == "ctrl-s" ]]; then
+  open_pane_session on "${selected_dirs[@]}"
+elif [[ $action_key == "ctrl-p" ]]; then
+  open_pane_session off "${selected_dirs[@]}"
 else
-  tmux switch-client -t "$session_name"
+  open_individual_sessions "${selected_dirs[@]}"
 fi
