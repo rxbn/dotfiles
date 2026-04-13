@@ -166,3 +166,10 @@ mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
 mas "WireGuard", id: 1451685025
 uv "syn-commodore"
+krew "cnpg"
+krew "get-all"
+krew "neat"
+krew "node-shell"
+krew "resource-capacity"
+krew "tree"
+krew "virt"
