@@ -151,6 +151,8 @@ cask "raspberry-pi-imager"
 cask "sf-symbols"
 # Team communication and collaboration software
 cask "slack"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Virtual machines UI using QEMU
 cask "utm"
 # Native desktop client for WhatsApp
@@ -164,7 +166,6 @@ mas "Logic Pro", id: 634148309
 mas "Motion", id: 434290957
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
-mas "WireGuard", id: 1451685025
 uv "syn-commodore"
 krew "cnpg"
 krew "get-all"
