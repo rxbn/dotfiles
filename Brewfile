@@ -1,6 +1,6 @@
-tap "containeroo/tap"
-tap "fluxcd/tap"
-tap "nikitabobko/tap"
+tap "containeroo/tap", trusted: true
+tap "fluxcd/tap", trusted: true
+tap "nikitabobko/tap", trusted: true
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Display directories as trees (with optional color/HTML output)
@@ -11,6 +11,8 @@ brew "ansible"
 brew "bash"
 # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 brew "cilium-cli"
+# Utility that creates projects from templates and maintains the cruft afterwards
+brew "cruft"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Modern, maintained replacement for ls
@@ -33,6 +35,10 @@ brew "gnu-sed"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
+# Deliver Go binaries as fast and easily as possible
+brew "goreleaser"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Kubernetes package manager
@@ -143,8 +149,6 @@ cask "ghostty"
 cask "iina"
 # Clipboard manager
 cask "maccy"
-# Desktop sync client for Nextcloud software products
-cask "nextcloud"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Tool that provides consistent, highly configurable symbols for apps
@@ -159,6 +163,7 @@ cask "utm"
 cask "whatsapp"
 # Gecko based web browser
 cask "zen"
+mas "1Password for Safari", id: 1569813296
 mas "Compressor", id: 424390742
 mas "Final Cut Pro", id: 424389933
 mas "Keynote", id: 361285480
@@ -166,6 +171,9 @@ mas "Logic Pro", id: 634148309
 mas "Motion", id: 434290957
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
+mas "SponsorBlock", id: 1573461917
+mas "uBlock Origin Lite", id: 6745342698
+mas "Xcode", id: 497799835
 uv "syn-commodore"
 krew "cnpg"
 krew "get-all"
