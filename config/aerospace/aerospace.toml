@@ -7,8 +7,6 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
-focus-follows-mouse.enabled = true
-
 [mode.main.binding]
 alt-enter = 'exec-and-forget open -n -a Ghostty'
 shift-alt-enter = 'exec-and-forget open -n -a Safari'
