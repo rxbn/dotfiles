@@ -2,8 +2,45 @@ local augroup_highlight = vim.api.nvim_create_augroup("custom-lsp-references", {
 local nmap = require("rxbn.util.keymap").nmap
 
 local custom_on_attach = function(client, bufnr)
+  if client:supports_method("textDocument/inlineCompletion", bufnr) then
+    vim.lsp.inline_completion.enable(true, {
+      bufnr = bufnr,
+    })
+
+    vim.keymap.set("i", "<C-y>", function()
+      if vim.fn.pumvisible() == 1 then
+        return "<C-y>"
+      end
+      if vim.lsp.inline_completion.get({ bufnr = bufnr }) then
+        return ""
+      end
+      return "<C-y>"
+    end, {
+      buffer = bufnr,
+      desc = "Accept completion",
+      expr = true,
+    })
+
+    vim.keymap.set("i", "<C-g>", function()
+      vim.lsp.inline_completion.select({ bufnr = bufnr })
+    end, {
+      buffer = bufnr,
+      desc = "Next inline completion",
+    })
+  end
+
   if client.name == "copilot" then
     return
+  end
+
+  if client:supports_method("textDocument/completion", bufnr) then
+    vim.lsp.completion.enable(true, client.id, bufnr, {
+      autotrigger = true,
+    })
+    vim.keymap.set("i", "<C-e>", vim.lsp.completion.get, {
+      buffer = bufnr,
+      desc = "Trigger LSP completion",
+    })
   end
 
   local map_opts = { buffer = bufnr }
@@ -59,16 +96,20 @@ end
 local updated_capabilities = vim.lsp.protocol.make_client_capabilities()
 updated_capabilities.textDocument.completion.completionItem.snippetSupport = true
 updated_capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = false
-updated_capabilities = vim.tbl_deep_extend(
-  "force",
-  updated_capabilities,
-  require("cmp_nvim_lsp").default_capabilities()
-)
 updated_capabilities.textDocument.completion.completionItem.insertReplaceSupport = false
 
 vim.diagnostic.config({ virtual_text = true })
 
 return {
-  on_attach = custom_on_attach,
   capabilities = updated_capabilities,
+  setup = function()
+    local augroup_attach = vim.api.nvim_create_augroup("custom-lsp-attach", { clear = true })
+    vim.api.nvim_create_autocmd("LspAttach", {
+      group = augroup_attach,
+      callback = function(args)
+        local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+        custom_on_attach(client, args.buf)
+      end,
+    })
+  end,
 }

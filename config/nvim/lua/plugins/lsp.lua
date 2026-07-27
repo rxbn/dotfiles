@@ -18,15 +18,13 @@ return {
           },
         },
       },
-      {
-        "ray-x/lsp_signature.nvim",
-        opts = {
-          hint_enable = false,
-        },
-      },
     },
     config = function()
+      local lsp = require("rxbn.util.lsp")
+      lsp.setup()
+
       local servers = {
+        copilot = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -68,8 +66,7 @@ return {
 
       for server in pairs(servers) do
         local server_opts = vim.tbl_deep_extend("force", {
-          on_attach = require("rxbn.util.lsp").on_attach,
-          capabilities = require("rxbn.util.lsp").capabilities,
+          capabilities = lsp.capabilities,
         }, servers[server])
 
         vim.lsp.config(server, server_opts)

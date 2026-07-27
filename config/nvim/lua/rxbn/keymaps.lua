@@ -2,6 +2,28 @@ local nmap = require("rxbn.util.keymap").nmap
 local vmap = require("rxbn.util.keymap").vmap
 local xmap = require("rxbn.util.keymap").xmap
 
+vim.keymap.set({ "i", "s" }, "<C-l>", function()
+  if vim.snippet.active({ direction = 1 }) then
+    return "<Cmd>lua vim.snippet.jump(1)<CR>"
+  end
+  return "<C-l>"
+end, {
+  desc = "Jump to next snippet tabstop",
+  expr = true,
+  silent = true,
+})
+
+vim.keymap.set({ "i", "s" }, "<C-h>", function()
+  if vim.snippet.active({ direction = -1 }) then
+    return "<Cmd>lua vim.snippet.jump(-1)<CR>"
+  end
+  return "<C-h>"
+end, {
+  desc = "Jump to previous snippet tabstop",
+  expr = true,
+  silent = true,
+})
+
 nmap({ "<leader>pv", vim.cmd.Ex })
 
 nmap({ "<Esc>", "<Cmd>nohlsearch<CR>" })

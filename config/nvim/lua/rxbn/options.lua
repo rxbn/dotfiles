@@ -11,6 +11,11 @@ opt.laststatus = 3
 vim.cmd([[highlight WinSeparator guibg=None]])
 opt.cursorline = true
 opt.signcolumn = "yes"
+opt.list = true
+opt.listchars = {
+  leadmultispace = "│ ",
+  tab = "│ ",
+}
 
 opt.shortmess:append("I")
 
@@ -28,6 +33,12 @@ opt.updatetime = 300
 opt.scrolloff = 10
 
 opt.splitright = true
+
+opt.autocomplete = true
+opt.complete = { "o", ".^5", "w^5", "b^5", "u^5" }
+opt.completeopt = { "menuone", "noselect", "popup", "fuzzy" }
+opt.pumborder = "rounded"
+opt.statusline = " %f %m%=%{v:lua.vim.lsp.status()} %y "
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
@@ -50,6 +61,21 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = rxbn_group,
   pattern = "*",
   command = [[%s/\s\+$//e]],
+})
+
+vim.api.nvim_create_autocmd("LspProgress", {
+  group = rxbn_group,
+  callback = function()
+    vim.cmd.redrawstatus()
+  end,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = rxbn_group,
+  pattern = "TelescopePrompt",
+  callback = function(args)
+    vim.bo[args.buf].autocomplete = false
+  end,
 })
 
 vim.lsp.log.set_level("off")
